@@ -14,15 +14,12 @@ $(function(){
 });
 
 /* Sidemenu */
-
-let menuTitle = document.getElementById("sidemenu-title");
-
 function menuToggle() {
     let menuContent = document.getElementById("sidemenu-content");
-    if (menuContent.style.display == "none") {
-        menuContent.style.display = "block";
-      } else {
+    if (menuContent.style.display == "block") {
         menuContent.style.display = "none";
-      }
+      } else {
+        menuContent.style.display = "block";
+      }      
 }
 

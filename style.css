@@ -184,9 +184,80 @@ body {
 
 .sidemenu-item {
     padding: 10px;
+    color: #03e9f4
 }
 
 .sidemenu-item:hover {
-    background: white;
-    color: black;
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    animation: neon 2s linear 1;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+/* Header Starts */
+
+header {
+    background: black;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;    
+    overflow: hidden;
+}
+
+header img {
+    width: 25%;
+    height: auto;
+    padding-top: 10px;
+    float: left;
+}
+
+header ul li {
+    display: block;
+    float: right;
+    padding-right: 15px;
+    padding-top: 25px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.25em;
+    padding: 5px;
+}
+
+header a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    animation: neon 2s linear 1;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+@keyframes neon {
+    0%,49% {box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4; background: #03e9f4;}
+    50% {box-shadow: none; background: none;}
+    60%, 74% {box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4; background: #03e9f4;}
+    75% {box-shadow: none; background: none;}
+    76%, 100% {box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4; background: #03e9f4;}
+
 }
