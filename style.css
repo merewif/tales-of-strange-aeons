@@ -166,7 +166,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-size: 10px;
-    height: 25%;
+    height: 30%;
     color: #03e9f4;
     text-shadow: -2px -2px 2px #f40303;
 }
@@ -178,19 +178,20 @@ body {
     top: 40%;
     text-align: right;
     background: black;
-    height: 25%;
+    height: 30%;
     padding: 20px;
+    box-shadow: 5px 0px 0px #03e9f4;
 }
 
 .sidemenu-item {
-    padding: 10px;
-    color: #03e9f4
+    padding: 13px;
+    color: #03e9f4;
+    text-transform: uppercase;    
 }
 
 .sidemenu-item:hover {
     background: #03e9f4;
     color: #fff;
-    border-radius: 5px;
     animation: neon 2s linear 1;
     box-shadow: 0 0 5px #03e9f4,
                 0 0 25px #03e9f4,
@@ -226,9 +227,9 @@ header ul li {
 
 header a {
     text-decoration: none;
-    color: white;
+    color: #03e9f4;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 300;
     font-size: 1.25em;
     padding: 5px;
 }
@@ -236,7 +237,7 @@ header a {
 header a:hover {
     background: #03e9f4;
     color: #fff;
-    border-radius: 5px;
+    padding: 15px;
     animation: neon 2s linear 1;
     box-shadow: 0 0 5px #03e9f4,
                 0 0 25px #03e9f4,
@@ -250,7 +251,7 @@ header a:hover {
         0 0 50px #03e9f4,
         0 0 100px #03e9f4; background: #03e9f4;}
     50% {box-shadow: none; background: none;}
-    60%, 74% {box-shadow: 0 0 5px #03e9f4,
+    55%, 74% {box-shadow: 0 0 5px #03e9f4,
         0 0 25px #03e9f4,
         0 0 50px #03e9f4,
         0 0 100px #03e9f4; background: #03e9f4;}
