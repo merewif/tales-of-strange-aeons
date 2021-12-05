@@ -1,7 +1,7 @@
 /* Popup Window */
 
 $(function(){
-    $("#popupwindow").load("/elements/popup.html"); 
+    $("#popupwindow").load("popup.html"); 
 });
 
   $(document).mouseup(function(e) {
