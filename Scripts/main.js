@@ -18,7 +18,6 @@ $(function(){
 let menuTitle = document.getElementById("sidemenu-title");
 
 function menuToggle() {
-
     let menuContent = document.getElementById("sidemenu-content");
     if (menuContent.style.display == "none") {
         menuContent.style.display = "block";
@@ -27,4 +26,3 @@ function menuToggle() {
       }
 }
 
-document.addEventListener("click", menuToggle);
