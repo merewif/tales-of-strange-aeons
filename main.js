@@ -18,11 +18,11 @@ function menuToggle() {
     let menuContent = document.getElementById("sidemenu-content");
     if (menuContent.style.display == "block") {
         menuContent.style.display = "none";
-        document.getElementById("sidemenu-title").innerHTML = "<h1>⮙ Explore the lore</h1>";
+        document.getElementById("sidemenu-title").innerHTML = "<h1>⮙ Explore the tales</h1>";
 
       } else {
         menuContent.style.display = "block";
-        document.getElementById("sidemenu-title").innerHTML = "<h1>⮛ Explore the lore</h1>";
+        document.getElementById("sidemenu-title").innerHTML = "<h1>⮛ Explore the tales</h1>";
       }      
 }
 
