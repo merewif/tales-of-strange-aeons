@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
 
 body {
     background: grey;
@@ -6,6 +7,19 @@ body {
     font-family: 'Montserrat';
     max-width: 100%;
 }
+
+#bg-image {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    background: url("https://images.unsplash.com/photo-1531278329486-539bf3bd6d5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1925&q=80");
+    background-position: top;
+    background-size: cover;
+    filter: blur(4px);
+} 
+
 
 /* Popup Starts */
 
@@ -226,11 +240,13 @@ header ul li {
 }
 
 header a {
+    font-family: 'Orbitron';
     text-decoration: none;
     color: #03e9f4;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 1.25em;
+    line-height: 1.25em;
     padding: 5px;
 }
 
