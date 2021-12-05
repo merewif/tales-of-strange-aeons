@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,400;1,900&display=swap');
+
+
+body {
+    background: grey;
+    color:white;
+    font-family: 'Montserrat';
+    max-width: 100%;
+}
+
+/* Popup Starts */
+
+#popup {
+    background: rgba(0, 0, 0, 0.9);
+    width: 40vw;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat';
+    overflow: hidden;
+    z-index: 10000;    
+}
+
+.border-animation {    
+    position: relative;
+    transition: .5s;
+}
+
+#popup span {
+    position: absolute;
+    display: block;
+}
+
+#popup span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 5s linear infinite;
+}
+
+#popup span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 5s linear infinite;
+    animation-delay: 1.25s
+}
+
+#popup span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 5s linear infinite;
+    animation-delay: 2.5s
+}
+
+#popup span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 5s linear infinite;
+    animation-delay: 3.75s
+}
+
+@keyframes btn-anim1 {
+    0% {left: -100%;}
+    50%,100% {left: 100%;}
+}
+
+@keyframes btn-anim2 {
+    0% {top: -100%;}
+    50%,100% {top: 100%;}
+}
+
+@keyframes btn-anim3 {
+    0% {right: -100%;}
+    50%,100% {right: 100%;}
+}
+
+@keyframes btn-anim4 {
+    0% {bottom: -100%;}
+    50%,100% {bottom: 100%;}
+}
+
+#spoiler {
+    padding: 10px;  
+}
+
+#spoiler i {
+    font-weight: 900;
+}
+
+#spoiler h1, #newsletter h1, #cookies h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #03e9f4;
+    text-shadow: 4px 4px 4px #f40303;
+}
+
+#cookies {
+    text-align: center;
+}
+
+#spoiler p, #cookies p {
+    text-align: justify;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#newsletter {
+    text-align: center;
+}
+
+#newsletter input[type=email] {
+    background: none;
+    border: 1px solid grey;
+    width: 50%;
+    height: 21px;
+}
+
+#sub, #cookieAccept, #cookieDecline {
+    background: transparent;
+    border: 1px solid grey;
+    height: 25px;
+    color: white;
+    font-family: 'Montserrat';
+    text-transform: lowercase;
+}
+
+#sub:hover {
+    background-color: #03e9f4;
+    color: black;        
+}
+
+#cookieAccept {
+    background-color: #03e9f4;
+    color: black;    
+}
+
+/* Popup Ends */
+/* Landing Page Begins */
+#sidemenu {
+    background: black;
+}
+
+#sidemenu-title {
+    position: absolute;
+    right: 0%;
+    top: 40%;
+    background: black;
+    writing-mode: vertical-rl;
+    transform:rotate(180deg);
+    background: black;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    height: 25%;
+    color: #03e9f4;
+    text-shadow: -2px -2px 2px #f40303;
+}
+
+#sidemenu-content {
+    display: none;
+    position: absolute;
+    right: 4%;
+    top: 40%;
+    text-align: right;
+    background: black;
+    height: 25%;
+    padding: 20px;
+}
+
+.sidemenu-item {
+    padding: 10px;
+}
+
+.sidemenu-item:hover {
+    background: white;
+    color: black;
+}
