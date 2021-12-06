@@ -14,10 +14,10 @@ body {
     position: fixed;
     left: 0;
     z-index: -1;
-    background: url("https://images.unsplash.com/photo-1531278329486-539bf3bd6d5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1925&q=80");
+    background: url("shutterstock_1354127294.jpg");
     background-position: top;
     background-size: cover;
-    filter: blur(4px);
+    filter: blur(2px);
 } 
 
 
@@ -162,6 +162,7 @@ body {
 
 /* Popup Ends */
 /* Landing Page Begins */
+
 #sidemenu {
     background: black;
 }
@@ -183,6 +184,7 @@ body {
     height: 30%;
     color: #03e9f4;
     text-shadow: -2px -2px 2px #f40303;
+    cursor: pointer;
 }
 
 #sidemenu-content {
@@ -191,7 +193,7 @@ body {
     right: 4%;
     top: 40%;
     text-align: right;
-    background: black;
+    background: rgba(0, 0, 0, 0.75);
     height: 30%;
     padding: 20px;
     box-shadow: 5px 0px 0px #03e9f4;
@@ -200,7 +202,8 @@ body {
 .sidemenu-item {
     padding: 13px;
     color: #03e9f4;
-    text-transform: uppercase;    
+    text-transform: uppercase; 
+    cursor: pointer;   
 }
 
 .sidemenu-item:hover {
@@ -216,7 +219,7 @@ body {
 /* Header Starts */
 
 header {
-    background: black;
+    background: rgba(0, 0, 0, 0.75);
     margin: 0;
     position: absolute;
     top: 0;
@@ -229,6 +232,7 @@ header img {
     width: 25%;
     height: auto;
     padding-top: 10px;
+    padding-bottom: 10px;
     float: left;
 }
 

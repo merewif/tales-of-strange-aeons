@@ -4,7 +4,7 @@ $(function(){
     $("#popupwindow").load("popup.html"); 
 });
 
-  $(document).mouseup(function(e) {
+$(document).mouseup(function(e) {
     let container = $("#popupwindow");
 
     // if the target of the click isn't the container nor a descendant of the container
