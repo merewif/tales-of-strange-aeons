@@ -390,7 +390,13 @@ header a:hover {
   left: 20%;
 }
 
-/* Chapters Page */
+/* Chapters Nav */
+
+#chapternav {
+  display: inline-block;
+  width: 100vw;
+  max-width: 100%;
+}
 
 #chapterlist {
   position: relative;
@@ -425,7 +431,13 @@ header a:hover {
   background-color: #03e9f4;
   box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
     0 0 100px #03e9f4;
-  border: none;
+  color: black;
+}
+
+.active-chapter {
+  background-color: #03e9f4;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
   color: black;
 }
 
@@ -446,4 +458,41 @@ header a:hover {
   text-transform: lowercase;
   font-size: 1.5em;
   font-weight: 300;
+}
+
+/* Chapter Text Divs */
+
+.fullchapter {
+  margin: 200px;
+  margin-top: 120px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.75);
+  width: calc(100vw - 350px);
+  display: none;
+}
+
+.fullchapter h1,
+.fullchapter h2 {
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+.fullchapter h1 {
+  font-family: "Orbitron";
+  text-transform: uppercase;
+}
+
+.fullchapter h2 {
+  font-family: "Montserrat";
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+.fullchapter p {
+  text-align: justify;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  padding: 30px;
+  padding-bottom: 0;
 }

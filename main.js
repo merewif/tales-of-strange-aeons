@@ -46,27 +46,49 @@ $(document).mouseup(function (e) {
 
 /* Chapters Page */
 
-$(document).click(function (event) {
+// Change position to side on click
+$(document).on("click", ".chapter", function (event) {
   let chapterCard = $(".chapter");
   let chapterList = $("#chapterlist");
   let chapterText = $(".chaptertext");
 
-  if (chapterCard.is(event.target)) {
-    chapterList.css({
-      "grid-template-columns": "1fr",
-      position: "absolute",
-      left: "10px",
-      "padding-left": "0",
-      "padding-top": "120px",
-    });
+  chapterList.css({
+    "grid-template-columns": "1fr",
+    position: "absolute",
+    left: "10px",
+    "padding-left": "0",
+    "padding-top": "120px",
+    width: "120px",
+  });
 
-    chapterCard.css({
-      width: "120px",
-      height: "120px",
-    });
+  chapterCard.css({
+    width: "120px",
+    height: "120px",
+  });
 
-    chapterText.css({
-      "font-size": "7px",
-    });
-  }
+  chapterText.css({
+    "font-size": "7px",
+  });
+});
+
+// Chapter 0
+$(document).on("click", "#chapter0-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter0-card").removeClass("active-chapter");
+  $(".fullchapter").not("#prologue").hide("fade", "fast");
+
+  //Open this
+  $("#chapter0-card").addClass("active-chapter");
+  $("#prologue").show("fade", "slow");
+});
+
+// Chapter 1
+$(document).on("click", "#chapter1-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter1-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-1").hide("fade", "fast");
+
+  //Open this
+  $("#chapter1-card").addClass("active-chapter");
+  $("#chapter-1").show("fade", "slow");
 });
