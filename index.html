@@ -5,14 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tales of Strange Aeons</title>
-
     <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- jQuery UI -->
     <link
       rel="stylesheet"
       href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Gumshoe -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe@4/dist/gumshoe.polyfills.min.js"></script>
+
+    <!-- Local JS -->
     <script src="main.js"></script>
 
     <!--GitHub page at https://merewif.github.io/tales-of-strange-aeons/index.html -->
@@ -36,19 +44,45 @@
         <h1>⮙ Explore the tales</h1>
       </div>
       <div id="sidemenu-content" class="sidemenu">
-        <div class="sidemenu-item" class="sidemenu">Books</div>
-        <div class="sidemenu-item" class="sidemenu">Characters</div>
-        <div class="sidemenu-item" class="sidemenu">Timeline</div>
-        <div class="sidemenu-item" class="sidemenu">History</div>
-        <div class="sidemenu-item" class="sidemenu">Powers</div>
-        <div class="sidemenu-item" class="sidemenu">Legends</div>
+        <ul id="sidemenu-ul">
+          <li class="sidemenu-li">
+            <a href="#section1-container">
+              <div class="sidemenu-item" class="sidemenu">Books</div></a
+            >
+          </li>
+          <li class="sidemenu-li">
+            <a href="#section2-container">
+              <div class="sidemenu-item" class="sidemenu">Characters</div></a
+            >
+          </li>
+          <li class="sidemenu-li">
+            <a href="#section3-container">
+              <div class="sidemenu-item" class="sidemenu">Timeline</div></a
+            >
+          </li>
+          <li class="sidemenu-li">
+            <a href="#section4-container">
+              <div class="sidemenu-item" class="sidemenu">History</div></a
+            >
+          </li>
+          <li class="sidemenu-li">
+            <a href="#section5-container">
+              <div class="sidemenu-item" class="sidemenu">Powers</div></a
+            >
+          </li>
+          <li class="sidemenu-li">
+            <a href="#section6-container">
+              <div class="sidemenu-item" class="sidemenu">Legends</div></a
+            >
+          </li>
+        </ul>
       </div>
     </div>
 
     <main id="landing-page">
-      <section class="landing-section">
+      <section class="landing-section" id="section1-container">
         <div id="section1">
-          <h1>header header</h1>
+          <h1>Books</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
             provident inventore, culpa eligendi at molestiae eveniet nulla quos
@@ -69,10 +103,114 @@
           </p>
         </div>
       </section>
-      <section class="landing-section">
+      <section class="landing-section" id="section2-container">
         <div id="section2">
           <div>
-            <h1>header header</h1>
+            <h1>Characters</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+              provident inventore, culpa eligendi at molestiae eveniet nulla
+              quos corrupti sit cum doloribus fugit eaque rem earum non sint
+              eos, distinctio deserunt ea aperiam laudantium. Sint unde dolor
+              aliquid et? Optio eligendi debitis autem ratione odit eaque
+              corporis earum harum laboriosam excepturi labore explicabo, culpa
+              eos error quis veritatis ex quod consequatur ut illo quos cum,
+              repellendus facilis. Libero laudantium ut dolor esse voluptatem
+              officia quas iusto quibusdam ab itaque. Aut, dolorem ut libero
+              numquam quia ipsa officiis sunt facere neque, pariatur cupiditate
+              amet qui quibusdam dicta maiores magni voluptas dolore doloribus
+              illo expedita nulla consectetur explicabo cumque dolores. Dolor
+              quaerat dolorem vitae recusandae quia ut beatae id doloremque
+              tenetur similique provident distinctio, fugit saepe architecto
+              exercitationem laudantium praesentium tempora et accusantium,
+              facilis dolore temporibus in? Itaque blanditiis odit iste
+              laboriosam omnis sunt.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="landing-section" id="section3-container">
+        <div id="section3">
+          <div>
+            <h1>Timeline</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+              provident inventore, culpa eligendi at molestiae eveniet nulla
+              quos corrupti sit cum doloribus fugit eaque rem earum non sint
+              eos, distinctio deserunt ea aperiam laudantium. Sint unde dolor
+              aliquid et? Optio eligendi debitis autem ratione odit eaque
+              corporis earum harum laboriosam excepturi labore explicabo, culpa
+              eos error quis veritatis ex quod consequatur ut illo quos cum,
+              repellendus facilis. Libero laudantium ut dolor esse voluptatem
+              officia quas iusto quibusdam ab itaque. Aut, dolorem ut libero
+              numquam quia ipsa officiis sunt facere neque, pariatur cupiditate
+              amet qui quibusdam dicta maiores magni voluptas dolore doloribus
+              illo expedita nulla consectetur explicabo cumque dolores. Dolor
+              quaerat dolorem vitae recusandae quia ut beatae id doloremque
+              tenetur similique provident distinctio, fugit saepe architecto
+              exercitationem laudantium praesentium tempora et accusantium,
+              facilis dolore temporibus in? Itaque blanditiis odit iste
+              laboriosam omnis sunt.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="landing-section" id="section4-container">
+        <div id="section4">
+          <div>
+            <h1>History</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+              provident inventore, culpa eligendi at molestiae eveniet nulla
+              quos corrupti sit cum doloribus fugit eaque rem earum non sint
+              eos, distinctio deserunt ea aperiam laudantium. Sint unde dolor
+              aliquid et? Optio eligendi debitis autem ratione odit eaque
+              corporis earum harum laboriosam excepturi labore explicabo, culpa
+              eos error quis veritatis ex quod consequatur ut illo quos cum,
+              repellendus facilis. Libero laudantium ut dolor esse voluptatem
+              officia quas iusto quibusdam ab itaque. Aut, dolorem ut libero
+              numquam quia ipsa officiis sunt facere neque, pariatur cupiditate
+              amet qui quibusdam dicta maiores magni voluptas dolore doloribus
+              illo expedita nulla consectetur explicabo cumque dolores. Dolor
+              quaerat dolorem vitae recusandae quia ut beatae id doloremque
+              tenetur similique provident distinctio, fugit saepe architecto
+              exercitationem laudantium praesentium tempora et accusantium,
+              facilis dolore temporibus in? Itaque blanditiis odit iste
+              laboriosam omnis sunt.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="landing-section" id="section5-container">
+        <div id="section5">
+          <div>
+            <h1>Powers</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+              provident inventore, culpa eligendi at molestiae eveniet nulla
+              quos corrupti sit cum doloribus fugit eaque rem earum non sint
+              eos, distinctio deserunt ea aperiam laudantium. Sint unde dolor
+              aliquid et? Optio eligendi debitis autem ratione odit eaque
+              corporis earum harum laboriosam excepturi labore explicabo, culpa
+              eos error quis veritatis ex quod consequatur ut illo quos cum,
+              repellendus facilis. Libero laudantium ut dolor esse voluptatem
+              officia quas iusto quibusdam ab itaque. Aut, dolorem ut libero
+              numquam quia ipsa officiis sunt facere neque, pariatur cupiditate
+              amet qui quibusdam dicta maiores magni voluptas dolore doloribus
+              illo expedita nulla consectetur explicabo cumque dolores. Dolor
+              quaerat dolorem vitae recusandae quia ut beatae id doloremque
+              tenetur similique provident distinctio, fugit saepe architecto
+              exercitationem laudantium praesentium tempora et accusantium,
+              facilis dolore temporibus in? Itaque blanditiis odit iste
+              laboriosam omnis sunt.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="landing-section" id="section6-container">
+        <div id="section6">
+          <div>
+            <h1>Legends</h1>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
               provident inventore, culpa eligendi at molestiae eveniet nulla
@@ -97,4 +235,8 @@
       </section>
     </main>
   </body>
+  <script>
+    let spy = new Gumshoe("#sidemenu-ul a");
+    spy.detect();
+  </script>
 </html>

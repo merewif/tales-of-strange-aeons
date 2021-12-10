@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,400;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: grey;
   color: white;
@@ -192,6 +196,16 @@ body {
   background: black;
 }
 
+#sidemenu-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sidemenu-ul li a {
+  text-decoration: none;
+}
+
 #sidemenu-title {
   position: fixed;
   right: 0%;
@@ -226,7 +240,6 @@ body {
 
 .sidemenu-item {
   padding: 13px;
-  color: #03e9f4;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -238,6 +251,23 @@ body {
   animation: neon 2s linear infinite;
   box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
     0 0 100px #03e9f4;
+}
+
+#sidemenu-ul li.active {
+  background: #03e9f4;
+  font-weight: 900;
+  color: black;
+  animation: neon 2s linear infinite;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+#sidemenu-ul li a {
+  color: #03e9f4;
+}
+
+#sidemenu-ul li.active a {
+  color: black;
 }
 
 /* Header Starts */
@@ -327,7 +357,11 @@ header a:hover {
 }
 
 #section1,
-#section2 {
+#section2,
+#section3,
+#section4,
+#section5,
+#section6 {
   background: rgba(0, 0, 0, 0.75);
   width: 30%;
   position: relative;
