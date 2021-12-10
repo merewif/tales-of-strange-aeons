@@ -57,8 +57,15 @@ $(document).on("click", ".chapter", function (event) {
     position: "absolute",
     left: "10px",
     "padding-left": "0",
-    "padding-top": "120px",
+    "padding-top": "0",
+    "padding-bottom": "0",
+    top: "120px",
+    "padding-right": "30px",
+    height: "85vh",
+    overflow: "scroll",
+    "overflow-x": "hidden",
     width: "120px",
+    "scrollbar-width": "none",
   });
 
   chapterCard.css({

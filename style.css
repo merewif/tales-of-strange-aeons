@@ -396,6 +396,7 @@ header a:hover {
   display: inline-block;
   width: 100vw;
   max-width: 100%;
+  overflow: hidden;
 }
 
 #chapterlist {
@@ -409,6 +410,10 @@ header a:hover {
   -ms-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
   transition: all 0.8s ease;
+}
+
+#chapterlist::-webkit-scrollbar {
+  display: none;
 }
 
 .chapter {
