@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tales of Strange Aeons</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- jQuery UI -->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Gumshoe -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe@4/dist/gumshoe.polyfills.min.js"></script>
+
+    <!-- Local JS -->
+    <script src="main.js"></script>
+
+    <!--GitHub page at https://merewif.github.io/tales-of-strange-aeons/index.html -->
+  </head>
+  <body>
+    <div id="popupwindow"></div>
+    <header>
+      <img src="logo.png" />
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Lore</a></li>
+        <li><a href="chapters.html">Chapters</a></li>
+        <li><a href="#">Podcast</a></li>
+        <li><a href="#">shop</a></li>
+        <li><a href="index.html">home</a></li>
+      </ul>
+    </header>
+    <div id="bg-image"></div>
+
+    <main id="chapters">
+      <div id="chapterlist">
+        <div class="chapter">
+          <div class="chaptertext">
+            <h1>Prologue</h1>
+            <p>Death Returns</p>
+          </div>
+        </div>
+        <div class="chapter">
+          <div class="chaptertext">
+            <h1>Chapter 1</h1>
+            <p>Quiet Awakening</p>
+          </div>
+        </div>
+        <div class="chapter">
+          <div class="chaptertext">
+            <h1>Chapter 2</h1>
+            <p>Quiet Awakening</p>
+          </div>
+        </div>
+        <div class="chapter">
+          <div class="chaptertext">
+            <h1>Chapter 3</h1>
+            <p>Quiet Awakening</p>
+          </div>
+        </div>
+        <div class="chapter">
+          <div class="chaptertext">
+            <h1>Chapter 4</h1>
+            <p>Quiet Awakening</p>
+          </div>
+        </div>
+        <div class="chapter">
+          <div class="chaptertext">
+            <h1>Chapter 5</h1>
+            <p>Quiet Awakening</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    let spy = new Gumshoe("#sidemenu-ul a");
+    spy.detect();
+  </script>
+</html>
