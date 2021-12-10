@@ -392,16 +392,18 @@ header a:hover {
 
 /* Chapters Page */
 
-#chapters {
+#chapterlist {
   position: relative;
   padding: 10%;
-}
-
-#chapterlist {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 10px;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .chapter {
@@ -411,6 +413,12 @@ header a:hover {
   margin: auto;
   border: 3px solid #03e9f4;
   color: black;
+  background: #03e9f4;
+  -webkit-transition: all 0.8s ease, border 0s;
+  -moz-transition: all 0.8s ease, border 0s;
+  -ms-transition: all 0.8s ease, border 0s;
+  -o-transition: all 0.8s ease, border 0s;
+  transition: all 0.8s ease, border 0s;
 }
 
 .chapter:hover {

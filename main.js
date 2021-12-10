@@ -45,3 +45,27 @@ $(document).mouseup(function (e) {
 });
 
 /* Chapters Page */
+
+$(document).mouseup(function (event) {
+  let chapterCard = $(".chapter");
+  let chapterList = $("#chapterlist");
+  let chapterText = $(".chaptertext");
+
+  if (chapterCard.is(event.target)) {
+    chapterList.css({
+      "grid-template-columns": "1fr",
+      position: "absolute",
+      left: "10px",
+      "padding-left": "0",
+    });
+
+    chapterCard.css({
+      width: "120px",
+      height: "120px",
+    });
+
+    chapterText.css({
+      "font-size": "7px",
+    });
+  }
+});
