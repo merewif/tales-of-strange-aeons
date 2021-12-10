@@ -402,9 +402,8 @@ header a:hover {
   position: relative;
   padding: 10%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
   -webkit-transition: all 0.8s ease;
   -moz-transition: all 0.8s ease;
   -ms-transition: all 0.8s ease;
@@ -490,6 +489,7 @@ header a:hover {
 }
 
 .fullchapter p {
+  font-family: "Montserrat";
   text-align: justify;
   font-size: 1.2em;
   line-height: 1.4em;
