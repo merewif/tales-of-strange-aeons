@@ -411,14 +411,14 @@ header a:hover {
   width: 300px;
   height: 300px;
   margin: auto;
-  border: 3px solid #03e9f4;
-  color: black;
-  background: #03e9f4;
+  color: white;
+  background: rgba(0, 0, 0, 0.75);
   -webkit-transition: all 0.8s ease, border 0s;
   -moz-transition: all 0.8s ease, border 0s;
   -ms-transition: all 0.8s ease, border 0s;
   -o-transition: all 0.8s ease, border 0s;
   transition: all 0.8s ease, border 0s;
+  cursor: pointer;
 }
 
 .chapter:hover {
@@ -426,6 +426,7 @@ header a:hover {
   box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
     0 0 100px #03e9f4;
   border: none;
+  color: black;
 }
 
 .chaptertext {

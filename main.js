@@ -46,7 +46,7 @@ $(document).mouseup(function (e) {
 
 /* Chapters Page */
 
-$(document).mouseup(function (event) {
+$(document).click(function (event) {
   let chapterCard = $(".chapter");
   let chapterList = $("#chapterlist");
   let chapterText = $(".chaptertext");
@@ -57,6 +57,7 @@ $(document).mouseup(function (event) {
       position: "absolute",
       left: "10px",
       "padding-left": "0",
+      "padding-top": "120px",
     });
 
     chapterCard.css({
