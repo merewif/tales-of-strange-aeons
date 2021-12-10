@@ -135,3 +135,102 @@ $(document).on("click", "#chapter5-card", function (e) {
   $("#chapter5-card").addClass("active-chapter");
   $("#chapter-5").slideDown("slow");
 });
+
+// Chapter 6
+$(document).on("click", "#chapter6-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter6-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-6").slideUp("slow");
+
+  //Open this
+  $("#chapter6-card").addClass("active-chapter");
+  $("#chapter-6").slideDown("slow");
+});
+
+// Chapter 7
+$(document).on("click", "#chapter7-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter7-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-7").slideUp("slow");
+
+  //Open this
+  $("#chapter7-card").addClass("active-chapter");
+  $("#chapter-7").slideDown("slow");
+});
+
+// Chapter 8
+$(document).on("click", "#chapter8-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter8-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-8").slideUp("slow");
+
+  //Open this
+  $("#chapter8-card").addClass("active-chapter");
+  $("#chapter-8").slideDown("slow");
+});
+
+// Chapter 9
+$(document).on("click", "#chapter9-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter9-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-9").slideUp("slow");
+
+  //Open this
+  $("#chapter9-card").addClass("active-chapter");
+  $("#chapter-9").slideDown("slow");
+});
+
+// Chapter 10
+$(document).on("click", "#chapter10-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter10-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-10").slideUp("slow");
+
+  //Open this
+  $("#chapter10-card").addClass("active-chapter");
+  $("#chapter-10").slideDown("slow");
+});
+
+// Chapter 11
+$(document).on("click", "#chapter11-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter11-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-11").slideUp("slow");
+
+  //Open this
+  $("#chapter11-card").addClass("active-chapter");
+  $("#chapter-11").slideDown("slow");
+});
+
+// Chapter 12
+$(document).on("click", "#chapter12-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter12-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-12").slideUp("slow");
+
+  //Open this
+  $("#chapter12-card").addClass("active-chapter");
+  $("#chapter-12").slideDown("slow");
+});
+
+// Chapter 13
+$(document).on("click", "#chapter13-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter13-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-13").slideUp("slow");
+
+  //Open this
+  $("#chapter13-card").addClass("active-chapter");
+  $("#chapter-13").slideDown("slow");
+});
+
+// Epilogue
+$(document).on("click", "#epilogue-card", function (e) {
+  //Close others
+  $(".chapter").not("#epilogue-card").removeClass("active-chapter");
+  $(".fullchapter").not("#epilogue").slideUp("slow");
+
+  //Open this
+  $("#epilogue-card").addClass("active-chapter");
+  $("#epilogue").slideDown("slow");
+});
