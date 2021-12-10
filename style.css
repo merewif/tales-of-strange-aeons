@@ -416,6 +416,50 @@ header a:hover {
   display: none;
 }
 
+#chapterlist span {
+  position: absolute;
+  display: block;
+}
+
+#chapterlist span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 5s linear infinite;
+}
+
+#chapterlist span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 5s linear infinite;
+  animation-delay: 1.25s;
+}
+
+#chapterlist span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 5s linear infinite;
+  animation-delay: 2.5s;
+}
+
+#chapterlist span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 5s linear infinite;
+  animation-delay: 3.75s;
+}
+
 .chapter {
   text-align: center;
   width: 300px;
