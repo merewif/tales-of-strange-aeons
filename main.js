@@ -75,20 +75,63 @@ $(document).on("click", ".chapter", function (event) {
 $(document).on("click", "#chapter0-card", function (e) {
   //Close others
   $(".chapter").not("#chapter0-card").removeClass("active-chapter");
-  $(".fullchapter").not("#prologue").hide("fade", "fast");
-
+  $(".fullchapter").not("#prologue").slideUp("slow");
   //Open this
   $("#chapter0-card").addClass("active-chapter");
-  $("#prologue").show("fade", "slow");
+  $("#prologue").slideToggle("slow");
 });
 
 // Chapter 1
 $(document).on("click", "#chapter1-card", function (e) {
   //Close others
   $(".chapter").not("#chapter1-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-1").hide("fade", "fast");
+  $(".fullchapter").not("#chapter-1").slideUp("slow");
 
   //Open this
   $("#chapter1-card").addClass("active-chapter");
-  $("#chapter-1").show("fade", "slow");
+  $("#chapter-1").slideToggle("slow");
+});
+
+// Chapter 2
+$(document).on("click", "#chapter2-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter2-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-2").slideUp("slow");
+
+  //Open this
+  $("#chapter2-card").addClass("active-chapter");
+  $("#chapter-2").slideToggle("slow");
+});
+
+// Chapter 3
+$(document).on("click", "#chapter3-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter3-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-3").slideUp("slow");
+
+  //Open this
+  $("#chapter3-card").addClass("active-chapter");
+  $("#chapter-3").slideToggle("slow");
+});
+
+// Chapter 4
+$(document).on("click", "#chapter4-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter4-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-4").slideUp("slow");
+
+  //Open this
+  $("#chapter4-card").addClass("active-chapter");
+  $("#chapter-4").slideToggle("slow");
+});
+
+// Chapter 5
+$(document).on("click", "#chapter5-card", function (e) {
+  //Close others
+  $(".chapter").not("#chapter5-card").removeClass("active-chapter");
+  $(".fullchapter").not("#chapter-5").slideUp("slow");
+
+  //Open this
+  $("#chapter5-card").addClass("active-chapter");
+  $("#chapter-5").slideToggle("slow");
 });
