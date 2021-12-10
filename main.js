@@ -78,7 +78,7 @@ $(document).on("click", "#chapter0-card", function (e) {
   $(".fullchapter").not("#prologue").slideUp("slow");
   //Open this
   $("#chapter0-card").addClass("active-chapter");
-  $("#prologue").slideToggle("slow");
+  $("#prologue").slideDown("slow");
 });
 
 // Chapter 1
@@ -89,7 +89,7 @@ $(document).on("click", "#chapter1-card", function (e) {
 
   //Open this
   $("#chapter1-card").addClass("active-chapter");
-  $("#chapter-1").slideToggle("slow");
+  $("#chapter-1").slideDown("slow");
 });
 
 // Chapter 2
@@ -100,7 +100,7 @@ $(document).on("click", "#chapter2-card", function (e) {
 
   //Open this
   $("#chapter2-card").addClass("active-chapter");
-  $("#chapter-2").slideToggle("slow");
+  $("#chapter-2").slideDown("slow");
 });
 
 // Chapter 3
@@ -111,7 +111,7 @@ $(document).on("click", "#chapter3-card", function (e) {
 
   //Open this
   $("#chapter3-card").addClass("active-chapter");
-  $("#chapter-3").slideToggle("slow");
+  $("#chapter-3").slideDown("slow");
 });
 
 // Chapter 4
@@ -122,7 +122,7 @@ $(document).on("click", "#chapter4-card", function (e) {
 
   //Open this
   $("#chapter4-card").addClass("active-chapter");
-  $("#chapter-4").slideToggle("slow");
+  $("#chapter-4").slideDown("slow");
 });
 
 // Chapter 5
@@ -133,5 +133,5 @@ $(document).on("click", "#chapter5-card", function (e) {
 
   //Open this
   $("#chapter5-card").addClass("active-chapter");
-  $("#chapter-5").slideToggle("slow");
+  $("#chapter-5").slideDown("slow");
 });
