@@ -43,3 +43,5 @@ $(document).mouseup(function (e) {
     title.removeClass("expanded");
   }
 });
+
+/* Chapters Page */
