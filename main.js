@@ -13,9 +13,9 @@ $(document).mouseup(function (e) {
   }
 });
 
-/* Header */
+/* Header, Background, Popup load */
 
-function header() {
+function essentials() {
   let header = document.createElement("header");
   header.innerHTML =
     "<img src='logo.png' /><ul><li><a href='pascheffect.html'>Pasch Effect</a></li><li><a href='chapters.html'>beyond mortal</a></li><li><a href='index.html'>lore</a></li></ul>";
@@ -29,7 +29,7 @@ function header() {
   document.body.prepend(popup, header, background);
 }
 
-window.addEventListener("load", header);
+window.addEventListener("load", essentials);
 
 /* Sidemenu with jQuery UI */
 
