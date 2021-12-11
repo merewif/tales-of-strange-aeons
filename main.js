@@ -13,6 +13,24 @@ $(document).mouseup(function (e) {
   }
 });
 
+/* Header */
+
+function header() {
+  let header = document.createElement("header");
+  header.innerHTML =
+    "<img src='logo.png' /><ul><li><a href='pascheffect.html'>Pasch Effect</a></li><li><a href='chapters.html'>beyond mortal</a></li><li><a href='index.html'>lore</a></li></ul>";
+
+  let popup = document.createElement("div");
+  popup.id = "popupwindow";
+
+  let background = document.createElement("div");
+  background.id = "bg-image";
+
+  document.body.prepend(popup, header, background);
+}
+
+window.addEventListener("load", header);
+
 /* Sidemenu with jQuery UI */
 
 $(document).ready(function toggle() {
