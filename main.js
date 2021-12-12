@@ -259,6 +259,10 @@ $(document).on("click", "#epilogue-card", function (e) {
 
 /* Book Cover Browser */
 
+$(document).ready(function () {
+  $("#blurb-container").load("./blurbs/book1-blurb.html");
+});
+
 $(document).on("click", ".booktitle", function (e) {
   let id = this.id;
   let activeImg = $("#cover-image-1").attr("src");
@@ -266,8 +270,8 @@ $(document).on("click", ".booktitle", function (e) {
   $(".booktitle").not(this).removeClass("active-title");
   $(this).addClass("active-title");
 
-  $("#section1-images").hide("fade");
-  $("#blurb").hide("fade");
+  $("#blurb").hide("slide");
+  $("#section1-images").delay(250).hide("fade", "fast");
 
   setTimeout(function () {
     $(".cover-image").attr("src", "./covers/" + id + ".jpg");
@@ -275,5 +279,5 @@ $(document).on("click", ".booktitle", function (e) {
   }, 400);
 
   $("#section1-images").show("fade");
-  $("#blurb").show("fade");
+  $("#blurb").delay(250).show("slide");
 });
