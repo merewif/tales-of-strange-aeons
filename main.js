@@ -267,10 +267,13 @@ $(document).on("click", ".booktitle", function (e) {
   $(this).addClass("active-title");
 
   $("#section1-images").hide("fade");
+  $("#blurb").hide("fade");
 
   setTimeout(function () {
     $(".cover-image").attr("src", "./covers/" + id + ".jpg");
-  }, 300);
+    $("#blurb-container").load("./blurbs/" + id + "-blurb.html");
+  }, 400);
 
   $("#section1-images").show("fade");
+  $("#blurb").show("fade");
 });
