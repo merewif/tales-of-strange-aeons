@@ -265,5 +265,5 @@ $(document).on("click", ".booktitle", function (e) {
   $(".booktitle").not(this).removeClass("active-title");
   $(this).addClass("active-title");
 
-  $("#cover-image").attr("src", "/covers/" + id + ".jpg");
+  $("#cover-image").attr("src", "./covers/" + id + ".jpg");
 });
