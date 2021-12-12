@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,400;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+@font-face {
+  font-family: "Equinox";
+  src: url(./assets/equinox/Equinox-Bold.otf);
+}
 
 html {
   scroll-behavior: smooth;
@@ -228,7 +232,7 @@ body {
 #sidemenu-content {
   display: none;
   position: fixed;
-  right: 4%;
+  right: 3.5%;
   top: 40%;
   text-align: right;
   background: rgba(0, 0, 0, 0.75);
@@ -386,10 +390,23 @@ header a:hover {
   display: flex;
   top: 30%;
   margin: 0 auto;
+  margin-right: 30%;
   width: 50%;
   height: 30vh;
   align-items: center;
   justify-content: center;
+}
+
+#section1-title {
+  position: absolute;
+  top: 21%;
+  left: 17%;
+  padding: 20px;
+  z-index: 100;
+  font-family: "Equinox";
+  font-size: 3em;
+  color: #03e9f4;
+  text-shadow: 3px 3px 3px #f40303;
 }
 
 #book-titles {
@@ -449,13 +466,13 @@ header a:hover {
   position: absolute;
   opacity: 1;
   top: -40%;
-  left: 35%;
+  left: 30%;
   max-width: 45%;
   z-index: 200;
 }
 
 #blurb {
-  z-index: 199;
+  z-index: 100;
   width: 15%;
   height: 50%;
   padding: 55px;
@@ -465,9 +482,15 @@ header a:hover {
   overflow: hidden;
   margin: 0 auto;
   top: calc(22%);
-  right: 7%;
+  right: 17%;
   box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.54);
   background: rgba(0, 0, 0, 0.75);
+}
+
+#blurb-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #blurb p {
