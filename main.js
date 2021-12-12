@@ -261,9 +261,16 @@ $(document).on("click", "#epilogue-card", function (e) {
 
 $(document).on("click", ".booktitle", function (e) {
   let id = this.id;
+  let activeImg = $("#cover-image-1").attr("src");
 
   $(".booktitle").not(this).removeClass("active-title");
   $(this).addClass("active-title");
 
-  $("#cover-image").attr("src", "./covers/" + id + ".jpg");
+  $("#section1-images").hide("fade");
+
+  setTimeout(function () {
+    $(".cover-image").attr("src", "./covers/" + id + ".jpg");
+  }, 300);
+
+  $("#section1-images").show("fade");
 });
