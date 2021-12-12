@@ -256,3 +256,14 @@ $(document).on("click", "#epilogue-card", function (e) {
   $("#epilogue-card").addClass("active-chapter");
   $("#epilogue").slideDown("slow");
 });
+
+/* Book Cover Browser */
+
+$(document).on("click", ".booktitle", function (e) {
+  let id = this.id;
+
+  $(".booktitle").not(this).removeClass("active-title");
+  $(this).addClass("active-title");
+
+  $("#cover-image").attr("src", "/covers/" + id + ".jpg");
+});
