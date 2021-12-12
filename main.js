@@ -1,7 +1,7 @@
 /* Popup Window */
 
 $(function () {
-  $("#popupwindow").load("popup.html");
+  $("#popupwindow").load("./assets/popup.html");
 });
 
 $(document).mouseup(function (e) {
@@ -18,7 +18,7 @@ $(document).mouseup(function (e) {
 function essentials() {
   let header = document.createElement("header");
   header.innerHTML =
-    "<img src='logo.png' /><ul><li><a href='pascheffect.html'>Pasch Effect</a></li><li><a href='chapters.html'>beyond mortal</a></li><li><a href='index.html'>lore</a></li></ul>";
+    "<img src='./assets/logo.png' /><ul><li><a href='pascheffect.html'>Pasch Effect</a></li><li><a href='chapters.html'>beyond mortal</a></li><li><a href='index.html'>lore</a></li></ul>";
 
   let popup = document.createElement("div");
   popup.id = "popupwindow";
