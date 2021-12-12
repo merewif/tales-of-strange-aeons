@@ -243,7 +243,7 @@ body {
 }
 
 .sidemenu-item {
-  padding: 13px;
+  padding: 16px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -277,13 +277,11 @@ body {
 /* Header Starts */
 
 header {
-  background: rgba(0, 0, 0, 0.75);
   margin: 0;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
   z-index: 1000;
 }
 
@@ -305,12 +303,14 @@ header ul li {
 header a {
   font-family: "Orbitron";
   text-decoration: none;
-  color: #03e9f4;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 1.25em;
   line-height: 1.25em;
   padding: 5px;
+  color: black;
+  text-shadow: 5px 5px 10px rgba(3, 233, 244, 1),
+    -3px -1px 12px rgba(3, 233, 244, 1);
 }
 
 header a:hover {
