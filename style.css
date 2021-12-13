@@ -245,6 +245,7 @@ body {
   width: 8%;
   padding: 20px;
   box-shadow: 5px 0px 0px #03e9f4;
+  z-index: 1000;
 }
 
 .sidemenu-item {
@@ -327,7 +328,6 @@ header a {
 
 header a:hover {
   color: black;
-  padding: 15px;
   /*
   background: #03e9f4;
   animation: neon 2s linear infinite;
