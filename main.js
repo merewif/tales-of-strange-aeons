@@ -17,6 +17,11 @@ $(document).on("click", "#leave-site", function (e) {
   history.back();
 });
 
+$(document).on("click", "#enter-site", function (e) {
+  let container = $("#popupwindow");
+  container.hide();
+});
+
 /* Header, Background, Popup load */
 
 function essentials() {
