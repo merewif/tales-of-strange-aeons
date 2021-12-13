@@ -104,168 +104,20 @@ $(document).on("click", ".chapter", function (event) {
   });
 });
 
-// Chapter 0
-$(document).on("click", "#chapter0-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter0-card").removeClass("active-chapter");
-  $(".fullchapter").not("#prologue").slideUp("slow");
-  //Open this
-  $("#chapter0-card").addClass("active-chapter");
-  $("#prologue").slideDown("slow");
-});
+$(document).on("click", ".chapter", function (e) {
+  // Title cards
+  $(".chapter").not(this).removeClass("active-chapter");
+  $(this).addClass("active-chapter");
+  let id = $(this).attr("id");
+  let idHTML = "./assets/books/beyond-mortal/" + id + ".html";
 
-// Chapter 1
-$(document).on("click", "#chapter1-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter1-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-1").slideUp("slow");
+  //Close chapter div
+  $("#chapter-open").slideUp("slow");
 
-  //Open this
-  $("#chapter1-card").addClass("active-chapter");
-  $("#chapter-1").slideDown("slow");
-});
-
-// Chapter 2
-$(document).on("click", "#chapter2-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter2-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-2").slideUp("slow");
-
-  //Open this
-  $("#chapter2-card").addClass("active-chapter");
-  $("#chapter-2").slideDown("slow");
-});
-
-// Chapter 3
-$(document).on("click", "#chapter3-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter3-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-3").slideUp("slow");
-
-  //Open this
-  $("#chapter3-card").addClass("active-chapter");
-  $("#chapter-3").slideDown("slow");
-});
-
-// Chapter 4
-$(document).on("click", "#chapter4-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter4-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-4").slideUp("slow");
-
-  //Open this
-  $("#chapter4-card").addClass("active-chapter");
-  $("#chapter-4").slideDown("slow");
-});
-
-// Chapter 5
-$(document).on("click", "#chapter5-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter5-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-5").slideUp("slow");
-
-  //Open this
-  $("#chapter5-card").addClass("active-chapter");
-  $("#chapter-5").slideDown("slow");
-});
-
-// Chapter 6
-$(document).on("click", "#chapter6-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter6-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-6").slideUp("slow");
-
-  //Open this
-  $("#chapter6-card").addClass("active-chapter");
-  $("#chapter-6").slideDown("slow");
-});
-
-// Chapter 7
-$(document).on("click", "#chapter7-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter7-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-7").slideUp("slow");
-
-  //Open this
-  $("#chapter7-card").addClass("active-chapter");
-  $("#chapter-7").slideDown("slow");
-});
-
-// Chapter 8
-$(document).on("click", "#chapter8-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter8-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-8").slideUp("slow");
-
-  //Open this
-  $("#chapter8-card").addClass("active-chapter");
-  $("#chapter-8").slideDown("slow");
-});
-
-// Chapter 9
-$(document).on("click", "#chapter9-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter9-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-9").slideUp("slow");
-
-  //Open this
-  $("#chapter9-card").addClass("active-chapter");
-  $("#chapter-9").slideDown("slow");
-});
-
-// Chapter 10
-$(document).on("click", "#chapter10-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter10-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-10").slideUp("slow");
-
-  //Open this
-  $("#chapter10-card").addClass("active-chapter");
-  $("#chapter-10").slideDown("slow");
-});
-
-// Chapter 11
-$(document).on("click", "#chapter11-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter11-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-11").slideUp("slow");
-
-  //Open this
-  $("#chapter11-card").addClass("active-chapter");
-  $("#chapter-11").slideDown("slow");
-});
-
-// Chapter 12
-$(document).on("click", "#chapter12-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter12-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-12").slideUp("slow");
-
-  //Open this
-  $("#chapter12-card").addClass("active-chapter");
-  $("#chapter-12").slideDown("slow");
-});
-
-// Chapter 13
-$(document).on("click", "#chapter13-card", function (e) {
-  //Close others
-  $(".chapter").not("#chapter13-card").removeClass("active-chapter");
-  $(".fullchapter").not("#chapter-13").slideUp("slow");
-
-  //Open this
-  $("#chapter13-card").addClass("active-chapter");
-  $("#chapter-13").slideDown("slow");
-});
-
-// Epilogue
-$(document).on("click", "#epilogue-card", function (e) {
-  //Close others
-  $(".chapter").not("#epilogue-card").removeClass("active-chapter");
-  $(".fullchapter").not("#epilogue").slideUp("slow");
-
-  //Open this
-  $("#epilogue-card").addClass("active-chapter");
-  $("#epilogue").slideDown("slow");
+  //Fill and reopen
+  setTimeout(function () {
+    $("#chapter-open").load(idHTML).slideDown("slow");
+  }, 500);
 });
 
 /* Book Cover Browser */
@@ -294,3 +146,14 @@ $(document).on("click", ".booktitle", function (e) {
 });
 
 /* Blogroll */
+
+/* Footer */
+
+//Create 3 styled footer column divs
+
+$(function () {
+  let footer = document.createElement("footer");
+  document.body.appendChild(footer);
+
+  $("footer").load("./assets/elements/footer.html");
+});
