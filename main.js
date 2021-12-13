@@ -13,6 +13,10 @@ $(document).mouseup(function (e) {
   }
 });
 
+$(document).on("click", "#leave-site", function (e) {
+  history.back();
+});
+
 /* Header, Background, Popup load */
 
 function essentials() {
@@ -282,3 +286,5 @@ $(document).on("click", ".booktitle", function (e) {
   $("#section1-images").show("fade");
   $("#blurb").delay(250).show("slide");
 });
+
+/* Blogroll */

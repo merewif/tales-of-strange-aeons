@@ -135,10 +135,6 @@ body {
   }
 }
 
-#spoiler {
-  padding: 10px;
-}
-
 #spoiler i {
   font-weight: 900;
 }
@@ -152,15 +148,19 @@ body {
   text-shadow: 4px 4px 4px #f40303;
   text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
     3px 3px 3px #f40303;
+  margin-top: 0;
 }
 
-#cookies {
+#spoiler {
   text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #spoiler p,
 #cookies p {
-  text-align: justify;
+  text-align: center;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -177,14 +177,13 @@ body {
 }
 
 #sub,
-#cookieAccept,
-#cookieDecline {
+.accept,
+.decline {
   background: transparent;
   border: 1px solid grey;
   height: 25px;
   color: white;
   font-family: "Montserrat";
-  text-transform: lowercase;
 }
 
 #sub:hover {
@@ -192,7 +191,7 @@ body {
   color: black;
 }
 
-#cookieAccept {
+.accept {
   background-color: #03e9f4;
   color: black;
   box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4;
