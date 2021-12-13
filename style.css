@@ -25,7 +25,7 @@ body {
   padding: 0;
   left: 0;
   z-index: -1;
-  background: url("./assets/cloudwalkers.jpg");
+  background: url("./assets/images/cloudwalkers.jpg");
   background-position: top;
   background-size: cover;
   filter: blur(2px);
@@ -284,17 +284,17 @@ body {
 
 header {
   margin: 0;
-  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+  position: sticky;
 }
 
 header img {
   width: 25%;
   height: auto;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 10px;
   float: left;
 }
@@ -307,7 +307,7 @@ header ul li {
   display: block;
   float: right;
   padding-right: 15px;
-  padding-top: 25px;
+  padding-top: 15px;
 }
 
 header a {
@@ -416,6 +416,10 @@ header a:hover {
   top: 23%;
   left: 15%;
   padding: 20px;
+  padding-top: 10px;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
   z-index: 100;
   font-family: "Equinox";
   font-size: 2em;
@@ -582,6 +586,7 @@ header a:hover {
 #chapterlist {
   position: relative;
   padding: 10%;
+  padding-top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 5px;
@@ -650,12 +655,15 @@ header a:hover {
   margin: 200px;
   margin-left: 145px;
   margin-bottom: 0;
-  margin-top: 100px;
+  margin-top: 0px;
   padding: 30px;
+  padding-top: 0px;
   background: rgba(0, 0, 0, 0.75);
   width: calc(100vw - 220px);
   display: none;
-  height: calc(78vh + 5px);
+  height: 82vh;
+  position: absolute;
+  top: 120px;
   overflow: scroll;
   overflow-x: hidden;
   scrollbar-width: none;

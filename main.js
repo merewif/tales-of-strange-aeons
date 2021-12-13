@@ -1,7 +1,7 @@
 /* Popup Window */
 
 $(function () {
-  $("#popupwindow").load("./assets/popup.html");
+  $("#popupwindow").load("./assets/elements/popup.html");
 });
 
 $(document).mouseup(function (e) {
@@ -17,8 +17,9 @@ $(document).mouseup(function (e) {
 
 function essentials() {
   let header = document.createElement("header");
-  header.innerHTML =
-    "<img src='./assets/logo.png' /><ul><li><a href='pascheffect.html'>Pasch Effect</a></li><li><a href='chapters.html'>beyond mortal</a></li><li><a href='index.html'>lore</a></li></ul>";
+  $(function () {
+    $("header").load("./assets/elements/header.html");
+  });
 
   let popup = document.createElement("div");
   popup.id = "popupwindow";
@@ -260,7 +261,7 @@ $(document).on("click", "#epilogue-card", function (e) {
 /* Book Cover Browser */
 
 $(document).ready(function () {
-  $("#blurb-container").load("./blurbs/book1-blurb.html");
+  $("#blurb-container").load("./assets/blurbs/book1-blurb.html");
 });
 
 $(document).on("click", ".booktitle", function (e) {
@@ -274,8 +275,8 @@ $(document).on("click", ".booktitle", function (e) {
   $("#section1-images").delay(250).hide("fade", "fast");
 
   setTimeout(function () {
-    $(".cover-image").attr("src", "./covers/" + id + ".jpg");
-    $("#blurb-container").load("./blurbs/" + id + "-blurb.html");
+    $(".cover-image").attr("src", "./assets/covers/" + id + ".jpg");
+    $("#blurb-container").load("./assets/blurbs/" + id + "-blurb.html");
   }, 400);
 
   $("#section1-images").show("fade");
