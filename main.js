@@ -20,6 +20,7 @@ $(document).on("click", "#leave-site", function (e) {
 $(document).on("click", "#enter-site", function (e) {
   let container = $("#popupwindow");
   container.hide();
+  document.cookie = "popup=accepted; path=/";
 });
 
 /* Header, Background, Popup load */
@@ -36,7 +37,7 @@ function essentials() {
   let background = document.createElement("div");
   background.id = "bg-image";
 
-  document.body.prepend(popup, header, background);
+  document.body.prepend(header, background);
 }
 
 window.addEventListener("load", essentials);
