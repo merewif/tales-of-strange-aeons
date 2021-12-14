@@ -111,7 +111,9 @@ $(document).on("click", ".booktitle", function (e) {
   $("#section1-images").delay(250).hide("fade", "fast");
 
   setTimeout(function () {
-    $(".cover-image").attr("src", "./assets/covers/" + id + ".jpg");
+    $(".cover-image")
+      .delay(1000)
+      .attr("src", "./assets/covers/" + id + ".jpg");
     $("#blurb-container").load("./assets/blurbs/" + id + "-blurb.html");
   }, 400);
 
