@@ -113,7 +113,7 @@ $(document).on("click", ".booktitle", function (e) {
   setTimeout(function () {
     $(".cover-image").attr("src", "./assets/covers/" + id + ".jpg");
     $("#blurb-container").load("./assets/blurbs/" + id + "-blurb.html");
-  }, 500);
+  }, 100);
 
   setTimeout(function () {
     $("#section1-images").show("fade");
