@@ -3,7 +3,6 @@ const fs = require("fs");
 
 // XML string to be parsed to JSON
 const xml = fs.readFileSync("./assets/feed/feed");
-const url = "https://pasch.substack.com/feed";
 
 // convert XML to JSON
 xml2js.parseString(url, (err, result) => {
