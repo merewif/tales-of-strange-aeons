@@ -5,7 +5,7 @@ const fs = require("fs");
 const url = "https://pasch.substack.com/feed";
 
 https.get(url, (response) => {
-  const filePath = fs.createWriteStream(`./assets/xml2json/feed`);
+  const filePath = fs.createWriteStream(`./assets/feed/feed`);
   response.pipe(filePath);
   filePath.on("finish", () => {
     filePath.close();

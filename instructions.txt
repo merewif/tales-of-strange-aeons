@@ -1,0 +1,6 @@
+Blogroll
+- Run 'node ./assets/feed/feed-downloader.js' to fetch the xml file from Substack.
+- Run 'node .assets/feed/xml2json.js" to convert xml to the displayed JSON.
+
+Header, Footer, Popup 
+- Change footer.html, header.html, popup.html in ./assets/elements/ to modify the contents.
