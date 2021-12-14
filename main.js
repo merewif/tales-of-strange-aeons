@@ -132,7 +132,7 @@ $(function () {
 });
 
 /* Blogroll */
-
+/*
 function loadBlogposts() {
   fetch("./assets/blogposts.json")
     .then((r) => r.json())
@@ -142,6 +142,7 @@ function loadBlogposts() {
 function displayBlogposts(posts) {
   for (let i = 0; i < posts.length; i++) {
     displayBlogpost(posts[i]);
+    console.log(posts[i]);
   }
 }
 
@@ -167,4 +168,45 @@ function displayBlogpost(post) {
   document.getElementById("blog").append(link);
 }
 
+window.addEventListener("load", loadBlogposts);*/
+
+function loadBlogposts() {
+  fetch("./assets/blogposts.json")
+    .then((r) => r.json())
+    .then(displayBlogposts);
+}
+
+function displayBlogposts(posts) {
+  for (let i = 0; i < posts.rss.channel[0].item.length; i++) {
+    displayBlogpost(posts.rss.channel[0].item[i]);
+  }
+}
+
+function displayBlogpost(post) {
+  let link = document.createElement("a");
+  link.href = post.link[0];
+  link.target = "_blank";
+
+  let title = document.createElement("h1");
+  title.className = "postname";
+  title.innerText = post.title[0];
+
+  let subtitle = document.createElement("h2");
+  subtitle.className = "subtitle";
+  subtitle.innerText = post.description[0];
+
+  let box = document.createElement("div");
+  box.className = "blogcard";
+
+  box.append(title, subtitle);
+  link.append(box);
+
+  document.getElementById("blog").append(link);
+}
+
 window.addEventListener("load", loadBlogposts);
+
+/*
+ 
+
+*/
