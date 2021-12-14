@@ -116,7 +116,7 @@ $(document).on("click", ".booktitle", function (e) {
   }, 400);
 
   $("#section1-images").show("fade");
-  $("#blurb").delay(250).show("slide");
+  $("#blurb").show("slide");
 });
 
 /* Footer */
