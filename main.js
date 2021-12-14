@@ -171,7 +171,7 @@ function displayBlogpost(post) {
 window.addEventListener("load", loadBlogposts);*/
 
 function loadBlogposts() {
-  fetch("./assets/blogposts.json")
+  fetch("./assets/feed/blogposts.json")
     .then((r) => r.json())
     .then(displayBlogposts);
 }
