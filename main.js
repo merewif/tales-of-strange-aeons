@@ -103,7 +103,6 @@ $(document).ready(function () {
 
 $(document).on("click", ".booktitle", function (e) {
   let id = this.id;
-  let activeImg = $("#cover-image-1").attr("src");
 
   $(".booktitle").not(this).removeClass("active-title");
   $(this).addClass("active-title");
@@ -132,43 +131,6 @@ $(function () {
 });
 
 /* Blogroll */
-/*
-function loadBlogposts() {
-  fetch("./assets/blogposts.json")
-    .then((r) => r.json())
-    .then(displayBlogposts);
-}
-
-function displayBlogposts(posts) {
-  for (let i = 0; i < posts.length; i++) {
-    displayBlogpost(posts[i]);
-    console.log(posts[i]);
-  }
-}
-
-function displayBlogpost(post) {
-  let link = document.createElement("a");
-  link.href = post.link;
-  link.target = "_blank";
-
-  let title = document.createElement("h1");
-  title.className = "postname";
-  title.innerText = post.title.cdataSection;
-
-  let subtitle = document.createElement("h2");
-  subtitle.className = "subtitle";
-  subtitle.innerText = post.description.cdataSection;
-
-  let box = document.createElement("div");
-  box.className = "blogcard";
-
-  box.append(title, subtitle);
-  link.append(box);
-
-  document.getElementById("blog").append(link);
-}
-
-window.addEventListener("load", loadBlogposts);*/
 
 function loadBlogposts() {
   fetch("./assets/feed/blogposts.json")
@@ -205,8 +167,3 @@ function displayBlogpost(post) {
 }
 
 window.addEventListener("load", loadBlogposts);
-
-/*
- 
-
-*/
