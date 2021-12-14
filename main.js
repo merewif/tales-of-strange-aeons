@@ -111,14 +111,14 @@ $(document).on("click", ".booktitle", function (e) {
   $("#section1-images").delay(250).hide("fade", "fast");
 
   setTimeout(function () {
-    $(".cover-image")
-      .delay(500)
-      .attr("src", "./assets/covers/" + id + ".jpg");
+    $(".cover-image").attr("src", "./assets/covers/" + id + ".jpg");
     $("#blurb-container").load("./assets/blurbs/" + id + "-blurb.html");
-  }, 400);
+  }, 500);
 
-  $("#section1-images").show("fade");
-  $("#blurb").show("slide");
+  setTimeout(function () {
+    $("#section1-images").show("fade");
+    $("#blurb").show("slide");
+  }, 1000);
 });
 
 /* Footer */
