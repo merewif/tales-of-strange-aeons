@@ -112,7 +112,7 @@ $(document).on("click", ".booktitle", function (e) {
 
   setTimeout(function () {
     $(".cover-image")
-      .delay(1000)
+      .delay(500)
       .attr("src", "./assets/covers/" + id + ".jpg");
     $("#blurb-container").load("./assets/blurbs/" + id + "-blurb.html");
   }, 400);

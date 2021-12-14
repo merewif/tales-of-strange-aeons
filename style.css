@@ -540,6 +540,7 @@ header a:hover {
   left: 35%;
   max-width: 50%;
   z-index: 200;
+  transition-duration: 0.3s;
 }
 
 #blurb {
