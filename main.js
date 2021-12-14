@@ -134,7 +134,7 @@ $(function () {
 /* Blogroll */
 
 function loadBlogposts() {
-  fetch("blogposts.json")
+  fetch("./assets/blogposts.json")
     .then((r) => r.json())
     .then(displayBlogposts);
 }
