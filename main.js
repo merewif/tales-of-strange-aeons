@@ -1,29 +1,4 @@
-/* Popup Window */
-
-$(function () {
-  $("#popupwindow").load("./assets/elements/popup.html");
-});
-
-$(document).mouseup(function (e) {
-  let container = $("#popupwindow");
-
-  // If the target of the click isn't the container
-  if (!container.is(e.target) && container.has(e.target).length === 0) {
-    container.hide();
-  }
-});
-
-$(document).on("click", "#leave-site", function (e) {
-  history.back();
-});
-
-$(document).on("click", "#enter-site", function (e) {
-  let container = $("#popupwindow");
-  container.hide();
-  document.cookie = "popup=accepted; path=/";
-});
-
-/* Header, Background, Popup load */
+/* Header, Background load */
 
 function essentials() {
   let header = document.createElement("header");
@@ -145,8 +120,6 @@ $(document).on("click", ".booktitle", function (e) {
   $("#blurb").delay(250).show("slide");
 });
 
-/* Blogroll */
-
 /* Footer */
 
 //Create 3 styled footer column divs
@@ -157,3 +130,41 @@ $(function () {
 
   $("footer").load("./assets/elements/footer.html");
 });
+
+/* Blogroll */
+
+function loadBlogposts() {
+  fetch("blogposts.json")
+    .then((r) => r.json())
+    .then(displayBlogposts);
+}
+
+function displayBlogposts(posts) {
+  for (let i = 0; i < posts.length; i++) {
+    displayBlogpost(posts[i]);
+  }
+}
+
+function displayBlogpost(post) {
+  let link = document.createElement("a");
+  link.href = post.link;
+  link.target = "_blank";
+
+  let title = document.createElement("h1");
+  title.className = "postname";
+  title.innerText = post.title.cdataSection;
+
+  let subtitle = document.createElement("h2");
+  subtitle.className = "subtitle";
+  subtitle.innerText = post.description.cdataSection;
+
+  let box = document.createElement("div");
+  box.className = "blogcard";
+
+  box.append(title, subtitle);
+  link.append(box);
+
+  document.getElementById("blog").append(link);
+}
+
+window.addEventListener("load", loadBlogposts);

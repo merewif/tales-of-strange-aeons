@@ -1,5 +1,25 @@
 {
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "xml2js": "^0.4.23"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "tales-of-strange-aeons",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merewif/tales-of-strange-aeons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/merewif/tales-of-strange-aeons/issues"
+  },
+  "homepage": "https://github.com/merewif/tales-of-strange-aeons#readme",
+  "description": ""
 }

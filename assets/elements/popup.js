@@ -23,11 +23,9 @@ $(document).on("click", "#enter-site", function (e) {
   document.cookie = "popup=accepted; path=/";
 });
 
-/* Header, Background, Popup load */
+/* Popup load */
 
 function popup() {
-  let header = document.createElement("header");
-
   let popup = document.createElement("div");
   popup.id = "popupwindow";
 
