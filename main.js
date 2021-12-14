@@ -108,12 +108,12 @@ $(document).on("click", ".booktitle", function (e) {
   $(this).addClass("active-title");
 
   $("#blurb").hide("slide");
-  $("#section1-images").delay(250).hide("fade", "fast");
+  $("#section1-images").hide("fade", "fast");
 
   setTimeout(function () {
     $(".cover-image").attr("src", "./assets/covers/" + id + ".jpg");
     $("#blurb-container").load("./assets/blurbs/" + id + "-blurb.html");
-  }, 100);
+  }, 400);
 
   setTimeout(function () {
     $("#section1-images").show("fade");
