@@ -199,6 +199,7 @@ a {
 }
 
 #sub,
+#subscribe,
 .accept,
 .decline {
   background: transparent;
@@ -206,6 +207,7 @@ a {
   height: 25px;
   color: white;
   font-family: "Montserrat";
+  cursor: pointer;
 }
 
 #sub:hover {
@@ -888,6 +890,10 @@ footer a {
 
 #contacts li i {
   padding-right: 10px;
+}
+
+#newsletter-input:focus {
+  outline: none;
 }
 
 /* Blog */
