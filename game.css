@@ -36,15 +36,16 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  cursor: url("/assets/images/cursor.png"), pointer;
+  cursor: url("./assets/images/cursor.png"), pointer;
 }
 
 #gamebox {
   height: 100vh;
   width: 100vw;
-  background: url("/assets/elements/game-assets/chapter-1/cobdens_voyage_corridor.jpg");
+  background: url("./assets/elements/game-assets/chapter-1/cobdens_voyage_corridor.jpg");
   background-size: cover;
-  cursor: url("/assets/images/cursor.png"), pointer;
+  background-position: center;
+  cursor: url("./assets/images/cursor.png"), pointer;
 }
 
 #gamecontrols {
@@ -86,7 +87,7 @@
 .gamebutton {
   background: none;
   border: 0px solid #03e9f4;
-  width: 400px;
+  width: 24%;
   height: 40px;
   font-family: "Montserrat";
   font-size: 1.5em;
@@ -96,7 +97,7 @@
   padding: 5px;
   color: #03e9f4;
   text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
-  cursor: url("/assets/images/cursor.png"), pointer;
+  cursor: url("./assets/images/cursor.png"), pointer;
 }
 
 .gamebutton:hover {
