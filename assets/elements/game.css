@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,400;1,900&display=swap");
+
+#headerlogo img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15%;
+  padding-top: 10px;
+  animation: header-img-animation 2s linear 1;
+  animation-delay: 10s;
+  cursor: pointer;
+}
+
+@keyframes header-img-animation {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  51%,
+  74% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  76%,
+  99% {
+    opacity: 1;
+  }
+}
+
+#game {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  cursor: url("/assets/images/cursor.png"), pointer;
+}
+
+#gamebox {
+  height: 100vh;
+  width: 100vw;
+  background: url("/assets/elements/game-assets/chapter-1/cobdens_voyage_corridor.jpg");
+  background-size: cover;
+  cursor: url("/assets/images/cursor.png"), pointer;
+}
+
+#gamecontrols {
+  border: 5px solid #03e9f4;
+  height: 22.5%;
+  width: 100%;
+  position: relative;
+  top: 77.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 1);
+  box-shadow: inset 0 0 5px #03e9f4, inset 0 0 25px #03e9f4,
+    inset 0 0 50px #03e9f4, 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4;
+}
+
+#gametext {
+  font-family: "Montserrat";
+  font-size: 1.1em;
+  line-height: 1em;
+  padding: 50px;
+  padding-bottom: 25px;
+  height: 50px;
+  text-align: justify;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+#gamebuttons {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.gamebutton {
+  background: none;
+  border: 0px solid #03e9f4;
+  width: 400px;
+  height: 40px;
+  font-family: "Montserrat";
+  font-size: 1.5em;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: lowercase;
+  padding: 5px;
+  color: #03e9f4;
+  text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
+  cursor: url("/assets/images/cursor.png"), pointer;
+}
+
+.gamebutton:hover {
+  color: white;
+  text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
+}
+
+#blinker {
+  animation: blinker 1s linear infinite;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+footer {
+  display: none;
+}
+
+header {
+  display: none;
+}

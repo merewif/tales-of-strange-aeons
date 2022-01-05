@@ -350,6 +350,7 @@ header img {
     opacity: 1;
   }
 }
+
 */ header ul {
   margin: 0;
 }
@@ -943,11 +944,4 @@ h2 {
 #blog h2 {
   text-transform: lowercase;
   font-weight: 300;
-}
-
-/* Podcast Page */
-
-#podcast-player {
-  width: 100vw;
-  height: 100vh;
 }
