@@ -14,7 +14,7 @@ function displayIntro(chapterSentences) {
   $("#introtext").text(chapterSentences[0]);
 
   $(document).on("click keydown", "body", function (e) {
-    if (e.keyCode !== 13 && event.type !== "click") {
+    if (e.keyCode !== 13 && e.type !== "click") {
       // 13 az enter, ha nem az, akkor semmit ne csináljon
       return false;
     }
@@ -72,7 +72,12 @@ function displayChapter(chapterJson) {
   $("#gametext").text(chapterJson[0]);
 
   // Click to load the next line of text
-  $(document).on("click", "#gametext", function (e) {
+  $(document).on("click keydown", "#gametext", function (e) {
+    if (e.keyCode !== 13 && e.type !== "click") {
+      // 13 az enter, ha nem az, akkor semmit ne csináljon
+      return false;
+    }
+
     // Halting the narration until the user chooses an option
     if ($("#gamebutton1").text() !== "") {
       console.log("Awaiting user response.");
