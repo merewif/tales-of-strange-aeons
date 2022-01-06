@@ -126,7 +126,7 @@ function displayChapter(sentence) {
       });
 
       // Option Button 2
-      $("#gamebutton1").unbind("click");
+      $("#gamebutton1");
       $(document).on("click", "#gamebutton1", function (event) {
         event.stopPropagation();
         let stepCounter = optionsObject[1][1];
@@ -141,11 +141,12 @@ function displayChapter(sentence) {
 
         // Bug happens here
         $("#gametext").html(sentence[i + stepCounter]);
+        i = i + stepCounter;
 
         // Get the array index of gametext content and set it as the new index for the text display
-        const findTextIndex = (element) =>
+        /* const findTextIndex = (element) =>
           element === sentence[i + stepCounter];
-        i = sentence.findIndex(findTextIndex);
+        i = sentence.findIndex(findTextIndex); */
 
         console.log(
           "After: " +
