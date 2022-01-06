@@ -14,7 +14,8 @@ function displayIntro(chapterSentences) {
   $("#introtext").text(chapterSentences[0]);
 
   $(document).on("click keydown", "body", function (e) {
-    if(e.keyCode !== 13 && event.type !== 'click') { // 13 az enter, ha nem az, akkor semmit ne csináljon
+    if (e.keyCode !== 13 && event.type !== "click") {
+      // 13 az enter, ha nem az, akkor semmit ne csináljon
       return false;
     }
     // Incrementing the tracker with each click
@@ -65,7 +66,7 @@ function fetchChapterJson(chapter) {
 // The visual novel function
 function displayChapter(sentence) {
   // Variable to track the current line
-  let i = 0;
+  let currentLine = 0;
 
   // Loading the initial line of text
   $("#gametext").text(sentence[0]);
@@ -79,19 +80,22 @@ function displayChapter(sentence) {
     }
 
     // Tracker incrementation
-    ++i;
+    ++currentLine;
 
     // Stops trying to load the next line if tracker reaches the length of the array
-    if (i >= sentence.length) {
+    if (currentLine >= sentence.length) {
       return;
     }
 
     // If the next item of array is a string it is loaded into the textbox
-    if (typeof sentence[i] === "string" || sentence[i] instanceof String) {
-      $("#gametext").html(sentence[i]);
+    if (
+      typeof sentence[currentLine] === "string" ||
+      sentence[currentLine] instanceof String
+    ) {
+      $("#gametext").html(sentence[currentLine]);
     } else {
       // If the next item of array is an object it loads the value text into the buttons
-      let optionsObject = Object.values(sentence[i]);
+      let optionsObject = Object.values(sentence[currentLine]);
       for (let i = 0; i < optionsObject.length; i++) {
         $("#gamebutton" + i).text(optionsObject[i][0]);
       }
@@ -105,19 +109,19 @@ function displayChapter(sentence) {
         console.log(
           "Before: " +
             "Current line index: " +
-            i +
+            currentLine +
             ", How many lines to skip: " +
             stepCounter
         );
 
         // Bug happens here
-        $("#gametext").html(sentence[i + stepCounter]);
-        i = i + stepCounter;
+        $("#gametext").html(sentence[currentLine + stepCounter]);
+        currentLine = currentLine + stepCounter;
 
         console.log(
           "After: " +
             "Current line index: " +
-            i +
+            currentLine +
             ", How many lines to skip: " +
             stepCounter
         );
@@ -137,24 +141,24 @@ function displayChapter(sentence) {
         console.log(
           "Before: " +
             "Current line index: " +
-            i +
+            currentLine +
             ", How many lines to skip: " +
             stepCounter
         );
 
         // Bug happens here
-        $("#gametext").html(sentence[i + stepCounter]);
-        i = i + stepCounter;
+        $("#gametext").html(sentence[currentLine + stepCounter]);
+        currentLine = currentLine + stepCounter;
 
         // Get the array index of gametext content and set it as the new index for the text display
         /* const findTextIndex = (element) =>
-          element === sentence[i + stepCounter];
-        i = sentence.findIndex(findTextIndex); */
+          element === sentence[currentLine + stepCounter];
+        currentLine = sentence.findIndex(findTextIndex); */
 
         console.log(
           "After: " +
             "Current line index: " +
-            i +
+            currentLine +
             ", How many lines to skip: " +
             stepCounter
         );
@@ -167,8 +171,8 @@ function displayChapter(sentence) {
       // Option Button 3
       $(document).on("click", "#gamebutton2", function (event) {
         event.stopPropagation();
-        $("#gametext").html(sentence[i + optionsObject[2][1]]);
-        i = i + optionsObject[2][1];
+        $("#gametext").html(sentence[currentLine + optionsObject[2][1]]);
+        currentLine = currentLine + optionsObject[2][1];
 
         for (let i = 0; i < 3; i++) {
           $("#gamebutton" + i).text("");
@@ -178,8 +182,8 @@ function displayChapter(sentence) {
       // Option Button 4
       $(document).on("click", "#gamebutton3", function (event) {
         event.stopPropagation();
-        $("#gametext").html(sentence[i + optionsObject[3][1]]);
-        i = i + optionsObject[3][1];
+        $("#gametext").html(sentence[currentLine + optionsObject[3][1]]);
+        currentLine = currentLine + optionsObject[3][1];
 
         for (let i = 0; i < 3; i++) {
           $("#gamebutton" + i).text("");
