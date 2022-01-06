@@ -66,24 +66,28 @@ function fetchChapterJson(chapter) {
     .then((data) => {
       chapterJson = data;
 
+      $('.gamebutton').hide(); // initially hiding choice buttons, displayChapterLine shows them if needed
+
       // Loading the initial line of text
-      $("#gametext").text(chapterJson[0]);
+      displayChapterLine();
     });
 }
 
 
 // Click to load the next line of text
 $(document).on("click", "#gametext", function (e) {
-  // Tracker incrementation
-  ++currentLineIndex;
+  displayChapterLine();
+});
 
+
+function displayChapterLine() {
   // Stops trying to load the next line if tracker reaches the length of the array
   if (currentLineIndex >= chapterJson.length) {
     return;
   }
 
   // Halting the narration until the user chooses an option
-  if ($("#gamebutton1").text() !== "") { // i dont get this condition as a way to check if the user has chosen anything - eszter
+  if ($(".gamebutton").is(':visible')) {
     console.log("Awaiting user response.");
     return;
   }
@@ -92,17 +96,22 @@ $(document).on("click", "#gametext", function (e) {
   if (!(typeof chapterJson[currentLineIndex] === "string" || chapterJson[currentLineIndex] instanceof String)) {
     // display option buttons
     let optionsObject = Object.values(chapterJson[currentLineIndex]);
+
     for (let i = 0; i < optionsObject.length; i++) {
-      $("#gamebutton" + i).text(optionsObject[i][0]);
+      let evokedButton = $('#gamebuttons').children(':nth-child(' + (i + 1) + ')');
+      evokedButton.show();
+      evokedButton.text(optionsObject[i][0]);
     }
 
-    // show the line next after the options in textbox
     $("#gametext").html(chapterJson[currentLineIndex + 1]);
   } else {
     // show line in textbox
     $("#gametext").html(chapterJson[currentLineIndex]);
+
+    // Tracker incrementation
+    ++currentLineIndex;
   }
-});
+}
 
 
 // Handling user choice
@@ -113,11 +122,13 @@ $(document).on("click", ".gamebutton", function (event) {
   let buttonNum = $(this).parent().children().index($(this));
   let linesToSkip = optionsObject[buttonNum][1];
 
-  // Bug happens here
   currentLineIndex += linesToSkip;
 
-  $('.gamebutton').text("");
-  $("#gametext").html(chapterJson[currentLineIndex]);
+  // Tracker incrementation
+  ++currentLineIndex;
+
+  $('.gamebutton').hide();
+  displayChapterLine();
 });
 
 

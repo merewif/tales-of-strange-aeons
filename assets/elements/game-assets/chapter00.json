@@ -2,7 +2,7 @@
   "line 1: There was no crime and no violence, no misery and want, no aging and no illness, no war, no ruling elite, <i>no death</i>.",
 
   {
-    "option01": ["Skip 0 lines", 0],
+    "option01": ["Skip 1 lines", 1],
     "option02": ["Jump ahead 3 lines", 3]
   },
 
