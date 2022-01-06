@@ -96,10 +96,14 @@ function displayChapter(sentence) {
       // Handling user choice
       $(document).on("click", "#gamebutton0", function (event) {
         event.stopPropagation();
-        $("#gametext").html(sentence[i + optionsObject[0][1]]);
+        let stepCounter = optionsObject[0][1];
+        console.log("Before: " + i, stepCounter);
 
-        // Bug source
-        i = i + optionsObject[0][1];
+        // Bug Source
+        $("#gametext").html(sentence[i + stepCounter]);
+        i = i + stepCounter;
+
+        console.log("After: " + i, stepCounter);
 
         // Removing all button text
         for (let i = 0; i < 3; i++) {
@@ -109,8 +113,15 @@ function displayChapter(sentence) {
 
       $(document).on("click", "#gamebutton1", function (event) {
         event.stopPropagation();
-        $("#gametext").html(sentence[i + optionsObject[1][1]]);
-        i = i + optionsObject[1][1];
+        let stepCounter = optionsObject[1][1];
+
+        console.log("Before: " + i, stepCounter);
+
+        // Bug source
+        $("#gametext").html(sentence[i + stepCounter]);
+        i = i + stepCounter;
+
+        console.log("After: " + i, stepCounter);
 
         for (let i = 0; i < 3; i++) {
           $("#gamebutton" + i).text("");
