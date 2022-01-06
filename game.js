@@ -42,7 +42,7 @@ function chapterSelection() {
 }
 
 function fetchChapterJson(chapter) {
-  let urlConstructor = "/assets/elements/game-assets/" + chapter + ".json";
+  let urlConstructor = "./assets/elements/game-assets/" + chapter + ".json";
   fetch(urlConstructor)
     .then((response) => response.json())
     .then((data) => {
