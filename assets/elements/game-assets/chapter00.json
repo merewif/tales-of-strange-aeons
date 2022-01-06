@@ -3,39 +3,31 @@
 
   {
     "option01": ["Skip 0 lines", 0],
-    "option02": ["Skip 3 lines", 3]
+    "option02": ["Jump ahead 3 lines", 3]
   },
 
-  "line 3: Ana took a deep breath to take in the calm of the world.",
+  "line 2: Ana took a deep breath to take in the calm of the world.",
 
-  "line 4: She closed her eyes to relish the moment and tried, but a nagging thought at the back of her mind kept her keen and alert.",
+  "line 3: She closed her eyes to relish the moment and tried, but a nagging thought at the back of her mind kept her keen and alert.",
 
-  "line 5: “Right,” she thought as she shook her head to return to reality. “I can’t sit around idle either.”",
+  "line 4: “Right,” she thought as she shook her head to return to reality. “I can’t sit around idle either.”",
 
-  "line 6: Her skirt fluttering and blowing up in the wind of the fall would definitely be less than ladylike.",
+  "line 5: Her skirt fluttering and blowing up in the wind of the fall would definitely be less than ladylike.",
 
   {
-    "option01": ["Skip 1 lines", 1],
-    "option02": ["Skip 4 lines", 4]
+    "option01": ["Jump ahead 2 lines", 2],
+    "option02": ["Jump ahead 3 lines", 3]
   },
 
-  "line 8: But the sensation of gravity weighing on her, the adrenaline rushing into her mind, the wind buffeting her skin was too alluring to end it so abruptly.",
+  "line 6: But the sensation of gravity weighing on her, the adrenaline rushing into her mind, the wind buffeting her skin was too alluring to end it so abruptly.",
 
-  "line 9: She fell and shifted her body to see the skydock grow ever more distant as she neared the ground.",
+  "line 7: She fell and shifted her body to see the skydock grow ever more distant as she neared the ground.",
 
-  "line 10: Some three thousand feet over the ground she closed her eyes for a mere second to access her artificial cortex with her mind.",
+  "line 8: Some three thousand feet over the ground she closed her eyes for a mere second to access her artificial cortex with her mind.",
 
-  "line 11: As a response to her mental command, a blue hue alighted her skin as she activated her physical shield against the heat and the jet engines of her backpack fired up with a high whistle.",
+  "line 9: As a response to her mental command, a blue hue alighted her skin as she activated her physical shield against the heat and the jet engines of her backpack fired up with a high whistle.",
 
-  "line 12: The falling stopped and she gently navigated herself back onto the dock.",
+  "line 10: The falling stopped and she gently navigated herself back onto the dock.",
 
-  "line 13: She looked around as she landed to see if anyone had seen it, then, seeing nobody save for the cameras, she walked back to the control room.",
-
-  "There was one starship that bothered her.",
-
-  "It was nearing the end of her shift and Cobden’s Voyage was still sitting in the dock ever since the morning, without any response from the crew, without anyone unloading the shipment.",
-
-  "Stranger still, the AI of the ship was unresponsive as well.",
-
-  "It wasn’t entirely unusual, as long space travels often ended while the crew was taking their well-earned rest after the journey to the outer worlds, and she knew there is no sleep deeper, more still and rejuvenating than that on a starship in the perfect emptiness of space, and to get the most out of the opportunity, sometimes they disabled every possible source of disturbance."
+  "line 11: It wasn’t entirely unusual, as long space travels often ended while the crew was taking their well-earned rest after the journey to the outer worlds, and she knew there is no sleep deeper, more still and rejuvenating than that on a starship in the perfect emptiness of space, and to get the most out of the opportunity, sometimes they disabled every possible source of disturbance."
 ]
