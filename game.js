@@ -103,7 +103,7 @@ function displayChapterLine() {
       evokedButton.text(optionsObject[i][0]);
     }
 
-    $("#gametext").html(chapterJson[currentLineIndex + 1]);
+    $("#gametext").html(chapterJson[currentLineIndex - 1]);
   } else {
     // show line in textbox
     $("#gametext").html(chapterJson[currentLineIndex]);
@@ -128,6 +128,7 @@ $(document).on("click", ".gamebutton", function (event) {
   ++currentLineIndex;
 
   $('.gamebutton').hide();
+
   displayChapterLine();
 });
 
