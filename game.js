@@ -101,7 +101,7 @@ function displayChapter(sentence) {
         let stepCounter = optionsObject[0][1];
         console.log(
           "Before: " +
-            "Index: " +
+            "Current line index: " +
             i +
             ", How many lines to skip: " +
             stepCounter
@@ -112,7 +112,11 @@ function displayChapter(sentence) {
         i = i + stepCounter;
 
         console.log(
-          "After: " + "Index: " + i + ", How many lines to skip: " + stepCounter
+          "After: " +
+            "Current line index: " +
+            i +
+            ", How many lines to skip: " +
+            stepCounter
         );
 
         // Removing all button text
@@ -129,7 +133,7 @@ function displayChapter(sentence) {
 
         console.log(
           "Before: " +
-            "Index: " +
+            "Current line index: " +
             i +
             ", How many lines to skip: " +
             stepCounter
@@ -144,7 +148,11 @@ function displayChapter(sentence) {
         i = sentence.findIndex(findTextIndex);
 
         console.log(
-          "After: " + "Index: " + i + ", How many lines to skip: " + stepCounter
+          "After: " +
+            "Current line index: " +
+            i +
+            ", How many lines to skip: " +
+            stepCounter
         );
 
         for (let i = 0; i < 3; i++) {
