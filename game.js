@@ -64,12 +64,12 @@ function fetchChapterJson(chapter) {
 }
 
 // The visual novel function
-function displayChapter(sentence) {
+function displayChapter(chapterJson) {
   // Variable to track the current line
   let currentLine = 0;
 
   // Loading the initial line of text
-  $("#gametext").text(sentence[0]);
+  $("#gametext").text(chapterJson[0]);
 
   // Click to load the next line of text
   $(document).on("click", "#gametext", function (e) {
@@ -83,19 +83,19 @@ function displayChapter(sentence) {
     ++currentLine;
 
     // Stops trying to load the next line if tracker reaches the length of the array
-    if (currentLine >= sentence.length) {
+    if (currentLine >= chapterJson.length) {
       return;
     }
 
     // If the next item of array is a string it is loaded into the textbox
     if (
-      typeof sentence[currentLine] === "string" ||
-      sentence[currentLine] instanceof String
+      typeof chapterJson[currentLine] === "string" ||
+      chapterJson[currentLine] instanceof String
     ) {
-      $("#gametext").html(sentence[currentLine]);
+      $("#gametext").html(chapterJson[currentLine]);
     } else {
       // If the next item of array is an object it loads the value text into the buttons
-      let optionsObject = Object.values(sentence[currentLine]);
+      let optionsObject = Object.values(chapterJson[currentLine]);
       for (let i = 0; i < optionsObject.length; i++) {
         $("#gamebutton" + i).text(optionsObject[i][0]);
       }
@@ -115,7 +115,7 @@ function displayChapter(sentence) {
         );
 
         // Bug happens here
-        $("#gametext").html(sentence[currentLine + stepCounter]);
+        $("#gametext").html(chapterJson[currentLine + stepCounter]);
         currentLine = currentLine + stepCounter;
 
         console.log(
@@ -147,13 +147,13 @@ function displayChapter(sentence) {
         );
 
         // Bug happens here
-        $("#gametext").html(sentence[currentLine + stepCounter]);
+        $("#gametext").html(chapterJson[currentLine + stepCounter]);
         currentLine = currentLine + stepCounter;
 
         // Get the array index of gametext content and set it as the new index for the text display
         /* const findTextIndex = (element) =>
-          element === sentence[currentLine + stepCounter];
-        currentLine = sentence.findIndex(findTextIndex); */
+          element === chapterJson[currentLine + stepCounter];
+        currentLine = chapterJson.findIndex(findTextIndex); */
 
         console.log(
           "After: " +
@@ -171,7 +171,7 @@ function displayChapter(sentence) {
       // Option Button 3
       $(document).on("click", "#gamebutton2", function (event) {
         event.stopPropagation();
-        $("#gametext").html(sentence[currentLine + optionsObject[2][1]]);
+        $("#gametext").html(chapterJson[currentLine + optionsObject[2][1]]);
         currentLine = currentLine + optionsObject[2][1];
 
         for (let i = 0; i < 3; i++) {
@@ -182,7 +182,7 @@ function displayChapter(sentence) {
       // Option Button 4
       $(document).on("click", "#gamebutton3", function (event) {
         event.stopPropagation();
-        $("#gametext").html(sentence[currentLine + optionsObject[3][1]]);
+        $("#gametext").html(chapterJson[currentLine + optionsObject[3][1]]);
         currentLine = currentLine + optionsObject[3][1];
 
         for (let i = 0; i < 3; i++) {

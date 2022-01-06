@@ -1,53 +1,35 @@
 [
-  "High above the Nameless Colony of Mars, dangling her legs twenty thousand feet above the city, the cold, fresh air filling her lungs and chilling her skin, Ana Mionar marveled at the sight of the city and felt utterly blessed for the life she was given.",
-
-  "Hundreds of thousands of Cloudwalkers passed by one another in the chaotic air trafic but none of them ever collided.",
-
-  "Millions mingled on the commercial streets without a single occurrence of crime.",
-
-  "Everyone performed their jobs with the utmost efficiency and with the will to the virtue of productive work.",
-
-  "Citizens and visitors alike respected one another as brothers and sisters.",
-
-  "Patches of color and groups of similar architecture deliniated the tens of thousands of independent neighborhoods that offered everyone a place to belong.",
-
-  "There was no crime and no violence, no misery and want, no aging and no illness, no war, no ruling elite, <i>no death</i>.",
+  "line 1: There was no crime and no violence, no misery and want, no aging and no illness, no war, no ruling elite, <i>no death</i>.",
 
   {
-    "option01": ["Keep enjoying the sight", 0],
-    "option02": ["Get back to work", 3]
+    "option01": ["Skip 0 lines", 0],
+    "option02": ["Skip 3 lines", 3]
   },
 
-  "Ana took a deep breath to take in the calm of the world.",
+  "line 3: Ana took a deep breath to take in the calm of the world.",
 
-  "She closed her eyes to relish the moment and tried, but a nagging thought at the back of her mind kept her keen and alert.",
+  "line 4: She closed her eyes to relish the moment and tried, but a nagging thought at the back of her mind kept her keen and alert.",
 
-  "“Right,” she thought as she shook her head to return to reality. “I can’t sit around idle either.”",
+  "line 5: “Right,” she thought as she shook her head to return to reality. “I can’t sit around idle either.”",
 
-  "She stretched out her legs to get the blood puming and put her hands on the floor besides herself.",
-
-  "“There is still work to do,” she thought and and pushed herself away from the edge of the skydock into the abyss.",
-
-  "Not a second elapsed when she realized it was a terrible idea.",
-
-  "Her skirt fluttering and blowing up in the wind of the fall would definitely be less than ladylike.",
+  "line 6: Her skirt fluttering and blowing up in the wind of the fall would definitely be less than ladylike.",
 
   {
-    "option01": ["Keep falling for a while more", 0],
-    "option02": ["Get back up", 4]
+    "option01": ["Skip 1 lines", 1],
+    "option02": ["Skip 4 lines", 4]
   },
 
-  "But the sensation of gravity weighing on her, the adrenaline rushing into her mind, the wind buffeting her skin was too alluring to end it so abruptly.",
+  "line 8: But the sensation of gravity weighing on her, the adrenaline rushing into her mind, the wind buffeting her skin was too alluring to end it so abruptly.",
 
-  "She fell and shifted her body to see the skydock grow ever more distant as she neared the ground.",
+  "line 9: She fell and shifted her body to see the skydock grow ever more distant as she neared the ground.",
 
-  "Some three thousand feet over the ground she closed her eyes for a mere second to access her artificial cortex with her mind.",
+  "line 10: Some three thousand feet over the ground she closed her eyes for a mere second to access her artificial cortex with her mind.",
 
-  "As a response to her mental command, a blue hue alighted her skin as she activated her physical shield against the heat and the jet engines of her backpack fired up with a high whistle.",
+  "line 11: As a response to her mental command, a blue hue alighted her skin as she activated her physical shield against the heat and the jet engines of her backpack fired up with a high whistle.",
 
-  "The falling stopped and she gently navigated herself back onto the dock.",
+  "line 12: The falling stopped and she gently navigated herself back onto the dock.",
 
-  "She looked around as she landed to see if anyone had seen it, then, seeing nobody save for the cameras, she walked back to the control room.",
+  "line 13: She looked around as she landed to see if anyone had seen it, then, seeing nobody save for the cameras, she walked back to the control room.",
 
   "There was one starship that bothered her.",
 
