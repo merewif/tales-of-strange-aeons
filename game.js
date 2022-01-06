@@ -13,7 +13,10 @@ function displayIntro(chapterSentences) {
   let i = 0;
   $("#introtext").text(chapterSentences[0]);
 
-  $(document).on("click", "body", function (e) {
+  $(document).on("click keydown", "body", function (e) {
+    if(e.keyCode !== 13) { // 13 az enter, ha nem az, akkor semmit ne csináljon
+      return false;
+    }
     // Incrementing the tracker with each click
     ++i;
 
