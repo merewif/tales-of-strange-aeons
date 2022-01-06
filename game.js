@@ -94,6 +94,8 @@ function displayChapter(sentence) {
       }
 
       // Handling user choice
+
+      // Option Button 1
       $(document).on("click", "#gamebutton0", function (event) {
         event.stopPropagation();
         let stepCounter = optionsObject[0][1];
@@ -119,6 +121,7 @@ function displayChapter(sentence) {
         }
       });
 
+      // Option Button 2
       $("#gamebutton1").unbind("click");
       $(document).on("click", "#gamebutton1", function (event) {
         event.stopPropagation();
@@ -149,6 +152,7 @@ function displayChapter(sentence) {
         }
       });
 
+      // Option Button 3
       $(document).on("click", "#gamebutton2", function (event) {
         event.stopPropagation();
         $("#gametext").html(sentence[i + optionsObject[2][1]]);
@@ -159,6 +163,7 @@ function displayChapter(sentence) {
         }
       });
 
+      // Option Button 4
       $(document).on("click", "#gamebutton3", function (event) {
         event.stopPropagation();
         $("#gametext").html(sentence[i + optionsObject[3][1]]);
