@@ -14,19 +14,20 @@ function fetchIntroJson() {
 // Function that displays the intro & main menu
 function displayIntro(introJson) {
   // Line display tracker
-  let i = 0;
+  let currentLine = 0;
+
   $("#introtext").text(introJson[0]);
 
   $(document).on("click keydown", "body", function (e) {
-    if (e.keyCode !== 13 && event.type !== "click") {
-      // 13 az enter, ha nem az, akkor semmit ne csináljon
+    // 13 is enter, if not that's the keydown it does nothing
+    if (e.keyCode !== 13 && e.type !== "click") {
       return false;
     }
     // Incrementing the tracker with each click
-    ++i;
+    ++currentLine;
 
     // Loading the main menu after the intro ends
-    if (i >= introJson.length) {
+    if (currentLine >= introJson.length) {
       $("#introtext").css({ display: "none" });
       $("#intro").css({
         "background-image": "url(./assets/covers/book1transparent.png)",
@@ -38,7 +39,7 @@ function displayIntro(introJson) {
     // Loading the next line on click with style
     $("#introtext").css({ opacity: "0" });
     setTimeout(function () {
-      $("#introtext").html(introJson[i]);
+      $("#introtext").html(introJson[currentLine]);
     }, 400);
     setTimeout(function () {
       $("#introtext").css({ opacity: "1" });
@@ -46,7 +47,7 @@ function displayIntro(introJson) {
   });
 }
 
-// clicking on a released chapter's div will trigger fetching it as json
+// Clicking on a released chapter's div will trigger fetching it as json
 $(document).on("click", ".released", function () {
   let clickedChapterId = this.id.toString();
 
@@ -64,7 +65,8 @@ function fetchChapterJson(chapter) {
     .then((data) => {
       chapterJson = data;
 
-      $(".gamebutton").hide(); // initially hiding choice buttons, displayChapterLine shows them if needed
+      // Initially hiding choice buttons, displayChapterLine shows them if needed
+      $(".gamebutton").hide();
 
       // Loading the initial line of text
       displayChapterLine();
@@ -95,18 +97,25 @@ function displayChapterLine() {
       chapterJson[currentLineIndex] instanceof String
     )
   ) {
-    // display option buttons
-    let optionsObject = Object.values(chapterJson[currentLineIndex]);
+    // If the object has only one property, set the url of its value as background
+    if (Object.values(chapterJson[currentLineIndex]).length == 1) {
+      let imgUrl = Object.values(chapterJson[currentLineIndex])[0][0];
+      document.getElementById("gamebox").style.backgroundImage =
+        "url(" + imgUrl + ")";
+      ++currentLineIndex;
+    } else {
+      // display option buttons
+      let optionsObject = Object.values(chapterJson[currentLineIndex]);
+      for (let i = 0; i < optionsObject.length; i++) {
+        let evokedButton = $("#gamebuttons").children(
+          ":nth-child(" + (i + 1) + ")"
+        );
+        evokedButton.show();
+        evokedButton.text(optionsObject[i][0]);
+      }
 
-    for (let i = 0; i < optionsObject.length; i++) {
-      let evokedButton = $("#gamebuttons").children(
-        ":nth-child(" + (i + 1) + ")"
-      );
-      evokedButton.show();
-      evokedButton.text(optionsObject[i][0]);
+      $("#gametext").html(chapterJson[currentLineIndex - 1]);
     }
-
-    $("#gametext").html(chapterJson[currentLineIndex - 1]);
   } else {
     // show line in textbox
     $("#gametext").html(chapterJson[currentLineIndex]);

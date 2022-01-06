@@ -156,7 +156,7 @@
 #gamebox {
   height: 100vh;
   width: 100vw;
-  background: url("./assets/elements/game-assets/chapter-1/nameless_colony_skyline.jpg");
+  background-image: url("./assets/elements/game-assets/chapter-1/nameless_colony_skyline.jpg");
   background-size: cover;
   background-position: center;
   cursor: url("./assets/images/cursor.png"), pointer;
