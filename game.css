@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,400;1,900&display=swap");
 
+#bg-image {
+  background-image: none;
+  background: black;
+}
+
 #headerlogo img {
   position: absolute;
   left: 50%;
@@ -8,7 +13,7 @@
   padding-top: 10px;
   animation: header-img-animation 2s linear 1;
   animation-delay: 10s;
-  cursor: pointer;
+  cursor: url("./assets/images/cursor.png"), pointer;
 }
 
 @keyframes header-img-animation {
@@ -32,42 +37,132 @@
   }
 }
 
+#intro {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  cursor: url("./assets/images/cursor.png"), pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#introtext {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 40%;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  font-family: "Orbitron";
+  font-size: 2em;
+  text-transform: uppercase;
+  line-height: 1em;
+  color: #03e9f4;
+  text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+#introtext.hide {
+  opacity: 0;
+}
+
+#visualchapternav {
+  display: none;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#visualchapterlist {
+  position: absolute;
+  left: 62.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+#visualchapterlist::-webkit-scrollbar {
+  display: none;
+}
+
+.visualchapter {
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  color: white;
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-transition: all 0.8s ease, border 0s;
+  -moz-transition: all 0.8s ease, border 0s;
+  -ms-transition: all 0.8s ease, border 0s;
+  -o-transition: all 0.8s ease, border 0s;
+  transition: all 0.8s ease, border 0s;
+  cursor: url("./assets/images/cursor.png"), pointer;
+}
+
+.visualchapter:hover {
+  background-color: #03e9f4;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+  color: black;
+}
+
 #game {
+  opacity: 0;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
   cursor: url("./assets/images/cursor.png"), pointer;
+  transition-duration: 1s;
 }
 
 #gamebox {
   height: 100vh;
   width: 100vw;
-  background: url("./assets/elements/game-assets/chapter-1/cobdens_voyage_corridor.jpg");
+  background: url("./assets/elements/game-assets/chapter-1/nameless_colony_skyline.jpg");
   background-size: cover;
   background-position: center;
   cursor: url("./assets/images/cursor.png"), pointer;
 }
 
 #gamecontrols {
-  border: 5px solid #03e9f4;
-  height: 22.5%;
+  height: 20%;
   width: 100%;
   position: relative;
-  top: 77.5%;
+  top: 80%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 1);
-  box-shadow: inset 0 0 5px #03e9f4, inset 0 0 25px #03e9f4,
-    inset 0 0 50px #03e9f4, 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4;
 }
 
 #gametext {
   font-family: "Montserrat";
-  font-size: 1.1em;
+  font-weight: 300;
+  color: #03e9f4;
+  font-size: 1.2em;
   line-height: 1em;
   padding: 50px;
-  padding-bottom: 25px;
-  height: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  height: 80px;
   text-align: justify;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -89,11 +184,11 @@
   border: 0px solid #03e9f4;
   width: 24%;
   height: 40px;
-  font-family: "Montserrat";
+  font-family: "Equinox";
+  text-transform: capitalize;
   font-size: 1.5em;
   font-weight: 300;
   text-decoration: none;
-  text-transform: lowercase;
   padding: 5px;
   color: #03e9f4;
   text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
@@ -109,7 +204,7 @@
   animation: blinker 1s linear infinite;
   width: 5px;
   height: 5px;
-  background-color: #fff;
+  background-color: #03e9f4;
 }
 
 @keyframes blinker {
