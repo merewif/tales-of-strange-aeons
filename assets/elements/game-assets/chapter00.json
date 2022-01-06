@@ -15,7 +15,7 @@
 
   {
     "option01": ["Keep enjoying the sight", 0],
-    "option02": ["Get back to work", 2]
+    "option02": ["Get back to work", 3]
   },
 
   "Ana took a deep breath to take in the calm of the world.",
@@ -34,7 +34,7 @@
 
   {
     "option01": ["Keep falling for a while more", 0],
-    "option02": ["Get back up", 3]
+    "option02": ["Get back up", 4]
   },
 
   "But the sensation of gravity weighing on her, the adrenaline rushing into her mind, the wind buffeting her skin was too alluring to end it so abruptly.",
