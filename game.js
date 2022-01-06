@@ -97,13 +97,17 @@ function displayChapter(sentence) {
       $(document).on("click", "#gamebutton0", function (event) {
         event.stopPropagation();
         let stepCounter = optionsObject[0][1];
-        console.log("Before: " + i, stepCounter);
+        console.log(
+          "Before: " + "Index: " + i + "How many lines to skip: " + stepCounter
+        );
 
         // Bug happens here
         $("#gametext").html(sentence[i + stepCounter]);
         i = i + stepCounter;
 
-        console.log("After: " + i, stepCounter);
+        console.log(
+          "After: " + "Index: " + i + "How many lines to skip: " + stepCounter
+        );
 
         // Removing all button text
         for (let i = 0; i < 3; i++) {
@@ -116,7 +120,9 @@ function displayChapter(sentence) {
         event.stopPropagation();
         let stepCounter = optionsObject[1][1];
 
-        console.log("Before: " + i, stepCounter);
+        console.log(
+          "Before: " + "Index: " + i + "How many lines to skip: " + stepCounter
+        );
 
         // Bug happens here
         $("#gametext").html(sentence[i + stepCounter]);
@@ -126,7 +132,9 @@ function displayChapter(sentence) {
           element === sentence[i + stepCounter];
         i = sentence.findIndex(findTextIndex);
 
-        console.log("After: " + i, stepCounter);
+        console.log(
+          "After: " + "Index: " + i + "How many lines to skip: " + stepCounter
+        );
 
         for (let i = 0; i < 3; i++) {
           $("#gamebutton" + i).text("");
