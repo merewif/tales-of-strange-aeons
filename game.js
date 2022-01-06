@@ -1,5 +1,5 @@
 function fetchIntroJson() {
-  fetch("/assets/elements/game-assets/chapter00.json")
+  fetch("./assets/elements/game-assets/chapter00.json")
     .then((response) => response.json())
     .then((data) => {
       displayIntro(data);
