@@ -1,5 +1,5 @@
 function fetchIntroJson() {
-  fetch("./assets/elements/game-assets/chapter00.json")
+  fetch("./assets/elements/game-assets/intro.json")
     .then((response) => response.json())
     .then((data) => {
       displayIntro(data);
@@ -34,10 +34,11 @@ function displayIntro(chapterSentences) {
 }
 
 function chapterSelection() {
-  $(document).on("click", "#visualchapternav", function () {
+  $(document).on("click", ".released", function () {
+    let clickedChapterId = this.id.toString();
     $("#intro").css({ display: "none" });
     $("#game").css({ opacity: "1" });
-    fetchChapterJson("chapter01");
+    fetchChapterJson(clickedChapterId);
   });
 }
 
@@ -55,6 +56,11 @@ function displayChapter(sentence) {
   $("#gametext").text(sentence[0]);
 
   $(document).on("click", "#game", function (e) {
+    if ($("#gamebutton1").text() !== "") {
+      console.log("Awaiting user response.");
+      return;
+    }
+
     ++i;
 
     if (i >= sentence.length) {
@@ -62,19 +68,43 @@ function displayChapter(sentence) {
     }
 
     if (typeof sentence[i] === "string" || sentence[i] instanceof String) {
-      $("#gametext").css({ opacity: "0" });
-      setTimeout(function () {
-        $("#gametext").html(sentence[i]);
-      }, 400);
-      setTimeout(function () {
-        $("#gametext").css({ opacity: "1" });
-      }, 950);
+      $("#gametext").html(sentence[i]);
     } else {
-      const options = Object.values(sentence[i]);
-      console.log(options);
-      for (let i = 0; i < options.length; i++) {
-        $("#gamebutton" + i).text(options[i]);
+      const optionsObject = Object.values(sentence[i]);
+      for (let i = 0; i < optionsObject.length; i++) {
+        $("#gamebutton" + i).text(optionsObject[i][0]);
       }
+
+      $(document).on("click", "#gamebutton0", function () {
+        console.log(optionsObject[0][1]);
+        $("#gametext").html(sentence[i + optionsObject[0][1]]);
+        i = i + optionsObject[0][1];
+        for (let i = 0; i < 3; i++) {
+          $("#gamebutton" + i).text("");
+        }
+      });
+      $(document).on("click", "#gamebutton1", function () {
+        console.log(i + optionsObject[1][1]);
+        $("#gametext").html(sentence[i + optionsObject[1][1]]);
+        i = i + optionsObject[1][1];
+        for (let i = 0; i < 3; i++) {
+          $("#gamebutton" + i).text("");
+        }
+      });
+      $(document).on("click", "#gamebutton2", function () {
+        $("#gametext").html(sentence[i + optionsObject[2][1]]);
+        i = i + optionsObject[2][1];
+        for (let i = 0; i < 3; i++) {
+          $("#gamebutton" + i).text("");
+        }
+      });
+      $(document).on("click", "#gamebutton3", function () {
+        $("#gametext").html(sentence[i + optionsObject[3][1]]);
+        i = i + optionsObject[3][1];
+        for (let i = 0; i < 3; i++) {
+          $("#gamebutton" + i).text("");
+        }
+      });
     }
   });
 }

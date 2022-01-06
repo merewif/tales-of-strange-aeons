@@ -1,9 +1,30 @@
 [
-  "Millions of years ago the first species of our galaxy mastered interstellar travel and found itself alone in a vast universe. ",
+  "High above the Nameless Colony of Mars, dangling her legs twenty thousand feet above the city, the cold, fresh air filling her lungs and chilling her skin, Ana Mionar marveled at the sight of the city and felt utterly blessed for the life she was given.",
 
-  "These Firstborn traveled from star to star and seeded every planet with a <i>Crucible of Immortality, a node in a network of a distributed database onto which every sentient being can upload itself to escape death and leap from one end of our galaxy to another in an instant.",
+  "Hundreds of thousands of Cloudwalkers passed by one another in the chaotic air trafic but none of them ever collided.",
 
-  "We have all been liberated from our mortal bodies ever since the Firstborn made their Holy Journey.",
+  "Millions mingled on the commercial streets without a single occurrence of crime.",
 
-  "Humankind alone remains<br> ignorant of their gift."
+  "Everyone performed their jobs with the utmost efficiency and with the will to the virtue of productive work.",
+
+  "Citizens and visitors alike respected one another as brothers and sisters.",
+
+  "Patches of color and groups of similar architecture deliniated the tens of thousands of independent neighborhoods that offered everyone a place to belong.",
+
+  "There was no crime and no violence, no misery and want, no aging and no illness, no war, no ruling elite, <i>no death</i>.",
+
+  {
+    "option01": ["Keep enjoying the sight", 0],
+    "option02": ["Get back to work", 2]
+  },
+
+  "Ana took a deep breath to take in the calm of the world.",
+
+  "She closed her eyes to relish the moment and tried, but a nagging thought at the back of her mind kept her keen and alert.",
+
+  "“Right,” she thought as she shook her head to return to reality. “I can’t sit around idle either.”",
+
+  "She stretched out her legs to get the blood puming and put her hands on the floor besides herself.",
+
+  "“There is still work to do,” she thought and and pushed herself away from the edge of the skydock into the abyss."
 ]
