@@ -16,7 +16,7 @@ function displayIntro(chapterSentences) {
     if (i >= chapterSentences.length) {
       $("#introtext").css({ display: "none" });
       $("#intro").css({
-        "background-image": "url(./assets/covers/book1.jpg)",
+        "background-image": "url(./assets/covers/book1transparent.png)",
       });
       $("#visualchapternav").css({ display: "block" });
       return;
