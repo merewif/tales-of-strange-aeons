@@ -68,7 +68,7 @@ function displayChapter(sentence) {
   $("#gametext").text(sentence[0]);
 
   // Click to load the next line of text
-  $(document).on("click", "#game", function (e) {
+  $(document).on("click", "#gametext", function (e) {
     // Halting the narration until the user chooses an option
     if ($("#gamebutton1").text() !== "") {
       console.log("Awaiting user response.");
@@ -88,7 +88,7 @@ function displayChapter(sentence) {
       $("#gametext").html(sentence[i]);
     } else {
       // If the next item of array is an object it loads the value text into the buttons
-      const optionsObject = Object.values(sentence[i]);
+      let optionsObject = Object.values(sentence[i]);
       for (let i = 0; i < optionsObject.length; i++) {
         $("#gamebutton" + i).text(optionsObject[i][0]);
       }
@@ -99,7 +99,7 @@ function displayChapter(sentence) {
         let stepCounter = optionsObject[0][1];
         console.log("Before: " + i, stepCounter);
 
-        // Bug Source
+        // Bug happens here
         $("#gametext").html(sentence[i + stepCounter]);
         i = i + stepCounter;
 
@@ -111,15 +111,20 @@ function displayChapter(sentence) {
         }
       });
 
+      $("#gamebutton1").unbind("click");
       $(document).on("click", "#gamebutton1", function (event) {
         event.stopPropagation();
         let stepCounter = optionsObject[1][1];
 
         console.log("Before: " + i, stepCounter);
 
-        // Bug source
+        // Bug happens here
         $("#gametext").html(sentence[i + stepCounter]);
-        i = i + stepCounter;
+
+        // Get the array index of gametext content and set it as the new index for the text display
+        const findTextIndex = (element) =>
+          element === sentence[i + stepCounter];
+        i = sentence.findIndex(findTextIndex);
 
         console.log("After: " + i, stepCounter);
 
