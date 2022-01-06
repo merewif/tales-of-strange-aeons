@@ -125,7 +125,11 @@ function displayChapter(sentence) {
         let stepCounter = optionsObject[1][1];
 
         console.log(
-          "Before: " + "Index: " + i + "How many lines to skip: " + stepCounter
+          "Before: " +
+            "Index: " +
+            i +
+            ", How many lines to skip: " +
+            stepCounter
         );
 
         // Bug happens here
@@ -137,7 +141,7 @@ function displayChapter(sentence) {
         i = sentence.findIndex(findTextIndex);
 
         console.log(
-          "After: " + "Index: " + i + "How many lines to skip: " + stepCounter
+          "After: " + "Index: " + i + ", How many lines to skip: " + stepCounter
         );
 
         for (let i = 0; i < 3; i++) {
