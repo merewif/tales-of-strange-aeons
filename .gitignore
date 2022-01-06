@@ -1,2 +1,4 @@
 node_modules
 .vscode
+/assets/elements/game-assets/chapter00.json
+/assets/elements/game-assets/intro.json
