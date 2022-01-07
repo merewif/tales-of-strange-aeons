@@ -160,7 +160,14 @@ $(document).on("click", ".gamebutton", function (event) {
 });
 
 function main() {
-  fetchIntroJson();
+  // Start the game button
+  $(document).on("click", "#start", function (e) {
+    $("#game").show();
+    $("#headerlogo").show();
+    $("#intro").css({ opacity: "1" });
+    $("#start").hide();
+    fetchIntroJson();
+  });
 }
 
 window.addEventListener("load", main);
