@@ -8,6 +8,7 @@ let chapterHoverSound = new Audio(
 );
 chapterHoverSound.volume = 0.1;
 let backgroundMusic = "";
+backgroundMusic.volume = 0.6;
 let soundEffect = "";
 
 // Click on play button
@@ -65,10 +66,10 @@ function displayIntro(introJson) {
     $("#introtext").css({ opacity: "0" });
     setTimeout(function () {
       $("#introtext").html(introJson[currentLine]);
-    }, 400);
+    }, 1000);
     setTimeout(function () {
       $("#introtext").css({ opacity: "1" });
-    }, 950);
+    }, 1250);
   });
 }
 
@@ -133,6 +134,7 @@ function displayChapterLine() {
       $("#gametext").html(
         chapterJson[currentLineIndex + 1] + "&nbsp;<span id='blinker'>.</span>"
       );
+
       currentLineIndex += 2;
     }
     // If the object key is "audio", play the audio defined in its value

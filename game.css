@@ -99,7 +99,7 @@
   color: #03e9f4;
   text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
   opacity: 1;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 
 #beyond-mortal {
@@ -212,10 +212,10 @@
 }
 
 #gamecontrols {
-  height: 20%;
+  height: 25%;
   width: 100%;
   position: relative;
-  top: 80%;
+  top: 75%;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.8);
@@ -226,12 +226,12 @@
   font-family: "Montserrat";
   font-weight: 300;
   color: #03e9f4;
-  font-size: 1.2em;
+  font-size: 1.5em;
   line-height: 1em;
   padding: 50px;
   padding-top: 30px;
   padding-bottom: 20px;
-  height: 80px;
+  height: 120px;
   text-align: justify;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
