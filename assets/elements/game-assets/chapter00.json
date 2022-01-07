@@ -47,7 +47,11 @@
 
   "Some three thousand feet over the ground she closed her eyes for a mere second to access her artificial cortex with her mind.",
 
-  "As a response to her mental command, a blue hue alighted her skin as she activated her physical shield against the heat and the jet engines of her backpack fired up with a high whistle.",
+  { "soundeffect": ["./assets/elements/game-assets/shield.wav"] },
+
+  "As a response to her mental command, a blue hue alighted her skin as she activated her physical shield against the heat and the jet engines of her backpack fired up with barely a sound.",
+
+  { "soundeffect": ["./assets/elements/game-assets/engineoff.wav"] },
 
   "The falling stopped and she gently navigated herself back onto the dock.",
 
@@ -61,9 +65,9 @@
 
   "There was one starship that bothered her.",
 
-  "It was nearing the end of her shift and Cobden’s Voyage was still sitting in the dock ever since the morning, without any response from the crew, without anyone unloading the shipment.",
-
   { "audio": ["./assets/elements/game-assets/intro.wav"] },
+
+  "It was nearing the end of her shift and Cobden’s Voyage was still sitting in the dock ever since the morning, without any response from the crew, without anyone unloading the shipment.",
 
   "Stranger still, the AI of the ship was unresponsive as well.",
 

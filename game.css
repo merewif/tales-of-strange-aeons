@@ -10,8 +10,7 @@
 }
 
 #bg-image {
-  background-image: none;
-  background: black;
+  background: url("./assets/images/cloudwalkers2.jpg");
 }
 
 #headerlogo img {
@@ -28,10 +27,9 @@
   position: absolute;
   z-index: 10000;
   border: 0;
-  width: 400px;
+  width: 300px;
   height: 100px;
   font-family: "Equinox";
-  text-transform: uppercase;
   font-size: 2em;
   top: 50%;
   left: 50%;
@@ -40,15 +38,22 @@
   cursor: url("./assets/images/cursor.png"), pointer;
   color: #03e9f4;
   text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 4px 6px 6px #f40303;
-  box-shadow: inset 0 0 5px #03e9f4, inset 0 0 25px #03e9f4, 0 0 5px #03e9f4,
-    0 0 25px #03e9f4;
+  box-shadow: inset 0 0 5px #03e9f4, inset 0 0 25px #03e9f4,
+    inset 0 0 50px #03e9f4, 0 0 5px #03e9f4, 0 0 25px #03e9f4;
+  border-radius: 100px;
 }
 
 #start:hover {
-  box-shadow: inset 0 0 5px #f40303, inset 0 0 25px #f40303, 0 0 5px #f40303,
-    0 0 25px #f40303;
-  color: #f40303;
+  background-color: #03e9f4;
+  color: black;
   text-shadow: none;
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  50% {
+    top: 48.5%;
+  }
 }
 
 #game,

@@ -10,6 +10,16 @@ chapterHoverSound.volume = 0.1;
 let backgroundMusic = "";
 let soundEffect = "";
 
+// Click on play button
+$(document).on("click", "#start", function (e) {
+  $("#bg-image").hide();
+  $("#game").show();
+  $("#headerlogo").show();
+  $("#intro").css({ opacity: "1" });
+  $("#start").hide();
+  fetchIntroJson();
+});
+
 // Function that loads the exposition lines.
 function fetchIntroJson() {
   fetch("./assets/elements/game-assets/intro.json")
@@ -195,16 +205,3 @@ $(document).on("click", ".gamebutton", function (event) {
   $(".gamebutton").hide();
   displayChapterLine();
 });
-
-function main() {
-  // Start the game button
-  $(document).on("click", "#start", function (e) {
-    $("#game").show();
-    $("#headerlogo").show();
-    $("#intro").css({ opacity: "1" });
-    $("#start").hide();
-    fetchIntroJson();
-  });
-}
-
-window.addEventListener("load", main);
