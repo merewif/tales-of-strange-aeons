@@ -85,7 +85,7 @@
   transform: translate(-50%, -50%);
   text-align: justify;
   text-align-last: center;
-  width: 50%;
+  width: 100%;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -137,7 +137,7 @@
 
 #visualchapterlist {
   position: absolute;
-  left: 62.5%;
+  left: 67.5%;
   top: 50%;
   transform: translate(-50%, -50%);
   display: grid;
@@ -156,8 +156,8 @@
 
 .visualchapter {
   text-align: center;
-  width: 300px;
-  height: 200px;
+  width: 200px;
+  height: 10em;
   margin: auto;
   color: white;
   background: rgba(0, 0, 0, 0.75);
@@ -171,6 +171,15 @@
 
 .visualchapter h1 {
   font-family: "Equinox";
+  font-size: 1.5em;
+  margin-bottom: 0;
+  margin-top: 10%;
+}
+
+.visualchapter p {
+  margin-top: 0;
+  padding-bottom: 10%;
+  font-size: 1em;
 }
 
 .released:hover {
@@ -212,10 +221,10 @@
 }
 
 #gamecontrols {
-  height: 25%;
+  height: 22.5%;
   width: 100%;
   position: relative;
-  top: 75%;
+  top: 77.5%;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.8);
@@ -231,7 +240,7 @@
   padding: 50px;
   padding-top: 30px;
   padding-bottom: 20px;
-  height: 120px;
+  height: 3em;
   text-align: justify;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -246,6 +255,8 @@
   text-align: center;
   display: block;
   width: 100%;
+  position: absolute;
+  bottom: 10px;
 }
 
 .gamebutton {
@@ -255,7 +266,7 @@
   height: 40px;
   font-family: "Equinox";
   text-transform: capitalize;
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: 300;
   text-decoration: none;
   padding: 5px;
