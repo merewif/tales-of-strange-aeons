@@ -58,6 +58,7 @@
 }
 
 #introtext {
+  z-index: 1000;
   position: relative;
   top: 50%;
   left: 50%;
@@ -85,10 +86,26 @@
 }
 
 #visualchapternav {
-  display: none;
   width: 100vw;
   max-width: 100%;
   overflow: hidden;
+  display: none;
+}
+
+#menuimage {
+  display: none;
+  background-image: url("./assets/covers/book1transparent.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 10%;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
 }
 
 #visualchapterlist {

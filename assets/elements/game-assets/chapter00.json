@@ -59,6 +59,8 @@
 
   "It was nearing the end of her shift and Cobden’s Voyage was still sitting in the dock ever since the morning, without any response from the crew, without anyone unloading the shipment.",
 
+  { "audio": ["./assets/elements/game-assets/intro.wav"] },
+
   "Stranger still, the AI of the ship was unresponsive as well.",
 
   "It wasn’t entirely unusual, as long space travels often ended while the crew was taking their well-earned rest after the journey to the outer worlds, and she knew there is no sleep deeper, more still and rejuvenating than that on a starship in the perfect emptiness of space, and to get the most out of the opportunity, sometimes they disabled every possible source of disturbance."

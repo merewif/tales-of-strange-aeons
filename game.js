@@ -1,8 +1,9 @@
-// global state trackers
+// global variables
 let currentLineIndex = 0; // Variable to track the current line
 let chapterJson = {};
-let audioIntro = new Audio(
-  "./assets/elements/game-assets/Bluezone-Abyss-sound-017.wav"
+let audioIntroSound = new Audio("./assets/elements/game-assets/intro.wav");
+let audioChapterClick = new Audio(
+  "./assets/elements/game-assets/chapterclick.wav"
 );
 
 // Function that loads the exposition lines.
@@ -16,7 +17,7 @@ function fetchIntroJson() {
 
 // Function that displays the intro & main menu
 function displayIntro(introJson) {
-  audioIntro.play();
+  audioIntroSound.play();
   // Line display tracker
   let currentLine = 0;
 
@@ -32,11 +33,11 @@ function displayIntro(introJson) {
 
     // Loading the main menu after the intro ends
     if (currentLine >= introJson.length) {
-      $("#introtext").css({ display: "none" });
-      $("#intro").css({
-        "background-image": "url(./assets/covers/book1transparent.png)",
-      });
-      $("#visualchapternav").css({ display: "block" });
+      $("#introtext").css({ opacity: "0" }).delay(1000).hide("fade");
+      setTimeout(function () {
+        $("#menuimage").show("fade");
+        $("#visualchapternav").show("fade");
+      }, 1000);
       return;
     }
 
@@ -53,7 +54,8 @@ function displayIntro(introJson) {
 
 // Clicking on a released chapter's div will trigger fetching it as json
 $(document).on("click", ".released", function () {
-  audioIntro.pause();
+  audioIntroSound.pause();
+  audioChapterClick.play();
   let clickedChapterId = this.id.toString();
 
   $("#intro").css({ display: "none" });
@@ -102,11 +104,19 @@ function displayChapterLine() {
       chapterJson[currentLineIndex] instanceof String
     )
   ) {
-    // If the object has only one property, set the url of its value as background
-    if (Object.values(chapterJson[currentLineIndex]).length == 1) {
+    // If the object key is "url", set its value as the background's url
+    if (Object.keys(chapterJson[currentLineIndex])[0] == "url") {
       let imgUrl = Object.values(chapterJson[currentLineIndex])[0][0];
       document.getElementById("gamebox").style.backgroundImage =
         "url(" + imgUrl + ")";
+      ++currentLineIndex;
+    }
+    // If the object key is "audio", play the audio defined in its value
+    else if (Object.keys(chapterJson[currentLineIndex])[0] == "audio") {
+      let nextBackgroundMusic = new Audio(
+        Object.values(chapterJson[currentLineIndex])[0][0]
+      );
+      nextBackgroundMusic.play();
       ++currentLineIndex;
     } else {
       // display option buttons
