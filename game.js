@@ -36,7 +36,7 @@ function displayIntro(introJson) {
   // Line display tracker
   let currentLine = 0;
 
-  $("#introtext").text(introJson[0]);
+  $("#introtext").html(introJson[0]);
 
   $(document).on("click keydown", "body", function (e) {
     // 13 is enter, if not that's the keydown it does nothing
