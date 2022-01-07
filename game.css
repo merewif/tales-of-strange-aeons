@@ -83,18 +83,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  width: 40%;
+  text-align: justify;
+  text-align-last: center;
+  width: 50%;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
-  font-family: "Orbitron";
+  font-family: "Montserrat";
+  font-weight: 300;
   font-size: 2em;
-  text-transform: uppercase;
-  line-height: 1em;
+  line-height: 1.1em;
   color: #03e9f4;
   text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
   opacity: 1;
