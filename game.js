@@ -3,9 +3,7 @@ let currentLineIndex = 0; // Variable to track the current line
 let chapterJson = {};
 let audioIntroSound = new Audio("./assets/elements/game-assets/intromusic.mp3");
 audioIntroSound.loop = true;
-let audioChapterClick = new Audio(
-  "./assets/elements/game-assets/chapterclick.wav"
-);
+let audioChapterClick = new Audio("./assets/elements/game-assets/scene01.mp3");
 
 // Function that loads the exposition lines.
 function fetchIntroJson() {
@@ -19,6 +17,7 @@ function fetchIntroJson() {
 // Function that displays the intro & main menu
 function displayIntro(introJson) {
   audioIntroSound.play();
+
   // Line display tracker
   let currentLine = 0;
 
