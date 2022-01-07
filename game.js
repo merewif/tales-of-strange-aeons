@@ -1,8 +1,9 @@
 // global variables
 let currentLineIndex = 0; // Variable to track the current line
 let chapterJson = {};
-let audioIntroSound = new Audio("./assets/elements/game-assets/intro.wav");
+let audioIntroSound = new Audio("./assets/elements/game-assets/intromusic.mp3");
 audioIntroSound.loop = true;
+audioIntroSound.volume = 0.8;
 let audioChapterClick = new Audio(
   "./assets/elements/game-assets/chapterclick.wav"
 );
