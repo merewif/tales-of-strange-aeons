@@ -1,5 +1,9 @@
 [
+  { "audio": ["./assets/elements/game-assets/scene01.mp3"] },
+
   "High above the Nameless Colony of Mars, dangling her legs twenty thousand feet above the city, the cold, fresh air filling her lungs and chilling her skin, Ana Mionar marveled at the sight of the city and felt utterly blessed for the life she was given.",
+
+  { "soundeffect": ["./assets/elements/game-assets/cloudwalker.wav"] },
 
   "Hundreds of thousands of Cloudwalkers passed by one another in the chaotic air trafic but none of them ever collided.",
 
@@ -63,5 +67,11 @@
 
   "Stranger still, the AI of the ship was unresponsive as well.",
 
-  "It wasn’t entirely unusual, as long space travels often ended while the crew was taking their well-earned rest after the journey to the outer worlds, and she knew there is no sleep deeper, more still and rejuvenating than that on a starship in the perfect emptiness of space, and to get the most out of the opportunity, sometimes they disabled every possible source of disturbance."
+  "It wasn’t entirely unusual, as long space travels often ended while the crew was taking their well-earned rest after the journey to the outer worlds, and she knew there is no sleep deeper, more still and rejuvenating than that on a starship in the perfect emptiness of space, and to get the most out of the opportunity, sometimes they disabled every possible source of disturbance.",
+
+  "“Still,” she thought and began counting the hours in her head.",
+
+  "“Cobden’s Voyage came back from Earth and if they took a few hours or half a day to sort out the goods and celebrate during the acceleration phase, they must have been sleeping for twelve hours or so… that’s hundreds of hours in dreamtime.”",
+
+  "“Don’t they get exhausted from so much dreaming?”"
 ]

@@ -3,11 +3,12 @@ let currentLineIndex = 0; // Variable to track the current line
 let chapterJson = {};
 let audioIntroSound = new Audio("./assets/elements/game-assets/intromusic.mp3");
 audioIntroSound.loop = true;
-let audioChapterClick = new Audio("./assets/elements/game-assets/scene01.mp3");
 let chapterHoverSound = new Audio(
   "./assets/elements/game-assets/chapterclick.wav"
 );
 chapterHoverSound.volume = 0.1;
+let backgroundMusic = "";
+let soundEffect = "";
 
 // Function that loads the exposition lines.
 function fetchIntroJson() {
@@ -64,7 +65,6 @@ function displayIntro(introJson) {
 // Clicking on a released chapter's div will trigger fetching it as json
 $(document).on("click", ".released", function () {
   audioIntroSound.pause();
-  audioChapterClick.play();
   let clickedChapterId = this.id.toString();
 
   $("#intro").css({ display: "none" });
@@ -118,16 +118,43 @@ function displayChapterLine() {
       let imgUrl = Object.values(chapterJson[currentLineIndex])[0][0];
       document.getElementById("gamebox").style.backgroundImage =
         "url(" + imgUrl + ")";
-      ++currentLineIndex;
+
+      // Show next line
+      $("#gametext").html(
+        chapterJson[currentLineIndex + 1] + "&nbsp;<span id='blinker'>.</span>"
+      );
+      currentLineIndex += 2;
     }
     // If the object key is "audio", play the audio defined in its value
     else if (Object.keys(chapterJson[currentLineIndex])[0] == "audio") {
-      let nextBackgroundMusic = new Audio(
+      // Stops the music if the first one was already loaded
+      if (currentLineIndex > 1) {
+        backgroundMusic.pause();
+      }
+
+      backgroundMusic = new Audio(
         Object.values(chapterJson[currentLineIndex])[0][0]
       );
-      nextBackgroundMusic.loop = true;
-      nextBackgroundMusic.play();
-      ++currentLineIndex;
+      backgroundMusic.loop = true;
+      backgroundMusic.play();
+
+      // Show next line
+      $("#gametext").html(
+        chapterJson[currentLineIndex + 1] + "&nbsp;<span id='blinker'>.</span>"
+      );
+      currentLineIndex += 2;
+    } // If the object key is "soundeffect", play the audio defined in its value
+    else if (Object.keys(chapterJson[currentLineIndex])[0] == "soundeffect") {
+      soundEffect = new Audio(
+        Object.values(chapterJson[currentLineIndex])[0][0]
+      );
+      soundEffect.play();
+
+      // Show next line
+      $("#gametext").html(
+        chapterJson[currentLineIndex + 1] + "&nbsp;<span id='blinker'>.</span>"
+      );
+      currentLineIndex += 2;
     } else {
       // display option buttons
       let optionsObject = Object.values(chapterJson[currentLineIndex]);
@@ -142,8 +169,10 @@ function displayChapterLine() {
       $("#gametext").html(chapterJson[currentLineIndex - 1]);
     }
   } else {
-    // show line in textbox
-    $("#gametext").html(chapterJson[currentLineIndex]);
+    // Show line in textbox
+    $("#gametext").html(
+      chapterJson[currentLineIndex] + "&nbsp;<span id='blinker'>.</span>"
+    );
 
     // Tracker incrementation
     ++currentLineIndex;

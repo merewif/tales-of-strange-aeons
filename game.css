@@ -264,10 +264,12 @@
 }
 
 #blinker {
+  display: inline-block;
   animation: blinker 1s linear infinite;
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 1em;
   background-color: #03e9f4;
+  opacity: 0.5;
 }
 
 @keyframes blinker {
