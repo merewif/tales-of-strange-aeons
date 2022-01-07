@@ -4,6 +4,10 @@ let chapterJson = {};
 let audioIntroSound = new Audio("./assets/elements/game-assets/intromusic.mp3");
 audioIntroSound.loop = true;
 let audioChapterClick = new Audio("./assets/elements/game-assets/scene01.mp3");
+let chapterHoverSound = new Audio(
+  "./assets/elements/game-assets/chapterclick.wav"
+);
+chapterHoverSound.volume = 0.1;
 
 // Function that loads the exposition lines.
 function fetchIntroJson() {
@@ -40,6 +44,11 @@ function displayIntro(introJson) {
       }, 1000);
       return;
     }
+
+    // Chapter card hover sound
+    $(".released").on("mouseenter", function () {
+      chapterHoverSound.play();
+    });
 
     // Loading the next line on click with style
     $("#introtext").css({ opacity: "0" });
