@@ -1,5 +1,5 @@
 [
-  "Millions of years ago the first species of our galaxy mastered interstellar travel and found itself alone in a vast universe. ",
+  "Aeons ago the first species of our galaxy mastered interstellar travel and found itself alone in a vast universe. ",
 
   "These Firstborn traveled from star to star and seeded every planet with a <i>Crucible of Immortality</i>, a node in a network of a distributed database onto which every sentient being can upload itself to escape death and leap from one end of our galaxy to another in an instant.",
 
@@ -7,5 +7,7 @@
 
   "Humankind alone remains<br> ignorant of their gift.",
 
-  "<div style='font-family:Equinox;font-size:3em;line-height:0.75em'>BEYOND<br>MORTAL</div>"
+  "Humankind alone<br> has yet to become...",
+
+  "<div id='beyond-mortal'>BEYOND<br>MORTAL</div>"
 ]
