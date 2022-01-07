@@ -1,6 +1,9 @@
 // global state trackers
 let currentLineIndex = 0; // Variable to track the current line
 let chapterJson = {};
+let audioIntro = new Audio(
+  "./assets/elements/game-assets/Bluezone-Abyss-sound-017.wav"
+);
 
 // Function that loads the exposition lines.
 function fetchIntroJson() {
@@ -13,6 +16,7 @@ function fetchIntroJson() {
 
 // Function that displays the intro & main menu
 function displayIntro(introJson) {
+  audioIntro.play();
   // Line display tracker
   let currentLine = 0;
 
@@ -49,6 +53,7 @@ function displayIntro(introJson) {
 
 // Clicking on a released chapter's div will trigger fetching it as json
 $(document).on("click", ".released", function () {
+  audioIntro.pause();
   let clickedChapterId = this.id.toString();
 
   $("#intro").css({ display: "none" });
