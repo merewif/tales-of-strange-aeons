@@ -2,6 +2,7 @@
 let currentLineIndex = 0; // Variable to track the current line
 let chapterJson = {};
 let audioIntroSound = new Audio("./assets/elements/game-assets/intro.wav");
+audioIntroSound.loop = true;
 let audioChapterClick = new Audio(
   "./assets/elements/game-assets/chapterclick.wav"
 );
@@ -116,6 +117,7 @@ function displayChapterLine() {
       let nextBackgroundMusic = new Audio(
         Object.values(chapterJson[currentLineIndex])[0][0]
       );
+      nextBackgroundMusic.loop = true;
       nextBackgroundMusic.play();
       ++currentLineIndex;
     } else {
