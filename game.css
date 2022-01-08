@@ -19,7 +19,6 @@
   transform: translateX(-50%);
   width: 15%;
   padding-top: 10px;
-  animation-delay: 10s;
   cursor: url("./assets/images/cursor.png"), pointer;
 }
 
