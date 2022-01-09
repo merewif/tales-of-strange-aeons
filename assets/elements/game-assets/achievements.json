@@ -36,7 +36,7 @@
     "description": "You prevented a suicide.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line346346",
+    "requirementLine": "line2346",
     "requirementChoice": 0
   },
   {

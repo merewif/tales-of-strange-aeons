@@ -121,7 +121,7 @@ $(document).on("click", "#back-to-menu", function (event) {
   $("#visualchapternav").hide("fade");
   $("#back-to-menu").hide("fade");
   $("#game-loader").hide("fade");
-  $("#achievements-container").html("").hide("fade");
+  $("#achievements-container").hide("fade").html("");
 
   setTimeout(function () {
     $("#main-menu").show("fade");
@@ -153,6 +153,40 @@ $(document).on("click", "#load-game", function (event) {
     $("#game-loader").show("fade");
     $("#back-to-menu").show("fade");
   }, 1000);
+
+  // Add uploaded save game file to local storage
+  let uploadedSaveFile = "saveState" + (localStorage.length + 1);
+  document
+    .getElementById("file-upload")
+    .addEventListener("change", handleFileUpload, false);
+
+  let reader = new FileReader();
+  reader.onload = handleFileRead;
+
+  function handleFileUpload(event) {
+    let file = event.target.files[0];
+    reader.readAsText(file);
+    $("#successful-upload").show("fade");
+
+    setTimeout(function () {
+      $("#successful-upload").hide("fade");
+    }, 1500);
+  }
+
+  function handleFileRead(event) {
+    let save = JSON.parse(event.target.result);
+    window.localStorage.setItem(uploadedSaveFile, JSON.stringify(save));
+  }
+});
+
+// Clear local storage
+$(document).on("click", "#delete-stored-saves", function () {
+  localStorage.clear();
+  $("#successful-delete").show("fade");
+
+  setTimeout(function () {
+    $("#successful-delete").hide("fade");
+  }, 1500);
 });
 
 // 'Achievements' menu option
@@ -182,19 +216,14 @@ $(document).on("click", "#achievements", function (event) {
 
         //Checking if achievement requirement is met
         let isComplete = 0;
-        for (let j = 0; j < localStorage.length; j++) {
-          console.log(
-            "local storage: " +
-              localStorageArray[j][requiredLineForCompletion] +
-              ", requirement: " +
+        if (localStorage.length > 0) {
+          for (let j = 0; j < localStorage.length; j++) {
+            if (
+              localStorageArray[j][requiredLineForCompletion] ==
               requiredChoiceForCompletion
-          );
-          if (
-            localStorageArray[j][requiredLineForCompletion] ==
-            requiredChoiceForCompletion
-          ) {
-            isComplete = 1;
-            console.log(isComplete);
+            ) {
+              isComplete = 1;
+            }
           }
         }
 

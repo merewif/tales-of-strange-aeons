@@ -171,9 +171,15 @@
 
       <div id="game-loader">
         <button class="menu-button" id="continue">continue game</button>
-        <button class="menu-button" id="upload-save-file">
-          Upload save file
+        <label for="file-upload" class="menu-button" id="upload-save-file">
+          Import save file
+        </label>
+        <div id="successful-upload">Save successfully imported.</div>
+        <input id="file-upload" type="file" />
+        <button class="menu-button" id="delete-stored-saves">
+          delete stored saves
         </button>
+        <div id="successful-delete">All game saves deleted.</div>
       </div>
 
       <div id="achievements-container"></div>

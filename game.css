@@ -280,6 +280,32 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: 40%;
+  text-align: center;
+}
+
+#game-loader input[type="file"] {
+  display: none;
+}
+
+#delete-stored-saves {
+  margin-top: 25px;
+}
+
+#successful-upload,
+#successful-delete {
+  font-family: "Montserrat";
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75em;
+  color: #03e9f4;
+  text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
+}
+
+#delete-stored-saves {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 #continue {
