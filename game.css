@@ -409,6 +409,10 @@ header {
 }
 
 @media screen and (max-width: 915px) {
+  #game {
+    position: sticky;
+  }
+
   #introtext {
     font-size: 1em;
   }
