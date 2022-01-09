@@ -9,7 +9,7 @@
       "purpose": "any"
     }
   ],
-  "start_url": "/game.html?source=pwa",
+  "start_url": "./game.html",
   "background_color": "black",
   "display": "fullscreen",
   "scope": "/",
@@ -20,7 +20,7 @@
       "name": "Play Beyond Mortal",
       "short_name": "Beyond Mortal",
       "descripion": "Beyond Mortal: The Visual Novel",
-      "url": "/game.html?source=pwa",
+      "url": "./game.html",
       "icons": [
         {
           "src": "./assets/elements/game-assets/beyondmortalicon.png",
