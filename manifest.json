@@ -7,11 +7,18 @@
       "type": "image/png",
       "sizes": "1766x1766",
       "purpose": "any"
+    },
+    {
+      "src": "./assets/images/cursor.png",
+      "type": "image/png",
+      "sizes": "30x26",
+      "purpose": "any"
     }
   ],
   "start_url": "./game.html",
   "background_color": "black",
-  "display": "fullscreen",
+  "display": "browser",
+  "orientation": "landscape",
   "scope": "/",
   "theme_color": "#03e9f4",
   "frame": "none",
