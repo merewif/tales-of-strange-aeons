@@ -659,6 +659,11 @@ header {
     animation: none;
   }
 
+  #install-game {
+    display: block;
+    top: 70%;
+  }
+
   #back-to-menu {
     margin-bottom: 0;
     font-size: 0.85em;
