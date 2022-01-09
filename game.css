@@ -417,8 +417,9 @@ header {
     font-size: 1em;
   }
 
-  #menu-button {
+  .menu-button {
     font-size: 1em;
+    margin: 0;
   }
 
   #bg-image {
