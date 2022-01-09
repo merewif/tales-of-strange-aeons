@@ -29,11 +29,6 @@ const loadSaveStateString = localStorage.getItem("saveState");
 const loadSaveState = JSON.parse(loadSaveStateString);
 
 let localStorageArray = [];
-for (let i = 1; i < localStorage.length + 1; i++) {
-  let fetchLocalStorageObject = localStorage.getItem("saveState" + i);
-  let processResult = JSON.parse(fetchLocalStorageObject);
-  localStorageArray.push(processResult);
-}
 
 // Click on play button
 $(document).on("click", "#start", function (e) {
@@ -178,8 +173,8 @@ $(document).on("click", "#load-game", function (event) {
     let save = JSON.parse(event.target.result);
     window.localStorage.setItem(uploadedSaveFile, JSON.stringify(save));
 
-    for (let i = 1; i < localStorage.length + 1; i++) {
-      let fetchLocalStorageObject = localStorage.getItem("saveState" + i);
+    for (let i = 0; i < localStorage.length; i++) {
+      let fetchLocalStorageObject = localStorage.getItem("saveState" + (i + 1));
       let processResult = JSON.parse(fetchLocalStorageObject);
       localStorageArray.push(processResult);
     }
@@ -189,6 +184,7 @@ $(document).on("click", "#load-game", function (event) {
 // Clear local storage
 $(document).on("click", "#delete-stored-saves", function () {
   localStorage.clear();
+  localStorageArray = [];
   $("#successful-delete").show("fade");
 
   setTimeout(function () {
@@ -201,6 +197,20 @@ $(document).on("click", "#achievements", function (event) {
   event.stopPropagation();
 
   $("#main-menu").hide("fade");
+
+  for (let i = 1; i < localStorage.length + 1; i++) {
+    let fetchLocalStorageObject = localStorage.getItem("saveState" + i);
+    let processResult = JSON.parse(fetchLocalStorageObject);
+    localStorageArray.push(processResult);
+  }
+
+  for (let i = 0; i < localStorageArray.length; i++) {
+    if (localStorageArray[i] == null) {
+      console.log(localStorageArray[i]);
+      localStorageArray.push(localStorageArray.splice(i, 1)[0]);
+      localStorageArray.pop();
+    }
+  }
 
   let urlConstructor = "./assets/elements/game-assets/achievements.json";
   fetch(urlConstructor)
@@ -232,11 +242,9 @@ $(document).on("click", "#achievements", function (event) {
 
         //Checking if achievement requirement is met
         let isComplete = 0;
-        if (localStorage.length > 0) {
-          for (let j = 0; j < localStorage.length; j++) {
-            if (localStorageArray[j] == null) {
-              //pass
-            } else if (
+        if (localStorageArray.length > 0) {
+          for (let j = 0; j < localStorageArray.length; j++) {
+            if (
               localStorageArray[j][requiredLineForCompletion] ==
               requiredChoiceForCompletion
             ) {
@@ -247,7 +255,6 @@ $(document).on("click", "#achievements", function (event) {
 
         if (isComplete == 1) {
           achievementIcon.src = achievementsJson[i].iconComplete;
-        } else {
         }
       }
     });
