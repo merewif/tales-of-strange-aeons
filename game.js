@@ -117,11 +117,17 @@ $(document).on("click", "#back-to-menu", function (event) {
   $("#back-to-menu").hide("fade");
   $("#game-loader").hide("fade");
   $("#achievements-container").hide("fade");
+  $();
 
   setTimeout(function () {
     $("#main-menu").show("fade");
     $("#achievements-container").html("");
   }, 1000);
+});
+
+// Exit game
+$(document).on("click", "#exit-game", function () {
+  window.location.reload();
 });
 
 // 'New Game' menu option
