@@ -21,8 +21,19 @@ backgroundMusic.volume = 0.6;
 
 let soundEffect = "";
 
+let localStorageLength = localStorage.length + 1;
+
 // Game saves
 let saveState = {};
+const loadSaveStateString = localStorage.getItem("saveState");
+const loadSaveState = JSON.parse(loadSaveStateString);
+
+let localStorageArray = [];
+for (let i = 1; i < localStorage.length + 1; i++) {
+  let fetchLocalStorageObject = localStorage.getItem("saveState" + i);
+  let processResult = JSON.parse(fetchLocalStorageObject);
+  localStorageArray.push(processResult);
+}
 
 // Click on play button
 $(document).on("click", "#start", function (e) {
@@ -52,7 +63,11 @@ function displayIntro(introJson) {
 
   $("#introtext").html(introJson[0]);
 
+  // Variable for preventing fast clicking
+  let clickDisabledIntro = false;
   $(document).on("click keydown", "body", function (e) {
+    if (clickDisabledIntro) return;
+
     // 13 is enter, if not that's the keydown it does nothing
     if (e.keyCode !== 13 && e.type !== "click") {
       return false;
@@ -78,11 +93,19 @@ function displayIntro(introJson) {
     setTimeout(function () {
       $("#introtext").css({ opacity: "1" });
     }, 1250);
+
+    // Preventing fast clicking
+    clickDisabledIntro = true;
+    setTimeout(function () {
+      clickDisabledIntro = false;
+    }, 1000);
   });
 }
 
 // Loading the main menu after the intro ends
-$(document).on("click keydown", "#beyond-mortal", function (e) {
+$(document).on("click keydown", "#beyond-mortal, #skipintro", function () {
+  $("#skipintro").hide("fade");
+
   $("#introtext").css({ opacity: "0" }).delay(1000).hide("fade");
   setTimeout(function () {
     $("#menuimage").show("fade");
@@ -98,6 +121,7 @@ $(document).on("click", "#back-to-menu", function (event) {
   $("#visualchapternav").hide("fade");
   $("#back-to-menu").hide("fade");
   $("#game-loader").hide("fade");
+  $("#achievements-container").html("").hide("fade");
 
   setTimeout(function () {
     $("#main-menu").show("fade");
@@ -131,6 +155,69 @@ $(document).on("click", "#load-game", function (event) {
   }, 1000);
 });
 
+// 'Achievements' menu option
+$(document).on("click", "#achievements", function (event) {
+  event.stopPropagation();
+
+  $("#main-menu").hide("fade");
+
+  let urlConstructor = "./assets/elements/game-assets/achievements.json";
+  fetch(urlConstructor)
+    .then((response) => response.json())
+    .then((achievementsJson) => {
+      for (let i = 0; i < achievementsJson.length; i++) {
+        let singleAchievement = document.createElement("div");
+        singleAchievement.className = "achievement-box";
+        singleAchievement.id = "achievement" + i;
+
+        let achievementTitle = document.createElement("h1");
+        achievementTitle.innerText = achievementsJson[i].name;
+
+        let achievementDescription = document.createElement("p");
+        achievementDescription.innerText = achievementsJson[i].description;
+
+        let achievementIcon = document.createElement("img");
+        let requiredLineForCompletion = achievementsJson[i].requirementLine;
+        let requiredChoiceForCompletion = achievementsJson[i].requirementChoice;
+
+        //Checking if achievement requirement is met
+        let isComplete = 0;
+        for (let j = 0; j < localStorage.length; j++) {
+          console.log(
+            "local storage: " +
+              localStorageArray[j][requiredLineForCompletion] +
+              ", requirement: " +
+              requiredChoiceForCompletion
+          );
+          if (
+            localStorageArray[j][requiredLineForCompletion] ==
+            requiredChoiceForCompletion
+          ) {
+            isComplete = 1;
+            console.log(isComplete);
+          }
+        }
+
+        if (isComplete == 1) {
+          achievementIcon.src = achievementsJson[i].iconComplete;
+        } else {
+          achievementIcon.src = achievementsJson[i].iconIncomplete;
+        }
+        $("#achievements-container").append(singleAchievement);
+        $("#achievement" + i).append(
+          achievementIcon,
+          achievementTitle,
+          achievementDescription
+        );
+      }
+    });
+
+  setTimeout(function () {
+    $("#achievements-container").show("fade");
+    $("#back-to-menu").show("fade");
+  }, 1000);
+});
+
 // Clicking on a released chapter's div will trigger fetching it as json
 $(document).on("click", ".released", function () {
   audioIntroSound.pause();
@@ -158,9 +245,19 @@ function fetchChapterJson(chapter) {
     });
 }
 
+// Variable for preventing fast clicking
+let clickDisabledChapter = false;
 // Click to load the next line of text
 $(document).on("click", "#gametext", function (e) {
+  if (clickDisabledChapter) return;
+
   displayChapterLine();
+
+  // Preventing fast clicking
+  clickDisabledChapter = true;
+  setTimeout(function () {
+    clickDisabledChapter = false;
+  }, 1000);
 });
 
 function displayChapterLine() {
@@ -224,6 +321,7 @@ function displayChapterLine() {
       $("#gametext").html(
         chapterJson[currentLineIndex + 1] + "&nbsp;<span id='blinker'>.</span>"
       );
+
       currentLineIndex += 2;
     } else {
       // display option buttons
@@ -239,7 +337,7 @@ function displayChapterLine() {
       $("#gametext").html(chapterJson[currentLineIndex - 1]);
     }
   } else {
-    // Show line in textbox
+    // Show line in textbox with fade-in-out
     $("#gametext").html(
       chapterJson[currentLineIndex] + "&nbsp;<span id='blinker'>.</span>"
     );
@@ -258,12 +356,11 @@ $(document).on("click", ".gamebutton", function (event) {
   let linesToSkip = optionsObject[buttonNum][1];
 
   // Push new property with line index as key and button number as value into object
-  saveState[currentLineIndex] = buttonNum;
-  console.log(saveState);
+  saveState["line" + currentLineIndex] = buttonNum;
 
   // Store object in localstorage
   const saveStateString = JSON.stringify(saveState);
-  localStorage.setItem("saveState", saveStateString);
+  localStorage.setItem("saveState" + localStorageLength, saveStateString);
 
   currentLineIndex += linesToSkip;
 

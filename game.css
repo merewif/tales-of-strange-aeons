@@ -128,6 +128,7 @@
 .menu-button:hover {
   text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
     0 0 100px #03e9f4;
+  animation: neon 2s linear 1;
 }
 
 .menu-button a:hover {
@@ -165,6 +166,19 @@
   font-size: 3em;
   line-height: 0.75em;
   text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 4px 6px 6px #f40303;
+}
+
+#skipintro {
+  color: #03e9f4;
+  background: none;
+  border: none;
+  text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  font-size: 2em;
+  height: 50px;
+  width: 50px;
 }
 
 #introtext.hide {
@@ -314,6 +328,46 @@
   display: inline-block;
   opacity: 1;
   visibility: visible;
+}
+
+#achievements-container {
+  display: none;
+  height: 75vh;
+  width: 40%;
+  position: absolute;
+  left: 67.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  padding-right: 25px;
+  scrollbar-color: #03e9f4 #353535;
+  scrollbar-width: thin;
+}
+
+#achievements-container h1,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+#achievements-container img {
+  float: left;
+  width: 75px;
+  margin-right: 10px;
+}
+
+#achievements-container h1 {
+  font-size: 1.85em;
+}
+
+#achievements-container p {
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+.achievement-box {
+  margin-bottom: 20px;
+  height: 100px;
 }
 
 #gamebox {
@@ -500,5 +554,31 @@ header {
 
   .gamebutton {
     font-size: 1em;
+  }
+}
+
+@keyframes neon {
+  0%,
+  49% {
+    text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  50% {
+    text-shadow: none;
+    background: none;
+  }
+  55%,
+  74% {
+    text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  75% {
+    text-shadow: none;
+    background: none;
+  }
+  76%,
+  100% {
+    text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+      0 0 100px #03e9f4;
   }
 }
