@@ -321,6 +321,10 @@
   transition-duration: 1s;
 }
 
+#game-ui-buttons {
+  display: block;
+}
+
 #save-game {
   background: none;
   border: none;

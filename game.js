@@ -156,36 +156,36 @@ $(document).on("click", "#load-game", function (event) {
     $("#back-to-menu").show("fade");
   }, 1000);
 
-  // Add uploaded save game file to local storage
-  let uploadedSaveFile = "saveState" + (localStorage.length + 1);
-  document
-    .getElementById("file-upload")
-    .addEventListener("change", handleFileUpload, false);
-
-  let reader = new FileReader();
-  reader.onload = handleFileRead;
-
-  function handleFileUpload(event) {
-    let file = event.target.files[0];
-    reader.readAsText(file);
-    $("#successful-upload").show("fade");
-
-    setTimeout(function () {
-      $("#successful-upload").hide("fade");
-    }, 1500);
-  }
-
-  function handleFileRead(event) {
-    let save = JSON.parse(event.target.result);
-    window.localStorage.setItem(uploadedSaveFile, JSON.stringify(save));
-
-    for (let i = 0; i < localStorage.length; i++) {
-      let fetchLocalStorageObject = localStorage.getItem("saveState" + (i + 1));
-      let processResult = JSON.parse(fetchLocalStorageObject);
-      localStorageArray.push(processResult);
-    }
-  }
+  $("#file-upload").change(function (e) {
+    handleFileUpload(e);
+  });
 });
+
+// Add uploaded save game file to local storage
+let uploadedSaveFile = "saveState" + (localStorage.length + 1);
+let reader = new FileReader();
+reader.onload = handleFileRead;
+
+function handleFileUpload(event) {
+  let file = event.target.files[0];
+  reader.readAsText(file);
+  $("#successful-upload").show("fade");
+
+  setTimeout(function () {
+    $("#successful-upload").hide("fade");
+  }, 1500);
+}
+
+function handleFileRead(event) {
+  let save = JSON.parse(event.target.result);
+  window.localStorage.setItem(uploadedSaveFile, JSON.stringify(save));
+
+  for (let i = 0; i < localStorage.length; i++) {
+    let fetchLocalStorageObject = localStorage.getItem("saveState" + (i + 1));
+    let processResult = JSON.parse(fetchLocalStorageObject);
+    localStorageArray.push(processResult);
+  }
+}
 
 // Clear local storage
 $(document).on("click", "#delete-stored-saves", function () {
@@ -204,15 +204,16 @@ $(document).on("click", "#achievements", function (event) {
 
   $("#main-menu").hide("fade");
 
+  // Fetch local storage contents into array
   for (let i = 1; i < localStorage.length + 1; i++) {
     let fetchLocalStorageObject = localStorage.getItem("saveState" + i);
     let processResult = JSON.parse(fetchLocalStorageObject);
     localStorageArray.push(processResult);
   }
 
+  // Remove empty elements from local storage array
   for (let i = 0; i < localStorageArray.length; i++) {
     if (localStorageArray[i] == null) {
-      console.log(localStorageArray[i]);
       localStorageArray.push(localStorageArray.splice(i, 1)[0]);
       localStorageArray.pop();
     }
@@ -248,13 +249,15 @@ $(document).on("click", "#achievements", function (event) {
 
         //Checking if achievement requirement is met
         let isComplete = 0;
-        if (localStorageArray.length > 0) {
-          for (let j = 0; j < localStorageArray.length; j++) {
+        if (localStorageArray.length > 0 && localStorageArray !== null) {
+          for (let j = 0; j < localStorage.length; j++) {
             if (
               localStorageArray[j][requiredLineForCompletion] ==
               requiredChoiceForCompletion
             ) {
               isComplete = 1;
+            } else {
+              //pass
             }
           }
         }
