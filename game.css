@@ -76,6 +76,65 @@
   background-position: 10%;
 }
 
+#main-menu {
+  display: none;
+  position: absolute;
+  left: 67.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+#back-to-menu {
+  display: none;
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: "Equinox";
+  color: #03e9f4;
+  text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
+  height: 40px;
+  margin-bottom: 25px;
+  font-size: 0.85em;
+  position: absolute;
+  left: 67.5%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
+
+#back-to-menu::after {
+  margin-left: 10px;
+  content: "Back to main menu";
+}
+
+.menu-button {
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: "Equinox";
+  color: #03e9f4;
+  text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
+  height: 40px;
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+.menu-button a {
+  color: #03e9f4;
+  text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
+  height: 40px;
+}
+
+.menu-button:hover {
+  text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+.menu-button a:hover {
+  text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
 #introtext {
   z-index: 1000;
   position: relative;
@@ -102,7 +161,7 @@
 }
 
 #beyond-mortal {
-  font-family: Equinox;
+  font-family: "Equinox";
   font-size: 3em;
   line-height: 0.75em;
   text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 4px 6px 6px #f40303;
@@ -127,7 +186,6 @@
   background-position: 10%;
   height: 100%;
   width: 100%;
-  display: block;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -199,6 +257,19 @@
 
 .unreleased p {
   color: #747474;
+}
+
+#game-loader {
+  display: none;
+  position: absolute;
+  left: 67.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+}
+
+#continue {
+  display: none;
 }
 
 #game {
@@ -335,4 +406,67 @@ footer {
 
 header {
   display: none;
+}
+
+@media screen and (max-height: 1000px) {
+  #bg-image {
+    background-size: cover;
+  }
+
+  #back-to-menu {
+    margin-bottom: 0;
+    font-size: 0.85em;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    transform: translate(25%, 10%);
+  }
+
+  #visualchapterlist {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0%, 0%);
+    margin: 5vh;
+    margin-bottom: 7.5vh;
+  }
+
+  .visualchapter {
+    height: 20vh;
+    width: 100%;
+  }
+
+  .visualchapter h1 {
+    font-size: 1em;
+    margin-top: 5px;
+  }
+
+  .visualchapter p {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+  }
+
+  #gamecontrols {
+    top: 70%;
+    height: 30%;
+  }
+
+  #gametext {
+    font-size: 1em;
+    padding: 20px;
+  }
+
+  #gamebuttons {
+    font-size: 0.85em;
+    bottom: 0;
+  }
+
+  .gamebutton {
+    font-size: 1em;
+  }
+
+  #save-game {
+    font-size: 1.25em;
+  }
 }

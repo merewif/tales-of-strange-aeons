@@ -5,12 +5,20 @@ let chapterJson = {};
 // Sounds
 let audioIntroSound = new Audio("./assets/elements/game-assets/intromusic.mp3");
 audioIntroSound.loop = true;
+
+let menuItemHoverSound = new Audio(
+  "./assets/elements/game-assets/menuhover.wav"
+);
+menuItemHoverSound.volume = 1;
+
 let chapterHoverSound = new Audio(
   "./assets/elements/game-assets/chapterclick.wav"
 );
 chapterHoverSound.volume = 0.1;
+
 let backgroundMusic = "";
 backgroundMusic.volume = 0.6;
+
 let soundEffect = "";
 
 // Game saves
@@ -52,15 +60,10 @@ function displayIntro(introJson) {
     // Incrementing the tracker with each click
     ++currentLine;
 
-    // Loading the main menu after the intro ends
-    if (currentLine >= introJson.length) {
-      $("#introtext").css({ opacity: "0" }).delay(1000).hide("fade");
-      setTimeout(function () {
-        $("#menuimage").show("fade");
-        $("#visualchapternav").show("fade");
-      }, 1000);
-      return;
-    }
+    // Menu button click sound
+    $(".menu-button, #back-to-menu").on("click", function () {
+      menuItemHoverSound.play();
+    });
 
     // Chapter card hover sound
     $(".released").on("mouseenter", function () {
@@ -77,6 +80,56 @@ function displayIntro(introJson) {
     }, 1250);
   });
 }
+
+// Loading the main menu after the intro ends
+$(document).on("click keydown", "#beyond-mortal", function (e) {
+  $("#introtext").css({ opacity: "0" }).delay(1000).hide("fade");
+  setTimeout(function () {
+    $("#menuimage").show("fade");
+    $("#main-menu").show("fade");
+  }, 1000);
+  return;
+});
+
+// Return to main menu
+$(document).on("click", "#back-to-menu", function (event) {
+  event.stopPropagation();
+
+  $("#visualchapternav").hide("fade");
+  $("#back-to-menu").hide("fade");
+  $("#game-loader").hide("fade");
+
+  setTimeout(function () {
+    $("#main-menu").show("fade");
+  }, 1000);
+});
+
+// 'New Game' menu option
+$(document).on("click", "#new-game", function (event) {
+  event.stopPropagation();
+
+  $("#main-menu").hide("fade");
+
+  setTimeout(function () {
+    $("#visualchapternav").show("fade");
+    $("#back-to-menu").show("fade");
+  }, 1000);
+});
+
+// 'Load Game' menu option
+$(document).on("click", "#load-game", function (event) {
+  event.stopPropagation();
+
+  $("#main-menu").hide("fade");
+
+  setTimeout(function () {
+    if (localStorage.getItem("saveState") !== null) {
+      $("#continue").show();
+    }
+    $("#game-loader").show("fade");
+    $("#back-to-menu").show("fade");
+  }, 1000);
+});
 
 // Clicking on a released chapter's div will trigger fetching it as json
 $(document).on("click", ".released", function () {
