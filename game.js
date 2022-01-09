@@ -147,7 +147,7 @@ $(document).on("click", "#load-game", function (event) {
   $("#main-menu").hide("fade");
 
   setTimeout(function () {
-    if (localStorage.getItem("saveState") !== null) {
+    if (localStorage.length !== null) {
       $("#continue").show();
     }
     $("#game-loader").show("fade");

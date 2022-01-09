@@ -1,21 +1,5 @@
 [
   {
-    "name": "Cobden's Final Voyage",
-    "description": "Played through the prologue.",
-    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
-    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line1240",
-    "requirementChoice": 1
-  },
-  {
-    "name": "Beyond Mortal",
-    "description": "Played through the game.",
-    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
-    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line346346",
-    "requirementChoice": 0
-  },
-  {
     "name": "Flybird",
     "description": "You went skydiving while at work.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
@@ -32,19 +16,59 @@
     "requirementChoice": 1
   },
   {
-    "name": "Beyond Mortal",
-    "description": "Played through the game.",
+    "name": "Cobden's Final Voyage",
+    "description": "Played through the prologue.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line9",
+    "requirementLine": "line1240",
+    "requirementChoice": 1
+  },
+  {
+    "name": "Whispers",
+    "description": "Something has awakened within you.",
+    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
+    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
+    "requirementLine": "line346346",
     "requirementChoice": 0
   },
   {
-    "name": "Beyond Mortal",
-    "description": "Played through the game.",
+    "name": "Dark Regrets",
+    "description": "You prevented a suicide.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line9",
+    "requirementLine": "line346346",
+    "requirementChoice": 0
+  },
+  {
+    "name": "Indifference",
+    "description": "You witnessed a suicide.",
+    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
+    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
+    "requirementLine": "line346346",
+    "requirementChoice": 0
+  },
+  {
+    "name": "The gift of blood",
+    "description": "Played through chapter one.",
+    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
+    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
+    "requirementLine": "line346346",
+    "requirementChoice": 0
+  },
+  {
+    "name": "Just a flesh wound",
+    "description": "Lost an arm and a ring.",
+    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
+    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
+    "requirementLine": "line6749",
+    "requirementChoice": 0
+  },
+  {
+    "name": "Fair Trade",
+    "description": "Saved a kidnapped child.",
+    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
+    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
+    "requirementLine": "line745749",
     "requirementChoice": 1
   },
   {
@@ -56,24 +80,8 @@
     "requirementChoice": 0
   },
   {
-    "name": "Beyond Mortal",
-    "description": "Played through the game.",
-    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
-    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line346346",
-    "requirementChoice": 0
-  },
-  {
-    "name": "Beyond Mortal",
-    "description": "Played through the game.",
-    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
-    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line346346",
-    "requirementChoice": 0
-  },
-  {
-    "name": "Beyond Mortal",
-    "description": "Played through the game.",
+    "name": "Beyond Portal",
+    "description": "Visited a planet of an alien species.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
     "requirementLine": "line346346",
