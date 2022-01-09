@@ -17,7 +17,7 @@
   ],
   "start_url": "./game.html",
   "background_color": "black",
-  "display": "browser",
+  "display": "fullscreen",
   "orientation": "landscape",
   "scope": "/",
   "theme_color": "#03e9f4",
