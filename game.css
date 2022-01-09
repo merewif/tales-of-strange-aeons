@@ -466,7 +466,7 @@ header {
   }
 
   #gametext {
-    font-size: 1em;
+    font-size: 0.75em;
     padding: 20px;
   }
 
@@ -476,7 +476,7 @@ header {
   }
 
   .gamebutton {
-    font-size: 1em;
+    font-size: 0.75em;
   }
 
   #save-game {
