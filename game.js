@@ -449,41 +449,42 @@ window.addEventListener("load", () => {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("service-worker.js");
   }
+});
 
-  // Initialize deferredPrompt for use later to show browser install prompt.
-  let deferredPrompt;
+// Initialize deferredPrompt for use later to show browser install prompt.
+let deferredPrompt;
+let buttonInstall = document.querySelector("#install-game");
 
-  window.addEventListener("beforeinstallprompt", (e) => {
-    // Prevent the mini-infobar from appearing on mobile
-    e.preventDefault();
-    // Stash the event so it can be triggered later.
-    deferredPrompt = e;
-    // Update UI notify the user they can install the PWA
-    showInstallPromotion();
-    // Optionally, send analytics event that PWA install promo was shown.
-    console.log(`'beforeinstallprompt' event was fired.`);
-  });
+window.addEventListener("beforeinstallprompt", (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to home screen
+  buttonInstall.style.display = "block";
 
-  let buttonInstall = document.querySelector("#install-game");
-  buttonInstall.addEventListener("click", async () => {
-    // Hide the app provided install promotion
-    hideInstallPromotion();
-    // Show the install prompt
+  buttonInstall.addEventListener("click", (e) => {
+    // hide our user interface that shows our A2HS button
+    buttonInstall.style.display = "none";
+    // Show the prompt
     deferredPrompt.prompt();
     // Wait for the user to respond to the prompt
-    const { outcome } = await deferredPrompt.userChoice;
-    // Optionally, send analytics event with outcome of user choice
-    console.log(`User response to the install prompt: ${outcome}`);
-    // We've used the prompt, and can't use it again, throw it away
-    deferredPrompt = null;
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === "accepted") {
+        console.log("User accepted the A2HS prompt");
+      } else {
+        console.log("User dismissed the A2HS prompt");
+      }
+      deferredPrompt = null;
+    });
   });
+});
 
-  window.addEventListener("appinstalled", () => {
-    // Hide the app-provided install promotion
-    hideInstallPromotion();
-    // Clear the deferredPrompt so it can be garbage collected
-    deferredPrompt = null;
-    // Optionally, send analytics event to indicate successful install
-    console.log("PWA was installed");
-  });
+window.addEventListener("appinstalled", () => {
+  // Hide the app-provided install promotion
+  hideInstallPromotion();
+  // Clear the deferredPrompt so it can be garbage collected
+  deferredPrompt = null;
+  // Optionally, send analytics event to indicate successful install
+  console.log("PWA was installed");
 });
