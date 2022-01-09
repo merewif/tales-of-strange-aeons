@@ -121,10 +121,11 @@ $(document).on("click", "#back-to-menu", function (event) {
   $("#visualchapternav").hide("fade");
   $("#back-to-menu").hide("fade");
   $("#game-loader").hide("fade");
-  $("#achievements-container").hide("fade").html("");
+  $("#achievements-container").hide("fade");
 
   setTimeout(function () {
     $("#main-menu").show("fade");
+    $("#achievements-container").html("");
   }, 1000);
 });
 
@@ -176,6 +177,12 @@ $(document).on("click", "#load-game", function (event) {
   function handleFileRead(event) {
     let save = JSON.parse(event.target.result);
     window.localStorage.setItem(uploadedSaveFile, JSON.stringify(save));
+
+    for (let i = 1; i < localStorage.length + 1; i++) {
+      let fetchLocalStorageObject = localStorage.getItem("saveState" + i);
+      let processResult = JSON.parse(fetchLocalStorageObject);
+      localStorageArray.push(processResult);
+    }
   }
 });
 
