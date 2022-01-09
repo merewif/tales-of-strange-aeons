@@ -30,7 +30,7 @@
   height: 100px;
   font-family: "Equinox";
   font-size: 2em;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: black;
@@ -50,27 +50,27 @@
 }
 
 #install-game {
+  display: none;
   position: absolute;
   z-index: 10000;
   border: 0;
   width: 300px;
   height: 100px;
   font-family: "Equinox";
-  font-size: 2em;
+  font-size: 1em;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: black;
+  background-color: none;
+  border: none;
+  background: none;
   cursor: url("./assets/images/cursor.png"), pointer;
   color: #03e9f4;
   text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 4px 6px 6px #f40303;
-  box-shadow: inset 0 0 5px #03e9f4, inset 0 0 25px #03e9f4,
-    inset 0 0 50px #03e9f4, 0 0 5px #03e9f4, 0 0 25px #03e9f4;
   border-radius: 100px;
 }
 
 #install-game:hover {
-  background-color: #03e9f4;
   color: black;
   text-shadow: none;
 }
