@@ -30,7 +30,7 @@
   height: 100px;
   font-family: "Equinox";
   font-size: 2em;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: black;
@@ -57,7 +57,7 @@
   height: 100px;
   font-family: "Equinox";
   font-size: 2em;
-  top: 65%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: black;
