@@ -39,6 +39,8 @@ $(document).on("click", "#start", function (e) {
   $("#start").hide();
   $("#install-game").hide();
   fetchIntroJson();
+
+  document.body.requestFullscreen();
 });
 
 // Function that loads the exposition lines.

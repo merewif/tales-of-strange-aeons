@@ -50,6 +50,7 @@
 }
 
 #install-game {
+  display: none;
   position: absolute;
   z-index: 10000;
   border: 0;

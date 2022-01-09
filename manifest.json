@@ -14,6 +14,7 @@
   "display": "fullscreen",
   "scope": "/",
   "theme_color": "#03e9f4",
+  "frame": "none",
   "shortcuts": [
     {
       "name": "Play Beyond Mortal",
