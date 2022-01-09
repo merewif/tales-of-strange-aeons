@@ -612,6 +612,10 @@ header {
     user-select: none;
   }
 
+  *:focus {
+    outline: none !important;
+  }
+
   #back-to-menu {
     margin-bottom: 0;
     font-size: 0.85em;
