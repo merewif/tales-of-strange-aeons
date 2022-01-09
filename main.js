@@ -165,7 +165,7 @@ function displayBlogpost(post) {
   box.append(title, subtitle);
   link.append(box);
 
-  document.getElementById("blog").append(link);
+  $("#blog").append(link);
 }
 
 window.addEventListener("load", loadBlogposts);

@@ -451,21 +451,22 @@ window.addEventListener("load", () => {
   }
 });
 
-// Initialize deferredPrompt for use later to show browser install prompt.
-let deferredPrompt;
-let buttonInstall = document.querySelector("#install-game");
+function pwa() {
+  // Initialize deferredPrompt for use later to show browser install prompt.
+  let deferredPrompt;
 
-window.addEventListener("beforeinstallprompt", (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI to notify the user they can add to home screen
-  buttonInstall.style.display = "block";
+  window.addEventListener("beforeinstallprompt", (e) => {
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // Update UI to notify the user they can add to home screen
+    $("#install-game").show();
+  });
 
-  buttonInstall.addEventListener("click", (e) => {
+  $("#install-game").on("click", function (e) {
     // hide our user interface that shows our A2HS button
-    buttonInstall.style.display = "none";
+    addBtn.style.display = "none";
     // Show the prompt
     deferredPrompt.prompt();
     // Wait for the user to respond to the prompt
@@ -478,13 +479,15 @@ window.addEventListener("beforeinstallprompt", (e) => {
       deferredPrompt = null;
     });
   });
-});
 
-window.addEventListener("appinstalled", () => {
-  // Hide the app-provided install promotion
-  hideInstallPromotion();
-  // Clear the deferredPrompt so it can be garbage collected
-  deferredPrompt = null;
-  // Optionally, send analytics event to indicate successful install
-  console.log("PWA was installed");
-});
+  window.addEventListener("appinstalled", () => {
+    // Hide the app-provided install promotion
+    hideInstallPromotion();
+    // Clear the deferredPrompt so it can be garbage collected
+    deferredPrompt = null;
+    // Optionally, send analytics event to indicate successful install
+    console.log("PWA was installed");
+  });
+}
+
+window.addEventListener("load", pwa());
