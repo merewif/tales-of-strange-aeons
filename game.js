@@ -218,6 +218,15 @@ $(document).on("click", "#achievements", function (event) {
         achievementDescription.innerText = achievementsJson[i].description;
 
         let achievementIcon = document.createElement("img");
+        achievementIcon.src = achievementsJson[i].iconIncomplete;
+
+        $("#achievements-container").append(singleAchievement);
+        $("#achievement" + i).append(
+          achievementIcon,
+          achievementTitle,
+          achievementDescription
+        );
+
         let requiredLineForCompletion = achievementsJson[i].requirementLine;
         let requiredChoiceForCompletion = achievementsJson[i].requirementChoice;
 
@@ -225,7 +234,9 @@ $(document).on("click", "#achievements", function (event) {
         let isComplete = 0;
         if (localStorage.length > 0) {
           for (let j = 0; j < localStorage.length; j++) {
-            if (
+            if (localStorageArray[j] == null) {
+              //pass
+            } else if (
               localStorageArray[j][requiredLineForCompletion] ==
               requiredChoiceForCompletion
             ) {
@@ -237,14 +248,7 @@ $(document).on("click", "#achievements", function (event) {
         if (isComplete == 1) {
           achievementIcon.src = achievementsJson[i].iconComplete;
         } else {
-          achievementIcon.src = achievementsJson[i].iconIncomplete;
         }
-        $("#achievements-container").append(singleAchievement);
-        $("#achievement" + i).append(
-          achievementIcon,
-          achievementTitle,
-          achievementDescription
-        );
       }
     });
 
