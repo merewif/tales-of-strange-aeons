@@ -3,7 +3,6 @@
 // This variable is intentionally declared and unused.
 // Add a comment for your linter if you want:
 // eslint-disable-next-line no-unused-vars
-const OFFLINE_VERSION = 1;
 
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = "offline";
