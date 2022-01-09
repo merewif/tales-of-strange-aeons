@@ -451,7 +451,7 @@ window.addEventListener("load", () => {
   }
 });
 
-function pwa() {
+function installAsPWA() {
   // Initialize deferredPrompt for use later to show browser install prompt.
   let deferredPrompt;
 
@@ -466,7 +466,7 @@ function pwa() {
 
   $("#install-game").on("click", function (e) {
     // hide our user interface that shows our A2HS button
-    addBtn.style.display = "none";
+    $("#install-game").hide();
     // Show the prompt
     deferredPrompt.prompt();
     // Wait for the user to respond to the prompt
@@ -490,4 +490,4 @@ function pwa() {
   });
 }
 
-window.addEventListener("load", pwa());
+window.addEventListener("load", installAsPWA);
