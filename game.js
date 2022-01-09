@@ -466,6 +466,19 @@ function installAsPWA() {
     $("#install-game").show();
   });
 
+  const installApp = document.getElementById("install-game");
+
+  installApp.addEventListener("click", async () => {
+    if (deferredPrompt !== null) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === "accepted") {
+        deferredPrompt = null;
+      }
+    }
+  });
+
+  /*
   $("#install-game").on("click", function (e) {
     // hide our user interface that shows our A2HS button
     $("#install-game").hide();
@@ -480,7 +493,7 @@ function installAsPWA() {
       }
       deferredPrompt = null;
     });
-  });
+  });*/
 
   window.addEventListener("appinstalled", () => {
     // Hide the app-provided install promotion
