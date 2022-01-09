@@ -1,0 +1,31 @@
+{
+  "short_name": "Beyond Mortal",
+  "name": "Tales of Strange Aeons",
+  "icons": [
+    {
+      "src": "./assets/elements/game-assets/beyondmortalicon.png",
+      "type": "image/png",
+      "sizes": "1766x1766"
+    }
+  ],
+  "start_url": "/game.html?source=pwa",
+  "background_color": "black",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#03e9f4",
+  "shortcuts": [
+    {
+      "name": "Play Beyond Mortal",
+      "short_name": "Beyond Mortal",
+      "descripion": "Beyond Mortal: The Visual Novel",
+      "url": "/game.html?source=pwa",
+      "icons": [
+        {
+          "src": "./assets/elements/game-assets/beyondmortalicon.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "description": "Play Beyond Mortal: The Visual Novel"
+}

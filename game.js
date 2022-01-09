@@ -442,3 +442,9 @@ function downloadGameSave(text, filename) {
 $(document).on("click", "#save-game", function () {
   downloadGameSave(JSON.stringify(saveState), "beyond-mortal-gamesave.tales");
 });
+
+window.addEventListener("load", () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+});

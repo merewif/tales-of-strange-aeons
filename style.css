@@ -945,3 +945,12 @@ h2 {
   text-transform: lowercase;
   font-weight: 300;
 }
+
+#offline {
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
