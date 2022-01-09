@@ -1,6 +1,8 @@
-// global variables
+// Global variables
 let currentLineIndex = 0; // Variable to track the current line
 let chapterJson = {};
+
+// Sounds
 let audioIntroSound = new Audio("./assets/elements/game-assets/intromusic.mp3");
 audioIntroSound.loop = true;
 let chapterHoverSound = new Audio(
@@ -10,6 +12,9 @@ chapterHoverSound.volume = 0.1;
 let backgroundMusic = "";
 backgroundMusic.volume = 0.6;
 let soundEffect = "";
+
+// Game saves
+let saveState = {};
 
 // Click on play button
 $(document).on("click", "#start", function (e) {
@@ -199,6 +204,14 @@ $(document).on("click", ".gamebutton", function (event) {
   let buttonNum = $(this).parent().children().index($(this));
   let linesToSkip = optionsObject[buttonNum][1];
 
+  // Push new property with line index as key and button number as value into object
+  saveState[currentLineIndex] = buttonNum;
+  console.log(saveState);
+
+  // Store object in localstorage
+  const saveStateString = JSON.stringify(saveState);
+  localStorage.setItem("saveState", saveStateString);
+
   currentLineIndex += linesToSkip;
 
   // Tracker incrementation
@@ -206,4 +219,20 @@ $(document).on("click", ".gamebutton", function (event) {
 
   $(".gamebutton").hide();
   displayChapterLine();
+});
+
+// Download game save
+function downloadGameSave(text, filename) {
+  let a = document.createElement("a");
+  a.setAttribute(
+    "href",
+    "data:text/plain;charset=utf-8," + encodeURIComponent(text)
+  );
+  a.setAttribute("download", filename);
+  a.click();
+}
+
+// Download button
+$(document).on("click", "#save-game", function () {
+  downloadGameSave(JSON.stringify(saveState), "beyond-mortal-gamesave.tales");
 });

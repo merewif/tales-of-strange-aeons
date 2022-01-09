@@ -210,6 +210,41 @@
   transition-duration: 1s;
 }
 
+#save-game {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 1%;
+  top: 0%;
+  transform: translate(92.5%, 0%);
+  z-index: 10001;
+  font-family: "Montserrat";
+  font-weight: 300;
+  color: #03e9f4;
+  text-shadow: 0 0 5px #03e9f4, 3px 3px 3px #f40303;
+  font-size: 2em;
+}
+
+#save-game::after {
+  position: relative;
+  display: inline-block;
+  right: 100%;
+  bottom: 70%;
+  transform: translateY(-30%);
+  margin-right: 15px;
+  font-size: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  content: "Download your current game progress.";
+  transition-duration: 1s;
+}
+
+#save-game:hover::after {
+  display: inline-block;
+  opacity: 1;
+  visibility: visible;
+}
+
 #gamebox {
   height: 100vh;
   width: 100vw;
