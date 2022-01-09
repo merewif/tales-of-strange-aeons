@@ -639,6 +639,10 @@ header {
   * {
     transform: rotate(-90deg);
   }
+
+  body {
+    transform: rotate(-90deg);
+  }
 }
 
 @keyframes neon {
