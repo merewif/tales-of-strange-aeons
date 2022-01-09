@@ -610,6 +610,7 @@ header {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    cursor: default !important;
   }
 
   :focus {
