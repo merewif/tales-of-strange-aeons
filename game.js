@@ -37,6 +37,7 @@ $(document).on("click", "#start", function (e) {
   $("#headerlogo").show();
   $("#intro").css({ opacity: "1" });
   $("#start").hide();
+  $("#install-game").hide();
   fetchIntroJson();
 });
 

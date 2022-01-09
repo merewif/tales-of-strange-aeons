@@ -647,6 +647,14 @@ header {
     outline: none !important;
   }
 
+  #start {
+    top: 30%;
+  }
+
+  #start:hover {
+    animation: none;
+  }
+
   #back-to-menu {
     margin-bottom: 0;
     font-size: 0.85em;
