@@ -635,6 +635,12 @@ header {
   }
 }
 
+@media screen and(orientation:portrait) {
+  * {
+    transform: rotate(-90deg);
+  }
+}
+
 @keyframes neon {
   0%,
   49% {
