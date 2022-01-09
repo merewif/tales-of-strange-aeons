@@ -637,6 +637,15 @@ header {
   .gamebutton {
     font-size: 1em;
   }
+
+  #save-game {
+    top: 1.2em;
+    right: 0%;
+  }
+
+  #exit-game {
+    font-size: 1.2em;
+  }
 }
 
 @keyframes neon {
