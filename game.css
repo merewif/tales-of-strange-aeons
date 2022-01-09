@@ -602,6 +602,10 @@ header {
 }
 
 @media screen and (max-width: 1280px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   #back-to-menu {
     margin-bottom: 0;
     font-size: 0.85em;
