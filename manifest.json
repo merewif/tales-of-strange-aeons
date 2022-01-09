@@ -5,7 +5,8 @@
     {
       "src": "./assets/elements/game-assets/beyondmortalicon.png",
       "type": "image/png",
-      "sizes": "1766x1766"
+      "sizes": "1766x1766",
+      "purpose": "any"
     }
   ],
   "start_url": "/game.html?source=pwa",
