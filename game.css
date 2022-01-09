@@ -612,7 +612,7 @@ header {
     user-select: none;
   }
 
-  *:focus {
+  :focus {
     outline: none !important;
   }
 
