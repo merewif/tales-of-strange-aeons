@@ -167,6 +167,7 @@
 #install-instructions {
   height: 10px;
   text-transform: uppercase;
+  text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 4px 4px 5px #f40303;
 }
 
 #install-game {
