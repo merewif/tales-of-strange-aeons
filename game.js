@@ -499,7 +499,7 @@ function installAsPWA() {
       deferredPrompt = null;
     });
   });*/
-
+  /*
   window.addEventListener("appinstalled", () => {
     // Hide the app-provided install promotion
     hideInstallPromotion();
@@ -508,7 +508,7 @@ function installAsPWA() {
     deferredPrompt = null;
     // Optionally, send analytics event to indicate successful install
     console.log("PWA was installed");
-  });
+  });*/
 }
 
 window.addEventListener("load", installAsPWA);
