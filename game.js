@@ -277,6 +277,11 @@ $(document).on("click", "#achievements", function (event) {
   }, 1000);
 });
 
+$(document).on("click", "#exit", function () {
+  document.exitFullscreen();
+  window.close();
+});
+
 // Clicking on a released chapter's div will trigger fetching it as json
 $(document).on("click", ".released", function () {
   audioIntroSound.pause();
