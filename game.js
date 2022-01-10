@@ -174,14 +174,15 @@ $(document).on("click", "#load-game", function (event) {
   });
 });
 
-// File reader for save game upload
-let reader = new FileReader();
-reader.onload = handleFileRead;
-
 // Read uploaded save game
 function handleFileUpload(event) {
-  let file = event.target.files[0];
-  reader.readAsText(file);
+  let input = document.getElementById("file-upload");
+  for (let i = 0; i < input.files.length; i++) {
+    let reader = new FileReader();
+    reader.readAsText(event.target.files[i]);
+    reader.onload = handleFileRead;
+  }
+  // reader.readAsText(file);
   $("#successful-upload").show("fade");
 
   setTimeout(function () {
