@@ -170,14 +170,15 @@ $(document).on("click", "#load-game", function (event) {
 
   $("#file-upload").change(function (e) {
     handleFileUpload(e);
+    document.body.requestFullscreen();
   });
 });
 
-// Add uploaded save game file to local storage
-let uploadedSaveFile = "saveState" + (localStorage.length + 1);
+// File reader for save game upload
 let reader = new FileReader();
 reader.onload = handleFileRead;
 
+// Read uploaded save game
 function handleFileUpload(event) {
   let file = event.target.files[0];
   reader.readAsText(file);
@@ -188,15 +189,13 @@ function handleFileUpload(event) {
   }, 1500);
 }
 
+// Add uploaded save game file to local storage
 function handleFileRead(event) {
   let save = JSON.parse(event.target.result);
-  window.localStorage.setItem(uploadedSaveFile, JSON.stringify(save));
-
-  for (let i = 0; i < localStorage.length; i++) {
-    let fetchLocalStorageObject = localStorage.getItem("saveState" + (i + 1));
-    let processResult = JSON.parse(fetchLocalStorageObject);
-    localStorageArray.push(processResult);
-  }
+  window.localStorage.setItem(
+    "saveState" + (localStorage.length + 1),
+    JSON.stringify(save)
+  );
 }
 
 // Clear local storage
@@ -222,14 +221,14 @@ $(document).on("click", "#achievements", function (event) {
     let processResult = JSON.parse(fetchLocalStorageObject);
     localStorageArray.push(processResult);
   }
-
+  /*
   // Remove empty elements from local storage array
   for (let i = 0; i < localStorageArray.length; i++) {
     if (localStorageArray[i] == null) {
       localStorageArray.push(localStorageArray.splice(i, 1)[0]);
       localStorageArray.pop();
     }
-  }
+  }*/
 
   let urlConstructor = "./assets/elements/game-assets/achievements.json";
   fetch(urlConstructor)

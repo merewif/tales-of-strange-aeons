@@ -542,6 +542,15 @@
   scrollbar-width: thin;
 }
 
+#achievements-container::-webkit-scrollbar {
+  background-color: #353535;
+  width: 2px;
+}
+
+#achievements-container::-webkit-scrollbar-thumb {
+  background-color: #03e9f4;
+}
+
 #achievements-container h1,
 p {
   padding: 0;

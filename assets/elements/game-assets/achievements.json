@@ -52,7 +52,7 @@
     "description": "Played through chapter one.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line346346",
+    "requirementLine": "line3646346",
     "requirementChoice": 0
   },
   {
