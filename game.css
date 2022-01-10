@@ -166,6 +166,7 @@
 
 #install-instructions {
   height: 10px;
+  text-transform: uppercase;
 }
 
 #install-game {
@@ -291,6 +292,9 @@
 }
 
 #beyond-mortal {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50%;
   font-family: "Equinox";
   font-size: 3em;
   line-height: 0.75em;
@@ -748,6 +752,10 @@ header {
 
   :focus {
     outline: none !important;
+  }
+
+  #beyond-mortal {
+    padding-top: 35%;
   }
 
   #popup {

@@ -30,6 +30,14 @@ const loadSaveState = JSON.parse(loadSaveStateString);
 
 let localStorageArray = [];
 
+$(document).on("click", "#install-instructions", function () {
+  $("#popup").show();
+});
+
+$(document).on("click", "#hide-popup, #intro", function () {
+  $("#popup").hide();
+});
+
 // Click on play button
 $(document).on("click", "#start", function (e) {
   $("#bg-image").hide();
@@ -472,14 +480,6 @@ function installAsPWA() {
     $("#install-instructions").hide();
     $("#install-game").show();
     showInstallPromotion();
-  });
-
-  $(document).on("click", "#install-instructions", function () {
-    $("#popup").show();
-  });
-
-  $(document).on("click", "#hide-popup, #intro", function () {
-    $("#popup").hide();
   });
 
   const installApp = document.getElementById("install-game");
