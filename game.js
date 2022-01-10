@@ -469,10 +469,10 @@ function installAsPWA() {
     deferredPrompt = e;
     // Update UI to notify the user they can add to home screen
     $("#install-game").show();
+    showInstallPromotion();
   });
 
   const installApp = document.getElementById("install-game");
-
   installApp.addEventListener("click", async () => {
     if (deferredPrompt !== null) {
       deferredPrompt.prompt();
