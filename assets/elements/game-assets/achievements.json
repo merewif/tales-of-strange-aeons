@@ -10,7 +10,7 @@
     "description": "Went skydiving while at work.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line17",
+    "requirementLine": "chapter00line17",
     "requirementChoice": 0
   },
   {
@@ -18,7 +18,7 @@
     "description": "Went back to work instead of skydiving.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line17",
+    "requirementLine": "chapter00line17",
     "requirementChoice": 1
   },
   {
@@ -26,7 +26,7 @@
     "description": "Played through the prologue.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line1240",
+    "requirementLine": "chapter00line1240",
     "requirementChoice": 1
   },
   {
@@ -40,7 +40,7 @@
     "description": "Something has awakened within you.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line346346",
+    "requirementLine": "chapter01line346346",
     "requirementChoice": 0
   },
   {
@@ -48,7 +48,7 @@
     "description": "Prevented a suicide.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line2346",
+    "requirementLine": "chapter01line2346",
     "requirementChoice": 0
   },
   {
@@ -56,7 +56,7 @@
     "description": "Witnessed a suicide.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line34623346",
+    "requirementLine": "chapter01line34623346",
     "requirementChoice": 0
   },
   {
@@ -64,7 +64,7 @@
     "description": "Played through chapter one.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line364536346",
+    "requirementLine": "chapter01line364536346",
     "requirementChoice": 0
   },
   {
@@ -72,7 +72,7 @@
     "description": "Lost an arm and a ring.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line6749",
+    "requirementLine": "chapter02line6749",
     "requirementChoice": 0
   },
   {
@@ -80,7 +80,7 @@
     "description": "Saved a kidnapped child.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line745749",
+    "requirementLine": "chapter02line745749",
     "requirementChoice": 1
   },
   {

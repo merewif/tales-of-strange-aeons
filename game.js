@@ -23,6 +23,8 @@ let soundEffect = "";
 
 let localStorageLength = localStorage.length + 1;
 
+let currentChapterID = "";
+
 // Game saves
 let saveState = {};
 const loadSaveStateString = localStorage.getItem("saveState");
@@ -297,6 +299,8 @@ $(document).on("click", ".released", function () {
 
 // Function that loads the chapter the user clicked on into the game
 function fetchChapterJson(chapter) {
+  currentChapterID = chapter;
+  console.log(currentChapterID);
   let urlConstructor = "./assets/elements/game-assets/" + chapter + ".json";
   fetch(urlConstructor)
     .then((response) => response.json())
@@ -422,11 +426,14 @@ $(document).on("click", ".gamebutton", function (event) {
   let linesToSkip = optionsObject[buttonNum][1];
 
   // Push new property with line index as key and button number as value into object
-  saveState["line" + currentLineIndex] = buttonNum;
+  saveState[currentChapterID + "line" + currentLineIndex] = buttonNum;
 
   // Store object in localstorage
   const saveStateString = JSON.stringify(saveState);
-  localStorage.setItem("saveState" + localStorageLength, saveStateString);
+  localStorage.setItem(
+    "saveState" + (localStorage.length + 1),
+    saveStateString
+  );
 
   currentLineIndex += linesToSkip;
 
