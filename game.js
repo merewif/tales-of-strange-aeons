@@ -129,6 +129,7 @@ $(document).on("click", "#back-to-menu", function (event) {
   $("#back-to-menu").hide("fade");
   $("#game-loader").hide("fade");
   $("#achievements-container").hide("fade");
+  $("#game").css({ cursor: "url('./assets/images/cursor.png'), pointer" });
   document.body.requestFullscreen();
 
   setTimeout(function () {
@@ -233,10 +234,10 @@ $(document).on("click", "#achievements", function (event) {
         singleAchievement.id = "achievement" + i;
 
         let achievementTitle = document.createElement("h1");
-        achievementTitle.innerText = achievementsJson[i].name;
+        achievementTitle.innerHTML = achievementsJson[i].name;
 
         let achievementDescription = document.createElement("p");
-        achievementDescription.innerText = achievementsJson[i].description;
+        achievementDescription.innerHTML = achievementsJson[i].description;
 
         let achievementIcon = document.createElement("img");
         achievementIcon.src = achievementsJson[i].iconIncomplete;
@@ -450,6 +451,7 @@ function downloadGameSave(text, filename) {
 // Download button
 $(document).on("click", "#save-game", function () {
   downloadGameSave(JSON.stringify(saveState), "beyond-mortal-gamesave.tales");
+  document.body.requestFullscreen();
 });
 
 // PWA Requirements

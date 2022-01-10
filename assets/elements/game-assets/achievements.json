@@ -1,7 +1,13 @@
 [
   {
+    "name": "<div style='text-align: center; font-size: 1.5rem;'><h1>Prologue</h1></div>",
+    "description": "",
+    "iconComplete": "",
+    "iconIncomplete": ""
+  },
+  {
     "name": "Flybird",
-    "description": "You went skydiving while at work.",
+    "description": "Went skydiving while at work.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
     "requirementLine": "line17",
@@ -9,7 +15,7 @@
   },
   {
     "name": "Diligent drone",
-    "description": "You went back to work instead of skydiving.",
+    "description": "Went back to work instead of skydiving.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
     "requirementLine": "line17",
@@ -24,6 +30,12 @@
     "requirementChoice": 1
   },
   {
+    "name": "<div style='text-align: center; font-size: 1.5rem;'><h1>Chapter 1</h1></div>",
+    "description": "",
+    "iconComplete": "",
+    "iconIncomplete": ""
+  },
+  {
     "name": "Whispers",
     "description": "Something has awakened within you.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
@@ -33,7 +45,7 @@
   },
   {
     "name": "Dark Regrets",
-    "description": "You prevented a suicide.",
+    "description": "Prevented a suicide.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
     "requirementLine": "line2346",
@@ -41,7 +53,7 @@
   },
   {
     "name": "Indifference",
-    "description": "You witnessed a suicide.",
+    "description": "Witnessed a suicide.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
     "requirementLine": "line34623346",
