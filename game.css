@@ -533,13 +533,14 @@
   height: 75vh;
   width: 40%;
   position: absolute;
-  left: 67.5%;
+  left: 65%;
   top: 50%;
   transform: translate(-50%, -50%);
   overflow-y: scroll;
   padding-right: 25px;
   scrollbar-color: #03e9f4 #353535;
   scrollbar-width: thin;
+  padding-top: 25px;
 }
 
 #achievements-container::-webkit-scrollbar {

@@ -182,9 +182,8 @@ function handleFileUpload(event) {
     reader.readAsText(event.target.files[i]);
     reader.onload = handleFileRead;
   }
-  // reader.readAsText(file);
-  $("#successful-upload").show("fade");
 
+  $("#successful-upload").show("fade");
   setTimeout(function () {
     $("#successful-upload").hide("fade");
   }, 1500);

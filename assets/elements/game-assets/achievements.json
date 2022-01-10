@@ -44,7 +44,7 @@
     "description": "You witnessed a suicide.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line346346",
+    "requirementLine": "line34623346",
     "requirementChoice": 0
   },
   {
@@ -52,7 +52,7 @@
     "description": "Played through chapter one.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line3646346",
+    "requirementLine": "line364536346",
     "requirementChoice": 0
   },
   {
@@ -76,7 +76,7 @@
     "description": "Played through the game.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line346346",
+    "requirementLine": "line34756346",
     "requirementChoice": 0
   },
   {
@@ -84,7 +84,7 @@
     "description": "Visited a planet of an alien species.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "line346346",
+    "requirementLine": "line34623346",
     "requirementChoice": 0
   }
 ]
