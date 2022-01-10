@@ -313,6 +313,7 @@
   font-size: 2em;
   height: 50px;
   width: 50px;
+  cursor: url("./assets/images/cursor.png"), pointer;
 }
 
 #introtext.hide {
@@ -549,17 +550,18 @@
     transparent
   );
   mask-image: linear-gradient (black, transparent);
+  scroll-behavior: smooth;
 }
 
 #achievements-container::-webkit-scrollbar {
-  background-color: #353535;
-  width: 5px;
-  cursor: url("./assets/images/cursor.png"), pointer;
+  background-color: #580b0b;
+  width: 8px;
+  cursor: url("./assets/images/cursor.png") auto !important;
 }
 
 #achievements-container::-webkit-scrollbar-thumb {
   background-color: #03e9f4;
-  cursor: url("./assets/images/cursor.png"), pointer;
+  cursor: url("./assets/images/cursor.png") auto !important;
 }
 
 #achievements-container h1,
