@@ -129,7 +129,7 @@ $(document).on("click", "#back-to-menu", function (event) {
   $("#back-to-menu").hide("fade");
   $("#game-loader").hide("fade");
   $("#achievements-container").hide("fade");
-  $();
+  document.body.requestFullscreen();
 
   setTimeout(function () {
     $("#main-menu").show("fade");
@@ -170,7 +170,6 @@ $(document).on("click", "#load-game", function (event) {
 
   $("#file-upload").change(function (e) {
     handleFileUpload(e);
-    document.body.requestFullscreen();
   });
 });
 
@@ -183,6 +182,7 @@ function handleFileUpload(event) {
     reader.onload = handleFileRead;
   }
 
+  input.value = "";
   $("#successful-upload").show("fade");
   setTimeout(function () {
     $("#successful-upload").hide("fade");
@@ -216,19 +216,12 @@ $(document).on("click", "#achievements", function (event) {
   $("#main-menu").hide("fade");
 
   // Fetch local storage contents into array
+  localStorageArray = [];
   for (let i = 1; i < localStorage.length + 1; i++) {
     let fetchLocalStorageObject = localStorage.getItem("saveState" + i);
     let processResult = JSON.parse(fetchLocalStorageObject);
     localStorageArray.push(processResult);
   }
-  /*
-  // Remove empty elements from local storage array
-  for (let i = 0; i < localStorageArray.length; i++) {
-    if (localStorageArray[i] == null) {
-      localStorageArray.push(localStorageArray.splice(i, 1)[0]);
-      localStorageArray.pop();
-    }
-  }*/
 
   let urlConstructor = "./assets/elements/game-assets/achievements.json";
   fetch(urlConstructor)
