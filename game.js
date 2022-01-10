@@ -49,7 +49,7 @@ $(document).on("click", "#start", function (e) {
   $("#install-instructions").hide();
   fetchIntroJson();
 
-  document.body.requestFullscreen();
+  document.body.requestFullscreen({ navigationUI: "hide" });
 });
 
 // Function that loads the exposition lines.
@@ -130,7 +130,7 @@ $(document).on("click", "#back-to-menu", function (event) {
   $("#game-loader").hide("fade");
   $("#achievements-container").hide("fade");
   $("#game").css({ cursor: "url('./assets/images/cursor.png'), pointer" });
-  document.body.requestFullscreen();
+  document.body.requestFullscreen({ navigationUI: "hide" });
 
   setTimeout(function () {
     $("#main-menu").show("fade");
@@ -451,7 +451,7 @@ function downloadGameSave(text, filename) {
 // Download button
 $(document).on("click", "#save-game", function () {
   downloadGameSave(JSON.stringify(saveState), "beyond-mortal-gamesave.tales");
-  document.body.requestFullscreen();
+  document.body.requestFullscreen({ navigationUI: "hide" });
 });
 
 // PWA Requirements

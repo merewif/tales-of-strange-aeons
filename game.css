@@ -542,15 +542,24 @@
   scrollbar-color: #03e9f4 #353535;
   scrollbar-width: thin;
   padding-top: 25px;
+  -webkit-mask-image: linear-gradient(
+    transparent,
+    black 5%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient (black, transparent);
 }
 
 #achievements-container::-webkit-scrollbar {
   background-color: #353535;
-  width: 2px;
+  width: 5px;
+  cursor: url("./assets/images/cursor.png"), pointer;
 }
 
 #achievements-container::-webkit-scrollbar-thumb {
   background-color: #03e9f4;
+  cursor: url("./assets/images/cursor.png"), pointer;
 }
 
 #achievements-container h1,
