@@ -965,7 +965,11 @@ h2 {
   }
   #sidemenu-content {
     z-index: 1;
-    right: 5%;
+  }
+  #sidemenu-ul {
+    display: grid;
+    height: 100%;
+    align-items: center;
   }
   #sidemenu-title {
     font-size: 0.5rem;
@@ -974,6 +978,7 @@ h2 {
   }
   .sidemenu-item {
     font-size: 0.75rem;
+    padding: 10%;
   }
   #section2,
   #section3,
