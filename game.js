@@ -318,17 +318,20 @@ function fetchChapterJson(chapter) {
 
 // Variable for preventing fast clicking
 let clickDisabledChapter = false;
+
 // Click to load the next line of text
-$(document).on("click", "#gametext", function (e) {
-  if (clickDisabledChapter) return;
+$(document).on("click keyup", "body", function (e) {
+  if (e.which === 32 || e.which === 1) {
+    if (clickDisabledChapter) return;
 
-  displayChapterLine();
+    displayChapterLine();
 
-  // Preventing fast clicking
-  clickDisabledChapter = true;
-  setTimeout(function () {
-    clickDisabledChapter = false;
-  }, 1000);
+    // Preventing fast clicking
+    clickDisabledChapter = true;
+    setTimeout(function () {
+      clickDisabledChapter = false;
+    }, 1000);
+  }
 });
 
 function displayChapterLine() {
