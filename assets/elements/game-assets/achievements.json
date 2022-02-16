@@ -1,6 +1,6 @@
 [
   {
-    "name": "<div style='text-align: center; font-size: 1.5rem;'><h1>Prologue</h1></div>",
+    "name": "<div style='text-align: center; font-size: 1.5rem;'><h1>Chapter 1</h1></div>",
     "description": "",
     "iconComplete": "",
     "iconIncomplete": ""
@@ -30,7 +30,37 @@
     "requirementChoice": 1
   },
   {
-    "name": "<div style='text-align: center; font-size: 1.5rem;'><h1>Chapter 1</h1></div>",
+    "name": "<div style='text-align: center; font-size: 1.5rem;'><h1>Chapter 2</h1></div>",
+    "description": "",
+    "iconComplete": "",
+    "iconIncomplete": ""
+  },
+  {
+    "name": "Just a flesh wound",
+    "description": "Lost an arm and a ring.",
+    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
+    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
+    "requirementLine": "chapter02line6749",
+    "requirementChoice": 0
+  },
+  {
+    "name": "Fair Trade",
+    "description": "Saved a kidnapped child.",
+    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
+    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
+    "requirementLine": "chapter02line745749",
+    "requirementChoice": 1
+  },
+  {
+    "name": "The Price of Heroism",
+    "description": "Played through chapter two.",
+    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
+    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
+    "requirementLine": "line34763456346",
+    "requirementChoice": 0
+  },
+  {
+    "name": "<div style='text-align: center; font-size: 1.5rem;'><h1>Chapter 3</h1></div>",
     "description": "",
     "iconComplete": "",
     "iconIncomplete": ""
@@ -61,27 +91,17 @@
   },
   {
     "name": "The gift of blood",
-    "description": "Played through chapter one.",
+    "description": "Played through chapter three.",
     "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
     "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
     "requirementLine": "chapter01line364536346",
     "requirementChoice": 0
   },
   {
-    "name": "Just a flesh wound",
-    "description": "Lost an arm and a ring.",
-    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
-    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "chapter02line6749",
-    "requirementChoice": 0
-  },
-  {
-    "name": "Fair Trade",
-    "description": "Saved a kidnapped child.",
-    "iconComplete": "./assets/elements/game-assets/beyondmortalicon.png",
-    "iconIncomplete": "./assets/elements/game-assets/beyondmortalicongrey.png",
-    "requirementLine": "chapter02line745749",
-    "requirementChoice": 1
+    "name": "<div style='text-align: center; font-size: 1.5rem;'><h1>General</h1></div>",
+    "description": "",
+    "iconComplete": "",
+    "iconIncomplete": ""
   },
   {
     "name": "Beyond Mortal",
