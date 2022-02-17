@@ -907,7 +907,7 @@ header {
     margin-right: 20px;
   }
 }
-@media only screen (max-width: 1466px) {
+@media only screen and (max-width: 1466px) {
   #back-to-menu {
     top: 95%;
   }
